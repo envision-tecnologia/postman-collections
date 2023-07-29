@@ -46,8 +46,8 @@
 													"});\r",
 													"\r",
 													"// Seta a 1 opção (mais barata)\r",
-													"var selectedFlightOption = jsonData.Root.airResponseData.flightsOptions[0];\r",
-													"var selectedFlightGroup = jsonData.Root.airResponseData.flightGroups[selectedFlightOption.flightGroupIndexes[0]];\r",
+													"var selectedFlightOption = jsonData.airResponseData.flightsOptions[0];\r",
+													"var selectedFlightGroup = jsonData.airResponseData.flightGroups[selectedFlightOption.flightGroupIndexes[0]];\r",
 													"var selectedFare = selectedFlightOption.brandedFares[0].faresByFlightGroup[0];\r",
 													"\r",
 													"pm.collectionVariables.set(\"selectedFare\", selectedFare);\r",
@@ -1175,32 +1175,32 @@
 	],
 	"variable": [
 		{
-			"id": "48e0a04a-74da-40a9-8a6c-e592d13d1794",
+			"id": "69552064-9c33-4fc6-8937-9ce0591b7dd8",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "ff67ddf1-e80c-443e-82e5-c848f0eb746c",
+			"id": "14b7738e-2bd8-4003-bc92-d7142cc81a10",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "823f37a2-c7d2-488e-ae02-f73ea86a1c98",
+			"id": "6805a9ac-3d5e-42e8-9dfc-6b436ca39d91",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "c08016d8-039a-45a4-971d-31463edc3d36",
+			"id": "cabd43da-45d5-4f9c-a542-a66aca540172",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "cc30a715-0da7-41e7-abb4-c32bf9e53eba",
+			"id": "04df4a15-c678-42b2-ac4f-b94fd590dc97",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "ea910cef-3280-440a-b812-d866a34ec8c0",
+			"id": "7d1e4d09-2dc5-468e-9c4d-31372678ec5f",
 			"key": "returnYear",
 			"value": ""
 		}
