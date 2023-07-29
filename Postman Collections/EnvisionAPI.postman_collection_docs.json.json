@@ -14,360 +14,417 @@
 					"item": [
 						{
 							"name": "Book 1 ADT One-Way",
-							"item": [],
+							"item": [
+								{
+									"name": "Search Flights Prod Filtro cias Copy",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "eb586594-af08-488e-9f50-b584f1b1712d",
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(30,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(30,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(30,'days').format(\"YYYY\"));\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "9ca2147a-777b-4066-a647-82983f7bda7e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
+									},
+									"response": []
+								}
+							],
 							"id": "85be4ef8-b0b9-42e5-bbc6-a75b1863539d"
 						},
 						{
 							"name": "Search Examples",
-							"item": [],
+							"item": [
+								{
+									"name": "Search Flights Prod Filtro cias",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "eb586594-af08-488e-9f50-b584f1b1712d",
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "40f05056-9086-487d-9aad-8736597b3b45",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
+									},
+									"response": []
+								},
+								{
+									"name": "Search Flights Prod Filtro Intervalo Horario",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript",
+												"id": "8686b6cd-05e9-41df-b60d-05542eb4d455"
+											}
+										}
+									],
+									"id": "3bef078d-8a33-45ee-934f-43504827a357",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"RIO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 10,\r\n\t\t\t\t\t\"max\": 11\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"RIO\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 15,\r\n\t\t\t\t\t\"max\": 17\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aéreo filtrando o horário"
+									},
+									"response": []
+								},
+								{
+									"name": "Search Flights Prod NonStop",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript",
+												"id": "4196ef02-c920-483a-bc16-d1961114b94f"
+											}
+										}
+									],
+									"id": "e72470c3-ee99-4548-9116-f7eabdda3bee",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search"
+									},
+									"response": []
+								},
+								{
+									"name": "Search Flights Prod MaxFlightOptions",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript",
+												"id": "fe0aa6c9-8f1a-49f4-9a96-cc578d254344"
+											}
+										}
+									],
+									"id": "af271f3e-d0b9-4dca-908a-63fe4e7fc898",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 2222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"recommendations\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t],\r\n        \"maxFlightOptions\": 2\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aéreo realizando o filtro para o máximo de voos."
+									},
+									"response": []
+								},
+								{
+									"name": "Search Flights Prod Bagagem",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript",
+												"id": "eba272ae-732e-4858-9d00-ec44c290e71a"
+											}
+										}
+									],
+									"id": "8e3a9790-def3-4166-ba60-970c3b752602",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando voos com bagagem."
+									},
+									"response": []
+								},
+								{
+									"name": "Search Flights MaxFlightOptions",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													"const moment = require('moment');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+													"\r",
+													"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+													"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+													"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+													""
+												],
+												"type": "text/javascript",
+												"id": "7bb29e2e-adce-4c41-9629-a58762261b2a"
+											}
+										}
+									],
+									"id": "d5d183dc-1893-4e57-bb6a-8f3f62b77f40",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"password": "Aa,123456",
+												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t],\r\n        \"maxFlightOptions\": 20\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost/EnvisionAPI/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando a quantidade de voos."
+									},
+									"response": []
+								}
+							],
 							"id": "670ef416-c386-4f22-b3c1-05b2d77a0729"
-						},
-						{
-							"name": "Search Flights Prod Filtro cias",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "eb586594-af08-488e-9f50-b584f1b1712d",
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "40f05056-9086-487d-9aad-8736597b3b45",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
-								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
-							},
-							"response": []
-						},
-						{
-							"name": "Search Flights Prod Filtro Intervalo Horario",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript",
-										"id": "8686b6cd-05e9-41df-b60d-05542eb4d455"
-									}
-								}
-							],
-							"id": "3bef078d-8a33-45ee-934f-43504827a357",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"RIO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 10,\r\n\t\t\t\t\t\"max\": 11\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"RIO\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 15,\r\n\t\t\t\t\t\"max\": 17\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
-								"description": "Nesse método é responsável por realizar a pesquisa de aéreo filtrando o horário"
-							},
-							"response": []
-						},
-						{
-							"name": "Search Flights Prod NonStop",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript",
-										"id": "4196ef02-c920-483a-bc16-d1961114b94f"
-									}
-								}
-							],
-							"id": "e72470c3-ee99-4548-9116-f7eabdda3bee",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.travelagent.com.br/Shopping/Search"
-							},
-							"response": []
-						},
-						{
-							"name": "Search Flights Prod MaxFlightOptions",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript",
-										"id": "fe0aa6c9-8f1a-49f4-9a96-cc578d254344"
-									}
-								}
-							],
-							"id": "af271f3e-d0b9-4dca-908a-63fe4e7fc898",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 2222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"recommendations\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t],\r\n        \"maxFlightOptions\": 2\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
-								"description": "Nesse método é responsável por realizar a pesquisa de aéreo realizando o filtro para o máximo de voos."
-							},
-							"response": []
-						},
-						{
-							"name": "Search Flights Prod Bagagem",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript",
-										"id": "eba272ae-732e-4858-9d00-ec44c290e71a"
-									}
-								}
-							],
-							"id": "8e3a9790-def3-4166-ba60-970c3b752602",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
-								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando voos com bagagem."
-							},
-							"response": []
-						},
-						{
-							"name": "Search Flights MaxFlightOptions",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											"const moment = require('moment');\r",
-											"\r",
-											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-											"\r",
-											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-											""
-										],
-										"type": "text/javascript",
-										"id": "7bb29e2e-adce-4c41-9629-a58762261b2a"
-									}
-								}
-							],
-							"id": "d5d183dc-1893-4e57-bb6a-8f3f62b77f40",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t],\r\n        \"maxFlightOptions\": 20\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "http://localhost/EnvisionAPI/Shopping/Search",
-								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando a quantidade de voos."
-							},
-							"response": []
 						},
 						{
 							"name": "PreOrder Aereo",
@@ -1021,32 +1078,32 @@
 	],
 	"variable": [
 		{
-			"id": "c342a4d2-1667-4a32-a4e8-332d5a1e8daa",
+			"id": "b9a80ceb-578c-4548-8cae-51cd728af560",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "284bf8f8-5308-4048-9d4d-5e1b0aab8c80",
+			"id": "f8cd7ab2-89f4-4fe7-91fa-1718b81dec52",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "bba7a8eb-8731-4794-b877-82dce904963f",
+			"id": "b8ce1ec6-983f-45d9-9e8e-f883975354f6",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "7896aa76-8210-47bd-9509-22073b5fd962",
+			"id": "b777eb6a-b961-43d9-b790-6418807d69fe",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "f88e4c6f-fcf7-4a4d-a3ed-092ba7475abf",
+			"id": "ae18b2f9-3077-4887-9251-ddf3de23b6f1",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "2e513bfc-6a93-4cbc-bf51-4b5231240a24",
+			"id": "a575a47b-be2d-4a4a-baef-c3dfda3ffc82",
 			"key": "returnYear",
 			"value": ""
 		}
