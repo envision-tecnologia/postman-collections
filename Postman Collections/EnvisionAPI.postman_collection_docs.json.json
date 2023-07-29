@@ -1,0 +1,1053 @@
+{
+	"info": {
+		"_postman_id": "3325423d-d56d-47a7-b1c1-0801961c9613",
+		"name": "EnvisionAPI Flows",
+		"description": "Bem vindo a documentação da Envision API\n\nMontamos alguns exemplos para consultas e criação de cadastro e reserva para produtos diferentes.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Shopping",
+			"item": [
+				{
+					"name": "Flights",
+					"item": [
+						{
+							"name": "Search Flights Prod Filtro cias",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "eb586594-af08-488e-9f50-b584f1b1712d",
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"_postman_id": "40f05056-9086-487d-9aad-8736597b3b45",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
+							},
+							"response": []
+						},
+						{
+							"name": "Search Flights Prod Filtro Intervalo Horario",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "8686b6cd-05e9-41df-b60d-05542eb4d455"
+									}
+								}
+							],
+							"_postman_id": "3bef078d-8a33-45ee-934f-43504827a357",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"RIO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 10,\r\n\t\t\t\t\t\"max\": 11\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"RIO\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 15,\r\n\t\t\t\t\t\"max\": 17\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aéreo filtrando o horário"
+							},
+							"response": []
+						},
+						{
+							"name": "Search Flights Prod NonStop",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "4196ef02-c920-483a-bc16-d1961114b94f"
+									}
+								}
+							],
+							"_postman_id": "e72470c3-ee99-4548-9116-f7eabdda3bee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search"
+							},
+							"response": []
+						},
+						{
+							"name": "Search Flights Prod MaxFlightOptions",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "fe0aa6c9-8f1a-49f4-9a96-cc578d254344"
+									}
+								}
+							],
+							"_postman_id": "af271f3e-d0b9-4dca-908a-63fe4e7fc898",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 2222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"recommendations\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t],\r\n        \"maxFlightOptions\": 2\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aéreo realizando o filtro para o máximo de voos."
+							},
+							"response": []
+						},
+						{
+							"name": "Search Flights Prod Bagagem",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "eba272ae-732e-4858-9d00-ec44c290e71a"
+									}
+								}
+							],
+							"_postman_id": "8e3a9790-def3-4166-ba60-970c3b752602",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando voos com bagagem."
+							},
+							"response": []
+						},
+						{
+							"name": "Search Flights MaxFlightOptions",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "7bb29e2e-adce-4c41-9629-a58762261b2a"
+									}
+								}
+							],
+							"_postman_id": "d5d183dc-1893-4e57-bb6a-8f3f62b77f40",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t],\r\n        \"maxFlightOptions\": 20\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost/EnvisionAPI/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando a quantidade de voos."
+							},
+							"response": []
+						},
+						{
+							"name": "PreOrder Aereo",
+							"_postman_id": "984a3f50-6cbf-45ad-99da-7443a71d5fde",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"travellers\": [{\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ],\r\n    \"air\": {\r\n        \"flightsSelections\": [{\r\n                \"flightGroup\": {\r\n                    \"originId\": 2702586,\r\n                    \"destinationId\": 2701273,\r\n                    \"arrivalTime\": {\r\n                        \"year\": 2021,\r\n                        \"month\": 2,\r\n                        \"day\": 10,\r\n                        \"dayOfWeek\": \"wednesday\",\r\n                        \"hour\": 11,\r\n                        \"minutes\": 55,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"departureTime\": {\r\n                        \"year\": 2021,\r\n                        \"month\": 2,\r\n                        \"day\": 10,\r\n                        \"dayOfWeek\": \"wednesday\",\r\n                        \"hour\": 10,\r\n                        \"minutes\": 55,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"issuerAirCompanyCode\": \"JJ\",\r\n                    \"supplierSystem\": \"Amadeus\",\r\n                    \"durationInMinutes\": 60,\r\n                    \"flights\": [{\r\n                            \"arrivalAirportId\": 2701273,\r\n                            \"departureAirportId\": 2702586,\r\n                            \"durationInMinutes\": 60,\r\n                            \"layoverInMinutes\": 0,\r\n                            \"arrivalDateTime\": {\r\n                                \"year\": 2021,\r\n                                \"month\": 2,\r\n                                \"day\": 10,\r\n                                \"dayOfWeek\": \"wednesday\",\r\n                                \"hour\": 11,\r\n                                \"minutes\": 55,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"departureDateTime\": {\r\n                                \"year\": 2021,\r\n                                \"month\": 2,\r\n                                \"day\": 10,\r\n                                \"dayOfWeek\": \"wednesday\",\r\n                                \"hour\": 10,\r\n                                \"minutes\": 55,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"cabinType\": \"economic\",\r\n                            \"airCompanyCode\": \"LA\",\r\n                            \"status\": \"unknwon\",\r\n                            \"operatedByAirCompanyCode\": \"LA\",\r\n                            \"flightNumber\": \"3112\",\r\n                            \"externalProperties\": \"{\\\"Cabin\\\":\\\"M\\\"}\",\r\n                            \"legs\": [],\r\n                            \"classOfService\": \"G\",\r\n                            \"aircraftType\": \"A319\"\r\n                        }\r\n                    ],\r\n                    \"externalProperties\": \"{\\\"codeShareDetails-Company\\\":\\\"JJ\\\",\\\"LoginInformationName\\\":\\\"Amadeus HU\\\"}\",\r\n                    \"stops\": 0\r\n                },\r\n                \"fare\": {\r\n                    \"externalProperties\": \"{\\\"Currency\\\":\\\"BRL\\\",\\\"IsNegoSpace\\\":false,\\\"TaxAmount\\\":36.06,\\\"TaxAmountCHD\\\":0.0,\\\"TaxAmountINF\\\":0.0,\\\"TaxAmountSRC\\\":0.0,\\\"TripType\\\":2,\\\"FareAmount\\\":56.02,\\\"DiscountRate\\\":0.0,\\\"USDFareAmount\\\":0.0,\\\"OriginalFareAmount\\\":56.015,\\\"OriginalFareAmountCHD\\\":0.0,\\\"OriginalFareAmountINF\\\":0.0,\\\"OriginalFareAmountSRC\\\":0.0,\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangeRate\\\":1.0,\\\"DUTaxes\\\":0.0,\\\"AdvancePurchase\\\":0.0,\\\"FlightClasses\\\":[\\\"G\\\"],\\\"CabinType\\\":2,\\\"FareBasis\\\":\\\"GOBNET1;Y\\\",\\\"FareRules\\\":null,\\\"RuleNumber\\\":null,\\\"CiaCode\\\":\\\"JJ\\\",\\\"MinStayHours\\\":0.0,\\\"MinStay\\\":\\\"00:00:00\\\",\\\"MaxStay\\\":\\\"00:00:00\\\",\\\"Source\\\":1,\\\"InboundOutbound\\\":0,\\\"CommercialAgreement\\\":{\\\"Id\\\":3074,\\\"Name\\\":\\\"ACORDO LATAM NAC\\\",\\\"AgreementCode\\\":\\\"155392\\\",\\\"AgreementType\\\":0,\\\"Classes\\\":\\\"\\\",\\\"AirCompanyId\\\":26,\\\"Source\\\":1,\\\"Active\\\":true,\\\"AmadeusLoginInformationId\\\":99,\\\"AzulLoginInformationId\\\":null,\\\"CionsLoginInformationIds\\\":{},\\\"GolLoginInformationId\\\":null,\\\"SabreLoginInformationId\\\":null,\\\"TamLoginInformationId\\\":null,\\\"AviancaLoginInformationId\\\":null,\\\"AmericanAirlinesLoginInformationId\\\":null,\\\"GalileoLoginInformationId\\\":null,\\\"KiuLoginInformationId\\\":null,\\\"ExternalId\\\":\\\"\\\",\\\"Condition\\\":\\\"<Parenthesis Operator=\\\\\\\"0\\\\\\\"><Field FieldName=\\\\\\\"Origin\\\\\\\" Operator=\\\\\\\"0\\\\\\\" Comparator=\\\\\\\"6\\\\\\\" Value=\\\\\\\"210\\\\\\\" Tag=\\\\\\\"\\\\\\\" ValueType=\\\\\\\"0\\\\\\\" /><Field FieldName=\\\\\\\"Destination\\\\\\\" Operator=\\\\\\\"1\\\\\\\" Comparator=\\\\\\\"6\\\\\\\" Value=\\\\\\\"210\\\\\\\" Tag=\\\\\\\"\\\\\\\" ValueType=\\\\\\\"0\\\\\\\" /></Parenthesis>\\\",\\\"CarCorpoteDiscountNumber\\\":null,\\\"CarPromotionCode\\\":null,\\\"CarCompanyCode\\\":null,\\\"CarCommercialAgreementInclusions\\\":null,\\\"PaxType\\\":\\\"\\\",\\\"IsOperatorFare\\\":true,\\\"AirCompanyCode\\\":\\\"LA\\\",\\\"ProductType\\\":1,\\\"CarITNumber\\\":null,\\\"AirTravelAgent\\\":false,\\\"AirCorporateGO\\\":false,\\\"AirTravelGO\\\":false,\\\"HotelTravelAgent\\\":false,\\\"HotelCorporateGO\\\":false,\\\"HotelTravelGO\\\":false,\\\"IsGlobalTravelAgent\\\":false,\\\"IsGlobalCorporateGO\\\":false,\\\"IsGlobalTravelGO\\\":false,\\\"LatamLoginInformationId\\\":null,\\\"CarTourCode\\\":null,\\\"LoyaltyCardNumber\\\":null,\\\"UseVoucherFake\\\":false},\\\"AgreementCode\\\":null,\\\"Pricing\\\":null,\\\"B2BExtension\\\":null,\\\"MarkupedFare\\\":56.02,\\\"DisplayFareAmount\\\":56.02,\\\"ExternalProperties\\\":{\\\"ExchangeRate.Old\\\":\\\"1\\\",\\\"Currency.Old\\\":\\\"BRL\\\",\\\"FareAmount.Old\\\":\\\"56.015\\\",\\\"TaxAmount.Old\\\":\\\"36.06\\\"},\\\"Quantity\\\":0,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"AwardAmount\\\":0.0,\\\"FareConversions\\\":[{\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangedCurrency\\\":\\\"BRL\\\",\\\"Value\\\":1.0,\\\"Exchanges\\\":{\\\"FareAmount\\\":56.02,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"FareAmountSRC\\\":0.0,\\\"TaxAmount\\\":36.06}}],\\\"FareAmountSRC\\\":0.0,\\\"BaggagesIncluded\\\":1,\\\"BrandedFaresFamily\\\":\\\"LIGHT\\\",\\\"OBFeeADT\\\":null,\\\"OBFeeCHD\\\":null,\\\"OBFeeINF\\\":null,\\\"FareType\\\":0}\",\r\n                    \"baggagesIncluded\": 0,\r\n                    \"brandedFareName\": \"LIGHT\",\r\n                    \"fareBasis\": \"GOBNET1;Y\",\r\n                    \"flightClasses\": [\"G\"],\r\n                    \"fareType\": \"public\",\r\n                    \"supplierSystem\": \"Amadeus\",\r\n                    \"agreementCode\": \"155392\",\r\n                    \"isRoundTripFare\": true\r\n                }\r\n            }, {\r\n                \"flightGroup\": {\r\n                    \"originId\": 2701273,\r\n                    \"destinationId\": 2702587,\r\n                    \"arrivalTime\": {\r\n                        \"year\": 2021,\r\n                        \"month\": 2,\r\n                        \"day\": 17,\r\n                        \"dayOfWeek\": \"wednesday\",\r\n                        \"hour\": 15,\r\n                        \"minutes\": 30,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"departureTime\": {\r\n                        \"year\": 2021,\r\n                        \"month\": 2,\r\n                        \"day\": 17,\r\n                        \"dayOfWeek\": \"wednesday\",\r\n                        \"hour\": 14,\r\n                        \"minutes\": 25,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"issuerAirCompanyCode\": \"JJ\",\r\n                    \"supplierSystem\": \"Amadeus\",\r\n                    \"durationInMinutes\": 65,\r\n                    \"flights\": [{\r\n                            \"arrivalAirportId\": 2702587,\r\n                            \"departureAirportId\": 2701273,\r\n                            \"durationInMinutes\": 65,\r\n                            \"layoverInMinutes\": 0,\r\n                            \"arrivalDateTime\": {\r\n                                \"year\": 2021,\r\n                                \"month\": 2,\r\n                                \"day\": 17,\r\n                                \"dayOfWeek\": \"wednesday\",\r\n                                \"hour\": 15,\r\n                                \"minutes\": 30,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"departureDateTime\": {\r\n                                \"year\": 2021,\r\n                                \"month\": 2,\r\n                                \"day\": 17,\r\n                                \"dayOfWeek\": \"wednesday\",\r\n                                \"hour\": 14,\r\n                                \"minutes\": 25,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"cabinType\": \"economic\",\r\n                            \"airCompanyCode\": \"LA\",\r\n                            \"status\": \"unknwon\",\r\n                            \"operatedByAirCompanyCode\": \"LA\",\r\n                            \"flightNumber\": \"3207\",\r\n                            \"externalProperties\": \"{\\\"Cabin\\\":\\\"M\\\"}\",\r\n                            \"legs\": [],\r\n                            \"classOfService\": \"G\",\r\n                            \"aircraftType\": \"A319\"\r\n                        }\r\n                    ],\r\n                    \"externalProperties\": \"{\\\"codeShareDetails-Company\\\":\\\"JJ\\\",\\\"LoginInformationName\\\":\\\"Amadeus HU\\\"}\",\r\n                    \"stops\": 0\r\n                },\r\n                \"fare\": {\r\n                    \"externalProperties\": \"{\\\"Currency\\\":\\\"BRL\\\",\\\"IsNegoSpace\\\":false,\\\"TaxAmount\\\":36.06,\\\"TaxAmountCHD\\\":0.0,\\\"TaxAmountINF\\\":0.0,\\\"TaxAmountSRC\\\":0.0,\\\"TripType\\\":2,\\\"FareAmount\\\":56.02,\\\"DiscountRate\\\":0.0,\\\"USDFareAmount\\\":0.0,\\\"OriginalFareAmount\\\":56.015,\\\"OriginalFareAmountCHD\\\":0.0,\\\"OriginalFareAmountINF\\\":0.0,\\\"OriginalFareAmountSRC\\\":0.0,\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangeRate\\\":1.0,\\\"DUTaxes\\\":0.0,\\\"AdvancePurchase\\\":0.0,\\\"FlightClasses\\\":[\\\"G\\\"],\\\"CabinType\\\":2,\\\"FareBasis\\\":\\\"GOBNET1;Y\\\",\\\"FareRules\\\":null,\\\"RuleNumber\\\":null,\\\"CiaCode\\\":\\\"JJ\\\",\\\"MinStayHours\\\":0.0,\\\"MinStay\\\":\\\"00:00:00\\\",\\\"MaxStay\\\":\\\"00:00:00\\\",\\\"Source\\\":1,\\\"InboundOutbound\\\":0,\\\"CommercialAgreement\\\":{\\\"Id\\\":3074,\\\"Name\\\":\\\"ACORDO LATAM NAC\\\",\\\"AgreementCode\\\":\\\"155392\\\",\\\"AgreementType\\\":0,\\\"Classes\\\":\\\"\\\",\\\"AirCompanyId\\\":26,\\\"Source\\\":1,\\\"Active\\\":true,\\\"AmadeusLoginInformationId\\\":99,\\\"AzulLoginInformationId\\\":null,\\\"CionsLoginInformationIds\\\":{},\\\"GolLoginInformationId\\\":null,\\\"SabreLoginInformationId\\\":null,\\\"TamLoginInformationId\\\":null,\\\"AviancaLoginInformationId\\\":null,\\\"AmericanAirlinesLoginInformationId\\\":null,\\\"GalileoLoginInformationId\\\":null,\\\"KiuLoginInformationId\\\":null,\\\"ExternalId\\\":\\\"\\\",\\\"Condition\\\":\\\"<Parenthesis Operator=\\\\\\\"0\\\\\\\"><Field FieldName=\\\\\\\"Origin\\\\\\\" Operator=\\\\\\\"0\\\\\\\" Comparator=\\\\\\\"6\\\\\\\" Value=\\\\\\\"210\\\\\\\" Tag=\\\\\\\"\\\\\\\" ValueType=\\\\\\\"0\\\\\\\" /><Field FieldName=\\\\\\\"Destination\\\\\\\" Operator=\\\\\\\"1\\\\\\\" Comparator=\\\\\\\"6\\\\\\\" Value=\\\\\\\"210\\\\\\\" Tag=\\\\\\\"\\\\\\\" ValueType=\\\\\\\"0\\\\\\\" /></Parenthesis>\\\",\\\"CarCorpoteDiscountNumber\\\":null,\\\"CarPromotionCode\\\":null,\\\"CarCompanyCode\\\":null,\\\"CarCommercialAgreementInclusions\\\":null,\\\"PaxType\\\":\\\"\\\",\\\"IsOperatorFare\\\":true,\\\"AirCompanyCode\\\":\\\"LA\\\",\\\"ProductType\\\":1,\\\"CarITNumber\\\":null,\\\"AirTravelAgent\\\":false,\\\"AirCorporateGO\\\":false,\\\"AirTravelGO\\\":false,\\\"HotelTravelAgent\\\":false,\\\"HotelCorporateGO\\\":false,\\\"HotelTravelGO\\\":false,\\\"IsGlobalTravelAgent\\\":false,\\\"IsGlobalCorporateGO\\\":false,\\\"IsGlobalTravelGO\\\":false,\\\"LatamLoginInformationId\\\":null,\\\"CarTourCode\\\":null,\\\"LoyaltyCardNumber\\\":null,\\\"UseVoucherFake\\\":false},\\\"AgreementCode\\\":null,\\\"Pricing\\\":null,\\\"B2BExtension\\\":null,\\\"MarkupedFare\\\":56.02,\\\"DisplayFareAmount\\\":56.02,\\\"ExternalProperties\\\":{\\\"ExchangeRate.Old\\\":\\\"1\\\",\\\"Currency.Old\\\":\\\"BRL\\\",\\\"FareAmount.Old\\\":\\\"56.015\\\",\\\"TaxAmount.Old\\\":\\\"36.06\\\"},\\\"Quantity\\\":0,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"AwardAmount\\\":0.0,\\\"FareConversions\\\":[{\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangedCurrency\\\":\\\"BRL\\\",\\\"Value\\\":1.0,\\\"Exchanges\\\":{\\\"FareAmount\\\":56.02,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"FareAmountSRC\\\":0.0,\\\"TaxAmount\\\":36.06}}],\\\"FareAmountSRC\\\":0.0,\\\"BaggagesIncluded\\\":1,\\\"BrandedFaresFamily\\\":\\\"LIGHT\\\",\\\"OBFeeADT\\\":null,\\\"OBFeeCHD\\\":null,\\\"OBFeeINF\\\":null,\\\"FareType\\\":0}\",\r\n                    \"baggagesIncluded\": 0,\r\n                    \"brandedFareName\": \"LIGHT\",\r\n                    \"fareBasis\": \"GOBNET1;Y\",\r\n                    \"flightClasses\": [\"G\"],\r\n                    \"fareType\": \"public\",\r\n                    \"supplierSystem\": \"Amadeus\",\r\n                    \"agreementCode\": \"155392\",\r\n                    \"isRoundTripFare\": true\r\n                }\r\n            }\r\n        ]\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/PreOrder",
+								"description": "Esse método é responsável por realizar a tarifação do aéreo."
+							},
+							"response": []
+						},
+						{
+							"name": "ProcessOrder Aereo",
+							"_postman_id": "61d3ffd9-60a8-41a9-9bef-0d2ee8d071f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"travellers\": [{\r\n            \"firstName\": \"Passageiro\",\r\n            \"lastName\": \"Envision\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            }\r\n        }\r\n    ],\r\n    \"air\": {\r\n        \"flightGroups\": [{\r\n                \"originId\": 2702586,\r\n                \"destinationId\": 2701273,\r\n                \"arrivalTime\": {\r\n                    \"year\": 2021,\r\n                    \"month\": 2,\r\n                    \"day\": 10,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 11,\r\n                    \"minutes\": 55,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"departureTime\": {\r\n                    \"year\": 2021,\r\n                    \"month\": 2,\r\n                    \"day\": 10,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 10,\r\n                    \"minutes\": 55,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"issuerAirCompanyCode\": \"JJ\",\r\n                \"supplierSystem\": \"Amadeus\",\r\n                \"durationInMinutes\": 60,\r\n                \"flights\": [{\r\n                        \"arrivalAirportId\": 2701273,\r\n                        \"departureAirportId\": 2702586,\r\n                        \"durationInMinutes\": 60,\r\n                        \"layoverInMinutes\": 0,\r\n                        \"arrivalDateTime\": {\r\n                            \"year\": 2021,\r\n                            \"month\": 2,\r\n                            \"day\": 10,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 11,\r\n                            \"minutes\": 55,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"departureDateTime\": {\r\n                            \"year\": 2021,\r\n                            \"month\": 2,\r\n                            \"day\": 10,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 10,\r\n                            \"minutes\": 55,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"cabinType\": \"economic\",\r\n                        \"airCompanyCode\": \"LA\",\r\n                        \"status\": \"unknwon\",\r\n                        \"operatedByAirCompanyCode\": \"LA\",\r\n                        \"flightNumber\": \"3112\",\r\n                        \"externalProperties\": \"{\\\"Cabin\\\":\\\"M\\\"}\",\r\n                        \"legs\": [],\r\n                        \"classOfService\": \"G\",\r\n                        \"aircraftType\": \"A319\"\r\n                    }\r\n                ],\r\n                \"externalProperties\": \"{\\\"codeShareDetails-Company\\\":\\\"JJ\\\",\\\"LoginInformationName\\\":\\\"Amadeus HU\\\",\\\"IsInternational\\\":\\\"False\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":36.06,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":2,\\\\\\\"FareAmount\\\\\\\":56.02,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":56.015,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":0.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[\\\\\\\"G\\\\\\\"],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"GOBNET1;Y\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":null,\\\\\\\"CiaCode\\\\\\\":\\\\\\\"JJ\\\\\\\",\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":1,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":{\\\\\\\"Id\\\\\\\":3074,\\\\\\\"Name\\\\\\\":\\\\\\\"ACORDO LATAM NAC\\\\\\\",\\\\\\\"AgreementCode\\\\\\\":\\\\\\\"155392\\\\\\\",\\\\\\\"AgreementType\\\\\\\":0,\\\\\\\"Classes\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"AirCompanyId\\\\\\\":26,\\\\\\\"Source\\\\\\\":1,\\\\\\\"Active\\\\\\\":true,\\\\\\\"AmadeusLoginInformationId\\\\\\\":99,\\\\\\\"AzulLoginInformationId\\\\\\\":null,\\\\\\\"CionsLoginInformationIds\\\\\\\":{},\\\\\\\"GolLoginInformationId\\\\\\\":null,\\\\\\\"SabreLoginInformationId\\\\\\\":null,\\\\\\\"TamLoginInformationId\\\\\\\":null,\\\\\\\"AviancaLoginInformationId\\\\\\\":null,\\\\\\\"AmericanAirlinesLoginInformationId\\\\\\\":null,\\\\\\\"GalileoLoginInformationId\\\\\\\":null,\\\\\\\"KiuLoginInformationId\\\\\\\":null,\\\\\\\"ExternalId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"Condition\\\\\\\":\\\\\\\"<Parenthesis Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\"><Field FieldName=\\\\\\\\\\\\\\\"Origin\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"6\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" /><Field FieldName=\\\\\\\\\\\\\\\"Destination\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"6\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" /></Parenthesis>\\\\\\\",\\\\\\\"CarCorpoteDiscountNumber\\\\\\\":null,\\\\\\\"CarPromotionCode\\\\\\\":null,\\\\\\\"CarCompanyCode\\\\\\\":null,\\\\\\\"CarCommercialAgreementInclusions\\\\\\\":null,\\\\\\\"PaxType\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"IsOperatorFare\\\\\\\":true,\\\\\\\"AirCompanyCode\\\\\\\":\\\\\\\"LA\\\\\\\",\\\\\\\"ProductType\\\\\\\":1,\\\\\\\"CarITNumber\\\\\\\":null,\\\\\\\"AirTravelAgent\\\\\\\":false,\\\\\\\"AirCorporateGO\\\\\\\":false,\\\\\\\"AirTravelGO\\\\\\\":false,\\\\\\\"HotelTravelAgent\\\\\\\":false,\\\\\\\"HotelCorporateGO\\\\\\\":false,\\\\\\\"HotelTravelGO\\\\\\\":false,\\\\\\\"IsGlobalTravelAgent\\\\\\\":false,\\\\\\\"IsGlobalCorporateGO\\\\\\\":false,\\\\\\\"IsGlobalTravelGO\\\\\\\":false,\\\\\\\"LatamLoginInformationId\\\\\\\":null,\\\\\\\"CarTourCode\\\\\\\":null,\\\\\\\"LoyaltyCardNumber\\\\\\\":null,\\\\\\\"UseVoucherFake\\\\\\\":false},\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":56.02,\\\\\\\"DisplayFareAmount\\\\\\\":56.02,\\\\\\\"ExternalProperties\\\\\\\":{\\\\\\\"ExchangeRate.Old\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"Currency.Old\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"FareAmount.Old\\\\\\\":\\\\\\\"56.015\\\\\\\",\\\\\\\"TaxAmount.Old\\\\\\\":\\\\\\\"36.06\\\\\\\"},\\\\\\\"Quantity\\\\\\\":0,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[{\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangedCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"Value\\\\\\\":1.0,\\\\\\\"Exchanges\\\\\\\":{\\\\\\\"FareAmount\\\\\\\":56.02,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"TaxAmount\\\\\\\":36.06}}],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":1,\\\\\\\"BrandedFaresFamily\\\\\\\":\\\\\\\"LIGHT\\\\\\\",\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\"}\",\r\n                \"stops\": 0,\r\n                \"baggagesIncluded\": 0\r\n            }, {\r\n                \"originId\": 2701273,\r\n                \"destinationId\": 2702587,\r\n                \"arrivalTime\": {\r\n                    \"year\": 2021,\r\n                    \"month\": 2,\r\n                    \"day\": 17,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 15,\r\n                    \"minutes\": 30,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"departureTime\": {\r\n                    \"year\": 2021,\r\n                    \"month\": 2,\r\n                    \"day\": 17,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 14,\r\n                    \"minutes\": 25,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"issuerAirCompanyCode\": \"JJ\",\r\n                \"supplierSystem\": \"Amadeus\",\r\n                \"durationInMinutes\": 65,\r\n                \"flights\": [{\r\n                        \"arrivalAirportId\": 2702587,\r\n                        \"departureAirportId\": 2701273,\r\n                        \"durationInMinutes\": 65,\r\n                        \"layoverInMinutes\": 0,\r\n                        \"arrivalDateTime\": {\r\n                            \"year\": 2021,\r\n                            \"month\": 2,\r\n                            \"day\": 17,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 15,\r\n                            \"minutes\": 30,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"departureDateTime\": {\r\n                            \"year\": 2021,\r\n                            \"month\": 2,\r\n                            \"day\": 17,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 14,\r\n                            \"minutes\": 25,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"cabinType\": \"economic\",\r\n                        \"airCompanyCode\": \"LA\",\r\n                        \"status\": \"unknwon\",\r\n                        \"operatedByAirCompanyCode\": \"LA\",\r\n                        \"flightNumber\": \"3207\",\r\n                        \"externalProperties\": \"{\\\"Cabin\\\":\\\"M\\\"}\",\r\n                        \"legs\": [],\r\n                        \"classOfService\": \"G\",\r\n                        \"aircraftType\": \"A319\"\r\n                    }\r\n                ],\r\n                \"externalProperties\": \"{\\\"codeShareDetails-Company\\\":\\\"JJ\\\",\\\"LoginInformationName\\\":\\\"Amadeus HU\\\",\\\"IsInternational\\\":\\\"False\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":36.06,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":2,\\\\\\\"FareAmount\\\\\\\":56.02,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":56.015,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":0.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[\\\\\\\"G\\\\\\\"],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"GOBNET1;Y\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":null,\\\\\\\"CiaCode\\\\\\\":\\\\\\\"JJ\\\\\\\",\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":1,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":{\\\\\\\"Id\\\\\\\":3074,\\\\\\\"Name\\\\\\\":\\\\\\\"ACORDO LATAM NAC\\\\\\\",\\\\\\\"AgreementCode\\\\\\\":\\\\\\\"155392\\\\\\\",\\\\\\\"AgreementType\\\\\\\":0,\\\\\\\"Classes\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"AirCompanyId\\\\\\\":26,\\\\\\\"Source\\\\\\\":1,\\\\\\\"Active\\\\\\\":true,\\\\\\\"AmadeusLoginInformationId\\\\\\\":99,\\\\\\\"AzulLoginInformationId\\\\\\\":null,\\\\\\\"CionsLoginInformationIds\\\\\\\":{},\\\\\\\"GolLoginInformationId\\\\\\\":null,\\\\\\\"SabreLoginInformationId\\\\\\\":null,\\\\\\\"TamLoginInformationId\\\\\\\":null,\\\\\\\"AviancaLoginInformationId\\\\\\\":null,\\\\\\\"AmericanAirlinesLoginInformationId\\\\\\\":null,\\\\\\\"GalileoLoginInformationId\\\\\\\":null,\\\\\\\"KiuLoginInformationId\\\\\\\":null,\\\\\\\"ExternalId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"Condition\\\\\\\":\\\\\\\"<Parenthesis Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\"><Field FieldName=\\\\\\\\\\\\\\\"Origin\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"6\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" /><Field FieldName=\\\\\\\\\\\\\\\"Destination\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"6\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" /></Parenthesis>\\\\\\\",\\\\\\\"CarCorpoteDiscountNumber\\\\\\\":null,\\\\\\\"CarPromotionCode\\\\\\\":null,\\\\\\\"CarCompanyCode\\\\\\\":null,\\\\\\\"CarCommercialAgreementInclusions\\\\\\\":null,\\\\\\\"PaxType\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"IsOperatorFare\\\\\\\":true,\\\\\\\"AirCompanyCode\\\\\\\":\\\\\\\"LA\\\\\\\",\\\\\\\"ProductType\\\\\\\":1,\\\\\\\"CarITNumber\\\\\\\":null,\\\\\\\"AirTravelAgent\\\\\\\":false,\\\\\\\"AirCorporateGO\\\\\\\":false,\\\\\\\"AirTravelGO\\\\\\\":false,\\\\\\\"HotelTravelAgent\\\\\\\":false,\\\\\\\"HotelCorporateGO\\\\\\\":false,\\\\\\\"HotelTravelGO\\\\\\\":false,\\\\\\\"IsGlobalTravelAgent\\\\\\\":false,\\\\\\\"IsGlobalCorporateGO\\\\\\\":false,\\\\\\\"IsGlobalTravelGO\\\\\\\":false,\\\\\\\"LatamLoginInformationId\\\\\\\":null,\\\\\\\"CarTourCode\\\\\\\":null,\\\\\\\"LoyaltyCardNumber\\\\\\\":null,\\\\\\\"UseVoucherFake\\\\\\\":false},\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":56.02,\\\\\\\"DisplayFareAmount\\\\\\\":56.02,\\\\\\\"ExternalProperties\\\\\\\":{\\\\\\\"ExchangeRate.Old\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"Currency.Old\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"FareAmount.Old\\\\\\\":\\\\\\\"56.015\\\\\\\",\\\\\\\"TaxAmount.Old\\\\\\\":\\\\\\\"36.06\\\\\\\"},\\\\\\\"Quantity\\\\\\\":0,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[{\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangedCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"Value\\\\\\\":1.0,\\\\\\\"Exchanges\\\\\\\":{\\\\\\\"FareAmount\\\\\\\":56.02,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"TaxAmount\\\\\\\":36.06}}],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":1,\\\\\\\"BrandedFaresFamily\\\\\\\":\\\\\\\"LIGHT\\\\\\\",\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\"}\",\r\n                \"stops\": 0,\r\n                \"baggagesIncluded\": 0\r\n            }\r\n        ],\r\n        \"bookingFares\": [{\r\n                \"agreementCode\": \"155392\",\r\n                \"exchangeRate\": 1.0,\r\n                \"displayFareAmount\": {\r\n                    \"value\": 112.03,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"taxes\": {\r\n                    \"value\": 72.12,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"fare\": {\r\n                    \"value\": 112.03,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"equivalentFare\": {\r\n                    \"value\": 112.03,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"duTaxes\": {\r\n                    \"value\": 0.0,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"fareBasis\": \"GOBNET1\",\r\n                \"travellerAgeGroup\": \"adult\",\r\n                \"fareType\": \"operator\",\r\n                \"supplierSystem\": \"Amadeus\",\r\n                \"externalProperties\": \"{\\\"discountCode\\\":\\\"IT\\\",\\\"FareConversion.Value\\\":\\\"1.0000\\\",\\\"FareConversion.ExchangedCurrency\\\":\\\"BRL\\\"}\",\r\n                \"total\": {\r\n                    \"value\": 184.15,\r\n                    \"currencyCode\": \"BRL\"\r\n                },\r\n                \"travellersCount\": 1\r\n            }\r\n        ]\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
+								"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
+							},
+							"response": []
+						},
+						{
+							"name": "IssueTickets",
+							"_postman_id": "5c5582dd-f2c4-4a36-a556-efdd340b7feb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"username": "paulo.martins@hurb.com",
+										"password": "paveGa1000*",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"tickets\": [{\r\n            \"travellerName\": \"PASSAGEIRO ENVISION\",\r\n            \"pnrLocator\": \"3N8MRP\",\r\n            \"supplierSystem\": \"Amadeus\"\r\n        }\r\n    ],\r\n    \"payments\": [{\r\n            \"totalValue\": {\r\n                \"value\": 184.15,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"method\": \"invoice\"\r\n        }\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/IssueTickets"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "f0d25fc5-bc94-4d1b-9534-cc0bfe1a1abc",
+					"description": "No Flights temos os métodos do aéreo, como pesquisa, tarifação e reserva",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Hotels",
+					"item": [
+						{
+							"name": "Search de Hotel",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "4f26933a-1fe7-4f4a-bddf-1ee062a0a7cd"
+									}
+								}
+							],
+							"_postman_id": "9b8cac57-403d-4936-9e47-d098a777929a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"companyContext\": {\r\n\r\n        \"consolidator\": {\r\n\r\n            \"id\": 11111\r\n\r\n        },\r\n\r\n        \"travelAgency\": {\r\n\r\n            \"id\": 22222\r\n\r\n        }\r\n\r\n    },\r\n\r\n    \"hotelParameters\": {\r\n\r\n        \"checkIn\": {\r\n\r\n            \"year\": 2022,\r\n\r\n            \"month\": 10,\r\n\r\n            \"day\": 5,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"checkOut\": {\r\n\r\n            \"year\": 2022,\r\n\r\n            \"month\": 10,\r\n\r\n            \"day\": 12,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"locationId\": 258680\r\n\r\n    },\r\n\r\n    \"paginationParameters\": {\r\n\r\n        \"pageNumber\": 1,\r\n\r\n        \"itemsPerPage\": 1000\r\n\r\n    },\r\n\r\n    \"sortParameters\": {\r\n\r\n        \"sortBy\": \"price\",\r\n\r\n        \"descending\": true\r\n\r\n    },\r\n\r\n    \"asynchronous\": false,\r\n\r\n    \"travellers\": [{\r\n\r\n            \"ageGroup\": \"adult\",\r\n\r\n            \"age\": 30\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/api/Shopping/Search",
+								"description": "Método responsável por realizar a pesquisa de hotel."
+							},
+							"response": []
+						},
+						{
+							"name": "PreOrder Hotel",
+							"_postman_id": "c9b85ed2-6616-41ae-a75a-401efa6c4560",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"companyContext\": {\r\n\r\n        \"consolidator\": {\r\n\r\n            \"id\":11111\r\n\r\n        },\r\n\r\n        \"travelAgency\": {\r\n\r\n            \"id\":22222\r\n\r\n        \t}\r\n\r\n    \t},\r\n  \"travellers\": [\r\n    {\r\n      \"ageGroup\": \"adult\",\r\n      \"age\": 30\r\n    }\r\n  ],\r\n  \"hotel\": {\r\n    \"hotels\": [\r\n            {\r\n                \"name\": \"Energia do Vento Pousada\",\r\n                \"images\": [],\r\n                \"rooms\": [\r\n                    {\r\n                        \"name\": \"Comfort Room\",\r\n                        \"supplierSystem\": \"EzLink\",\r\n                        \"externalProperties\": \"{\\\"HotelBrokerId\\\":\\\"610ade98b1d0b51c270d4f29\\\",\\\"RoomBrokerId\\\":\\\"3b5f5b60-18ac-11ed-a260-3f130f6c03ca\\\",\\\"Refundable\\\":\\\"True\\\",\\\"Id\\\":\\\"446655\\\",\\\"SO_ExternalProperties\\\":\\\"{\\\\\\\"Token\\\\\\\":\\\\\\\"3b3c4300-18ac-11ed-b647-d7a12ee526f5\\\\\\\"}\\\"}\",\r\n                        \"originalBrokerName\": \"EzLink\",\r\n                        \"supplierSystemCodes\": {\r\n                            \"EzLink\": \"3b5f5b60-18ac-11ed-a260-3f130f6c03ca\"\r\n                        },\r\n                        \"board\": {\r\n                            \"name\": \"Café da manhã\",\r\n                            \"externalProperties\": \"{\\\"BoardId\\\":\\\"1\\\",\\\"Id\\\":\\\"0\\\"}\",\r\n                            \"description\": \"Breakfast\"\r\n                        },\r\n                        \"dailyFareDiscount\": {\r\n                            \"value\": 0.0\r\n                        },\r\n                        \"dailyFare\": {\r\n                            \"value\": 250.36,\r\n                            \"currencyCode\": \"BRL\"\r\n                        },\r\n                        \"originalDailyFare\": {\r\n                            \"value\": 250.36,\r\n                            \"currencyCode\": \"BRL\"\r\n                        },\r\n                        \"dailyTax\": {\r\n                            \"value\": 0.0,\r\n                            \"currencyCode\": \"BRL\"\r\n                        },\r\n                        \"originalDailyTax\": {\r\n                            \"value\": 0.0\r\n                        },\r\n                        \"checkIn\": {\r\n                            \"year\": 2022,\r\n                            \"month\": 11,\r\n                            \"day\": 12,\r\n                            \"dayOfWeek\": \"saturday\",\r\n                            \"hour\": 0,\r\n                            \"minutes\": 0,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"checkOut\": {\r\n                            \"year\": 2022,\r\n                            \"month\": 11,\r\n                            \"day\": 13,\r\n                            \"dayOfWeek\": \"sunday\",\r\n                            \"hour\": 0,\r\n                            \"minutes\": 0,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        }\r\n                    }\r\n                ],\r\n                \"externalProperties\": \"{\\\"Merged\\\":\\\"True\\\",\\\"LoginInformationName\\\":\\\"\\\",\\\"Id\\\":\\\"5000212\\\",\\\"LocationId\\\":\\\"2703100\\\"}\",\r\n                \"address\": {\r\n                    \"street\": \"R. Poços de Caldas, 238\",\r\n                    \"city\": \"ILHA COMPRIDA\",\r\n                    \"country\": \"Brasil\",\r\n                    \"longitude\": -47.5508000,\r\n                    \"latitude\": -24.7458000\r\n                },\r\n                \"stars\": 3.0,\r\n                \"supplierSystemCodes\": {\r\n                    \"EzLink\": \"610ade98b1d0b51c270d4f29\"\r\n                }\r\n            }\r\n        ]\r\n  },\r\n  \"searchRQ\": {\r\n    \t\"companyContext\": {\r\n\r\n        \"consolidator\": {\r\n\r\n            \"id\":92783\r\n\r\n        },\r\n\r\n        \"travelAgency\": {\r\n\r\n            \"id\":92783\r\n\r\n        \t}\r\n\r\n    \t},\r\n\t\t\"paginationParameters\": {\r\n\t\t\t\"pageIndex\": 1,\r\n\t\t\t\"itemsPerPage\": 999\r\n\t\t},\r\n\t\t\"sortParameters\": {\r\n\t\t\t\"sortBy\": \"price\",\r\n\t\t\t\"descending\": false\r\n\t\t},\r\n\t\t\"asynchronous\": false,\r\n\t\t\"travellers\": [{\r\n\t\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\t\"age\": 30\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Records/PreOrder",
+								"description": "Método responsável por realizar a tarifação de hotel."
+							},
+							"response": []
+						},
+						{
+							"name": "ProcessOrder Hotel",
+							"_postman_id": "2a78efb0-cf3a-418f-8a7c-db6d7bcea963",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111,\r\n\t\t\t\"name\": \"ENVISION TECNOLOGIA\",\r\n\t\t\t\"systemAccountId\": 0\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222,\r\n\t\t\t\"name\": \"ENVISION AGENCIA\",\r\n\t\t\t\"systemAccountId\": 0\r\n\t\t}\r\n\t},\r\n\t\"travellers\": [{\r\n\t\t\t\"firstName\": \"MARI\\u00c2NGELA\",\r\n\t\t\t\"middleName\": \"PORTELA PINHEIRO DA\",\r\n\t\t\t\"lastName\": \"SILVA\",\r\n\t\t\t\"birthDate\": {\r\n\t\t\t\t\"year\": 1993,\r\n\t\t\t\t\"month\": 10,\r\n\t\t\t\t\"day\": 18,\r\n\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\"millisecond\": 0\r\n\t\t\t},\r\n\t\t\t\"nationalityCode\": \"BRA\",\r\n\t\t\t\"gender\": \"male\",\r\n\t\t\t\"documents\": [{\r\n\t\t\t\t\t\"number\": \"222141162\",\r\n\t\t\t\t\t\"documentType\": 2\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}, {\r\n\t\t\t\"firstName\": \"LUIZ\",\r\n\t\t\t\"middleName\": \"ALBERTO ROCHA\",\r\n\t\t\t\"lastName\": \"GRA\\u00c7ANO\",\r\n\t\t\t\"birthDate\": {\r\n\t\t\t\t\"year\": 1992,\r\n\t\t\t\t\"month\": 12,\r\n\t\t\t\t\"day\": 3,\r\n\t\t\t\t\"dayOfWeek\": \"thursday\",\r\n\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\"millisecond\": 0\r\n\t\t\t},\r\n\t\t\t\"nationalityCode\": \"BRA\",\r\n\t\t\t\"gender\": \"male\",\r\n\t\t\t\"documents\": [{\r\n\t\t\t\t\t\"number\": \"129280509\",\r\n\t\t\t\t\t\"documentType\": 2\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"air\": {\r\n\t\t\"flightGroups\": [{\r\n\t\t\t\t\"originId\": 2701188,\r\n\t\t\t\t\"destinationId\": 2701176,\r\n\t\t\t\t\"arrivalTime\": {\r\n\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\"hour\": 10,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"departureTime\": {\r\n\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\"hour\": 6,\r\n\t\t\t\t\t\"minutes\": 15,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"issuerAirCompanyCode\": \"G3\",\r\n\t\t\t\t\"supplierSystem\": \"Gol\",\r\n\t\t\t\t\"durationInMinutes\": 185,\r\n\t\t\t\t\"flights\": [{\r\n\t\t\t\t\t\t\"arrivalAirportId\": 2702587,\r\n\t\t\t\t\t\t\"departureAirportId\": 2701188,\r\n\t\t\t\t\t\t\"durationInMinutes\": 75,\r\n\t\t\t\t\t\t\"layoverInMinutes\": 100,\r\n\t\t\t\t\t\t\"arrivalDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\t\t\"hour\": 7,\r\n\t\t\t\t\t\t\t\"minutes\": 30,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"departureDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\t\t\"hour\": 6,\r\n\t\t\t\t\t\t\t\"minutes\": 15,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"cabinType\": \"economic\",\r\n\t\t\t\t\t\t\"airCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"status\": \"unknwon\",\r\n\t\t\t\t\t\t\"operatedByAirCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"flightNumber\": \"1063\",\r\n\t\t\t\t\t\t\"externalProperties\": \"{\\\"OpSuffix\\\":\\\"\\\",\\\"FlightDesignatorCarrierCode\\\":\\\"G3\\\",\\\"FlightDesignatorFlightNumber\\\":\\\"1063\\\"}\",\r\n\t\t\t\t\t\t\"legs\": [],\r\n\t\t\t\t\t\t\"classOfService\": \"A\",\r\n\t\t\t\t\t\t\"aircraftType\": \"737-800\"\r\n\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\"arrivalAirportId\": 2701176,\r\n\t\t\t\t\t\t\"departureAirportId\": 2702587,\r\n\t\t\t\t\t\t\"durationInMinutes\": 110,\r\n\t\t\t\t\t\t\"layoverInMinutes\": 0,\r\n\t\t\t\t\t\t\"arrivalDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\t\t\"hour\": 10,\r\n\t\t\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"departureDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\t\t\"hour\": 9,\r\n\t\t\t\t\t\t\t\"minutes\": 10,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"cabinType\": \"economic\",\r\n\t\t\t\t\t\t\"airCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"status\": \"unknwon\",\r\n\t\t\t\t\t\t\"operatedByAirCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"flightNumber\": \"1136\",\r\n\t\t\t\t\t\t\"externalProperties\": \"{\\\"OpSuffix\\\":\\\"\\\",\\\"FlightDesignatorCarrierCode\\\":\\\"G3\\\",\\\"FlightDesignatorFlightNumber\\\":\\\"1136\\\"}\",\r\n\t\t\t\t\t\t\"legs\": [],\r\n\t\t\t\t\t\t\"classOfService\": \"A\",\r\n\t\t\t\t\t\t\"aircraftType\": \"737-800\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"externalProperties\": \"{\\\"LoginInformationName\\\":\\\"Credencial Gol\\\",\\\"IsInternational\\\":\\\"False\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":32.84,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":2,\\\\\\\"FareAmount\\\\\\\":442.18,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":442.180000000,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":0.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[\\\\\\\"A\\\\\\\",\\\\\\\"A\\\\\\\"],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"APBSDS3\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":\\\\\\\"EP00\\\\\\\",\\\\\\\"CiaCode\\\\\\\":\\\\\\\"G3\\\\\\\",\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":4,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":{\\\\\\\"Id\\\\\\\":3674,\\\\\\\"Name\\\\\\\":\\\\\\\"GOL\\\\\\\",\\\\\\\"AgreementCode\\\\\\\":\\\\\\\"OPER1\\\\\\\",\\\\\\\"AgreementType\\\\\\\":0,\\\\\\\"Classes\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"AirCompanyId\\\\\\\":1070,\\\\\\\"Source\\\\\\\":4,\\\\\\\"Active\\\\\\\":true,\\\\\\\"AmadeusLoginInformationId\\\\\\\":null,\\\\\\\"AzulLoginInformationId\\\\\\\":null,\\\\\\\"CionsLoginInformationIds\\\\\\\":{},\\\\\\\"GolLoginInformationId\\\\\\\":648,\\\\\\\"SabreLoginInformationId\\\\\\\":637,\\\\\\\"TamLoginInformationId\\\\\\\":null,\\\\\\\"AviancaLoginInformationId\\\\\\\":null,\\\\\\\"AmericanAirlinesLoginInformationId\\\\\\\":null,\\\\\\\"GalileoLoginInformationId\\\\\\\":null,\\\\\\\"KiuLoginInformationId\\\\\\\":null,\\\\\\\"ExternalId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"Condition\\\\\\\":\\\\\\\"<Parenthesis Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\"><Field FieldName=\\\\\\\\\\\\\\\"Origin\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" \\/><Field FieldName=\\\\\\\\\\\\\\\"TripType\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" \\/><\\/Parenthesis>\\\\\\\",\\\\\\\"CarCorpoteDiscountNumber\\\\\\\":null,\\\\\\\"CarPromotionCode\\\\\\\":null,\\\\\\\"CarCompanyCode\\\\\\\":null,\\\\\\\"CarCommercialAgreementInclusions\\\\\\\":null,\\\\\\\"PaxType\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"IsOperatorFare\\\\\\\":true,\\\\\\\"AirCompanyCode\\\\\\\":\\\\\\\"G3\\\\\\\",\\\\\\\"ProductType\\\\\\\":1,\\\\\\\"CarITNumber\\\\\\\":null,\\\\\\\"AirTravelAgent\\\\\\\":false,\\\\\\\"AirCorporateGO\\\\\\\":false,\\\\\\\"AirTravelGO\\\\\\\":false,\\\\\\\"HotelTravelAgent\\\\\\\":false,\\\\\\\"HotelCorporateGO\\\\\\\":false,\\\\\\\"HotelTravelGO\\\\\\\":false,\\\\\\\"IsGlobalTravelAgent\\\\\\\":false,\\\\\\\"IsGlobalCorporateGO\\\\\\\":false,\\\\\\\"IsGlobalTravelGO\\\\\\\":false,\\\\\\\"LatamLoginInformationId\\\\\\\":null,\\\\\\\"CarTourCode\\\\\\\":null,\\\\\\\"LoyaltyCardNumber\\\\\\\":null,\\\\\\\"UseVoucherFake\\\\\\\":false},\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":442.18,\\\\\\\"DisplayFareAmount\\\\\\\":442.18,\\\\\\\"ExternalProperties\\\\\\\":{\\\\\\\"FareSequence\\\\\\\":\\\\\\\"6\\\\\\\",\\\\\\\"ADTProductClass\\\\\\\":\\\\\\\"PL\\\\\\\",\\\\\\\"ADTPaxTypeHasAgreement\\\\\\\":\\\\\\\"True\\\\\\\",\\\\\\\"ExchangeRate.Old\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"Currency.Old\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"FareAmount.Old\\\\\\\":\\\\\\\"442.180000000\\\\\\\",\\\\\\\"TaxAmount.Old\\\\\\\":\\\\\\\"32.840000000\\\\\\\"},\\\\\\\"Quantity\\\\\\\":1,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[{\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangedCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"Value\\\\\\\":1.0,\\\\\\\"Exchanges\\\\\\\":{\\\\\\\"FareAmount\\\\\\\":442.18,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"TaxAmount\\\\\\\":32.84}}],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":2,\\\\\\\"BrandedFaresFamily\\\\\\\":\\\\\\\"Plus\\\\\\\",\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\"}\",\r\n\t\t\t\t\"stops\": 1,\r\n\t\t\t\t\"baggagesIncluded\": 1\r\n\t\t\t}, {\r\n\t\t\t\t\"originId\": 2701176,\r\n\t\t\t\t\"destinationId\": 2701188,\r\n\t\t\t\t\"arrivalTime\": {\r\n\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\"hour\": 23,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"departureTime\": {\r\n\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\"hour\": 18,\r\n\t\t\t\t\t\"minutes\": 10,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"issuerAirCompanyCode\": \"G3\",\r\n\t\t\t\t\"supplierSystem\": \"Gol\",\r\n\t\t\t\t\"durationInMinutes\": 165,\r\n\t\t\t\t\"flights\": [{\r\n\t\t\t\t\t\t\"arrivalAirportId\": 2702587,\r\n\t\t\t\t\t\t\"departureAirportId\": 2701176,\r\n\t\t\t\t\t\t\"durationInMinutes\": 100,\r\n\t\t\t\t\t\t\"layoverInMinutes\": 65,\r\n\t\t\t\t\t\t\"arrivalDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\t\t\"hour\": 20,\r\n\t\t\t\t\t\t\t\"minutes\": 50,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"departureDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\t\t\"hour\": 18,\r\n\t\t\t\t\t\t\t\"minutes\": 10,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"cabinType\": \"economic\",\r\n\t\t\t\t\t\t\"airCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"status\": \"unknwon\",\r\n\t\t\t\t\t\t\"operatedByAirCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"flightNumber\": \"1157\",\r\n\t\t\t\t\t\t\"externalProperties\": \"{\\\"OpSuffix\\\":\\\"\\\",\\\"FlightDesignatorCarrierCode\\\":\\\"G3\\\",\\\"FlightDesignatorFlightNumber\\\":\\\"1157\\\"}\",\r\n\t\t\t\t\t\t\"legs\": [],\r\n\t\t\t\t\t\t\"classOfService\": \"A\",\r\n\t\t\t\t\t\t\"aircraftType\": \"737-800\"\r\n\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\"arrivalAirportId\": 2701188,\r\n\t\t\t\t\t\t\"departureAirportId\": 2702587,\r\n\t\t\t\t\t\t\"durationInMinutes\": 65,\r\n\t\t\t\t\t\t\"layoverInMinutes\": 0,\r\n\t\t\t\t\t\t\"arrivalDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\t\t\"hour\": 23,\r\n\t\t\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"departureDateTime\": {\r\n\t\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\t\t\"hour\": 21,\r\n\t\t\t\t\t\t\t\"minutes\": 55,\r\n\t\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"cabinType\": \"economic\",\r\n\t\t\t\t\t\t\"airCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"status\": \"unknwon\",\r\n\t\t\t\t\t\t\"operatedByAirCompanyCode\": \"G3\",\r\n\t\t\t\t\t\t\"flightNumber\": \"1066\",\r\n\t\t\t\t\t\t\"externalProperties\": \"{\\\"OpSuffix\\\":\\\"\\\",\\\"FlightDesignatorCarrierCode\\\":\\\"G3\\\",\\\"FlightDesignatorFlightNumber\\\":\\\"1066\\\"}\",\r\n\t\t\t\t\t\t\"legs\": [],\r\n\t\t\t\t\t\t\"classOfService\": \"A\",\r\n\t\t\t\t\t\t\"aircraftType\": \"737-800\"\r\n\t\t\t\t\t}\r\n\t\t\t\t],\r\n\t\t\t\t\"externalProperties\": \"{\\\"LoginInformationName\\\":\\\"Credencial Gol\\\",\\\"IsInternational\\\":\\\"False\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":27.16,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":2,\\\\\\\"FareAmount\\\\\\\":442.18,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":442.180000000,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":0.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[\\\\\\\"A\\\\\\\",\\\\\\\"A\\\\\\\"],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"APBSDS3\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":\\\\\\\"EP00\\\\\\\",\\\\\\\"CiaCode\\\\\\\":\\\\\\\"G3\\\\\\\",\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":4,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":{\\\\\\\"Id\\\\\\\":3674,\\\\\\\"Name\\\\\\\":\\\\\\\"GOL\\\\\\\",\\\\\\\"AgreementCode\\\\\\\":\\\\\\\"OPER1\\\\\\\",\\\\\\\"AgreementType\\\\\\\":0,\\\\\\\"Classes\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"AirCompanyId\\\\\\\":1070,\\\\\\\"Source\\\\\\\":4,\\\\\\\"Active\\\\\\\":true,\\\\\\\"AmadeusLoginInformationId\\\\\\\":null,\\\\\\\"AzulLoginInformationId\\\\\\\":null,\\\\\\\"CionsLoginInformationIds\\\\\\\":{},\\\\\\\"GolLoginInformationId\\\\\\\":648,\\\\\\\"SabreLoginInformationId\\\\\\\":637,\\\\\\\"TamLoginInformationId\\\\\\\":null,\\\\\\\"AviancaLoginInformationId\\\\\\\":null,\\\\\\\"AmericanAirlinesLoginInformationId\\\\\\\":null,\\\\\\\"GalileoLoginInformationId\\\\\\\":null,\\\\\\\"KiuLoginInformationId\\\\\\\":null,\\\\\\\"ExternalId\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"Condition\\\\\\\":\\\\\\\"<Parenthesis Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\"><Field FieldName=\\\\\\\\\\\\\\\"Origin\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"210\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" \\/><Field FieldName=\\\\\\\\\\\\\\\"TripType\\\\\\\\\\\\\\\" Operator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Comparator=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Value=\\\\\\\\\\\\\\\"1\\\\\\\\\\\\\\\" Tag=\\\\\\\\\\\\\\\"\\\\\\\\\\\\\\\" ValueType=\\\\\\\\\\\\\\\"0\\\\\\\\\\\\\\\" \\/><\\/Parenthesis>\\\\\\\",\\\\\\\"CarCorpoteDiscountNumber\\\\\\\":null,\\\\\\\"CarPromotionCode\\\\\\\":null,\\\\\\\"CarCompanyCode\\\\\\\":null,\\\\\\\"CarCommercialAgreementInclusions\\\\\\\":null,\\\\\\\"PaxType\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"IsOperatorFare\\\\\\\":true,\\\\\\\"AirCompanyCode\\\\\\\":\\\\\\\"G3\\\\\\\",\\\\\\\"ProductType\\\\\\\":1,\\\\\\\"CarITNumber\\\\\\\":null,\\\\\\\"AirTravelAgent\\\\\\\":false,\\\\\\\"AirCorporateGO\\\\\\\":false,\\\\\\\"AirTravelGO\\\\\\\":false,\\\\\\\"HotelTravelAgent\\\\\\\":false,\\\\\\\"HotelCorporateGO\\\\\\\":false,\\\\\\\"HotelTravelGO\\\\\\\":false,\\\\\\\"IsGlobalTravelAgent\\\\\\\":false,\\\\\\\"IsGlobalCorporateGO\\\\\\\":false,\\\\\\\"IsGlobalTravelGO\\\\\\\":false,\\\\\\\"LatamLoginInformationId\\\\\\\":null,\\\\\\\"CarTourCode\\\\\\\":null,\\\\\\\"LoyaltyCardNumber\\\\\\\":null,\\\\\\\"UseVoucherFake\\\\\\\":false},\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":442.18,\\\\\\\"DisplayFareAmount\\\\\\\":442.18,\\\\\\\"ExternalProperties\\\\\\\":{\\\\\\\"FareSequence\\\\\\\":\\\\\\\"6\\\\\\\",\\\\\\\"ADTProductClass\\\\\\\":\\\\\\\"PL\\\\\\\",\\\\\\\"ADTPaxTypeHasAgreement\\\\\\\":\\\\\\\"True\\\\\\\",\\\\\\\"ExchangeRate.Old\\\\\\\":\\\\\\\"1\\\\\\\",\\\\\\\"Currency.Old\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"FareAmount.Old\\\\\\\":\\\\\\\"442.180000000\\\\\\\",\\\\\\\"TaxAmount.Old\\\\\\\":\\\\\\\"27.160000000\\\\\\\"},\\\\\\\"Quantity\\\\\\\":1,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[{\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangedCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"Value\\\\\\\":1.0,\\\\\\\"Exchanges\\\\\\\":{\\\\\\\"FareAmount\\\\\\\":442.18,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"TaxAmount\\\\\\\":27.16}}],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":2,\\\\\\\"BrandedFaresFamily\\\\\\\":\\\\\\\"Plus\\\\\\\",\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\"}\",\r\n\t\t\t\t\"stops\": 1,\r\n\t\t\t\t\"baggagesIncluded\": 1\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"bookingFares\": [{\r\n\t\t\t\t\"agreementCode\": \"OPER1\",\r\n\t\t\t\t\"exchangeRate\": 1,\r\n\t\t\t\t\"displayFareAmount\": {\r\n\t\t\t\t\t\"value\": 884.36,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"taxes\": {\r\n\t\t\t\t\t\"value\": 60,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"fare\": {\r\n\t\t\t\t\t\"value\": 884.36,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"equivalentFare\": {\r\n\t\t\t\t\t\"value\": 884.36,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"duTaxes\": {\r\n\t\t\t\t\t\"value\": 0,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"fareBasis\": \"APBSDS3\",\r\n\t\t\t\t\"travellerAgeGroup\": \"adult\",\r\n\t\t\t\t\"fareType\": \"public\",\r\n\t\t\t\t\"supplierSystem\": \"Gol\",\r\n\t\t\t\t\"pricing\": {\r\n\t\t\t\t\t\"id\": 3588,\r\n\t\t\t\t\t\"name\": \"Markup operadora\",\r\n\t\t\t\t\t\"calculatedMarkup\": 249.43,\r\n\t\t\t\t\t\"markup\": 0.22,\r\n\t\t\t\t\t\"fees\": [],\r\n\t\t\t\t\t\"fee\": 0,\r\n\t\t\t\t\t\"totalFee\": 0,\r\n\t\t\t\t\t\"totalFeeAsTax\": 0,\r\n\t\t\t\t\t\"discount\": 0,\r\n\t\t\t\t\t\"calculatedDiscount\": 0,\r\n\t\t\t\t\t\"subPricings\": [{\r\n\t\t\t\t\t\t\t\"id\": 3588,\r\n\t\t\t\t\t\t\t\"name\": \"Markup operadora\",\r\n\t\t\t\t\t\t\t\"calculatedMarkup\": 249.43,\r\n\t\t\t\t\t\t\t\"markup\": 0.22,\r\n\t\t\t\t\t\t\t\"fees\": [],\r\n\t\t\t\t\t\t\t\"fee\": 0,\r\n\t\t\t\t\t\t\t\"totalFee\": 0,\r\n\t\t\t\t\t\t\t\"totalFeeAsTax\": 0,\r\n\t\t\t\t\t\t\t\"discount\": 0,\r\n\t\t\t\t\t\t\t\"calculatedDiscount\": 0\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t\"externalProperties\": \"{\\\"DUs\\\":\\\"\\\",\\\"ClassOfService\\\":\\\"A\\\",\\\"ProductClass\\\":\\\"PL\\\",\\\"FareSequence\\\":\\\"6\\\",\\\"FareConversion.Value\\\":\\\"1.0000\\\",\\\"FareConversion.ExchangedCurrency\\\":\\\"BRL\\\"}\",\r\n\t\t\t\t\"total\": {\r\n\t\t\t\t\t\"value\": 1888.72,\r\n\t\t\t\t\t\"currencyCode\": \"BRL\"\r\n\t\t\t\t},\r\n\t\t\t\t\"travellersCount\": 2,\r\n\t\t\t\t\"incentiveValue\": 0\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"searchRQ\": {\r\n\t\t\"companyContext\": {\r\n\t\t\t\"consolidator\": {\r\n\t\t\t\t\"id\": 49270,\r\n\t\t\t\t\"name\": \"EHTL VIAGENS ONLINE LTDA\",\r\n\t\t\t\t\"systemAccountId\": 0\r\n\t\t\t},\r\n\t\t\t\"travelAgency\": {\r\n\t\t\t\t\"id\": 49270,\r\n\t\t\t\t\"name\": \"EHTL VIAGENS ONLINE LTDA\",\r\n\t\t\t\t\"systemAccountId\": 0\r\n\t\t\t}\r\n\t\t},\r\n\t\t\"airParameters\": {\r\n\t\t\t\"groupingType\": \"cityPair\",\r\n\t\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\t\"origin\": 2701188,\r\n\t\t\t\t\t\"destination\": 2701176,\r\n\t\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\"month\": 10,\r\n\t\t\t\t\t\t\"day\": 30,\r\n\t\t\t\t\t\t\"dayOfWeek\": \"friday\",\r\n\t\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\t\"baggageAllowance\": \"indifferent\",\r\n\t\t\t\t\t\"ciaCodes\": [\"G3\"]\r\n\t\t\t\t}, {\r\n\t\t\t\t\t\"origin\": 2701176,\r\n\t\t\t\t\t\"destination\": 2701188,\r\n\t\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\t\"year\": 2020,\r\n\t\t\t\t\t\t\"month\": 11,\r\n\t\t\t\t\t\t\"day\": 2,\r\n\t\t\t\t\t\t\"dayOfWeek\": \"monday\",\r\n\t\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"nonStop\": false,\r\n\t\t\t\t\t\"baggageAllowance\": \"indifferent\",\r\n\t\t\t\t\t\"ciaCodes\": [\"G3\"]\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t},\r\n\t\t\"paginationParameters\": {\r\n\t\t\t\"pageIndex\": 1,\r\n\t\t\t\"itemsPerPage\": 999\r\n\t\t},\r\n\t\t\"sortParameters\": {\r\n\t\t\t\"sortBy\": \"price\",\r\n\t\t\t\"descending\": false\r\n\t\t},\r\n\t\t\"asynchronous\": false,\r\n\t\t\"travellers\": [{\r\n\t\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\t\"age\": 0\r\n\t\t\t}, {\r\n\t\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\t\"age\": 0\r\n\t\t\t}\r\n\t\t]\r\n\t}\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://api.travelagent.com.br/EnvisionAPI/Shopping/ProcessOrder",
+								"description": "Método responsável para criar a reserva de hotel."
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "a798a7d9-bca4-4bd3-9967-71c859738afc",
+					"description": "Em Hotels temos os métodos para hotel, como pesquisa, tarifação e reserva.",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Cars",
+					"item": [
+						{
+							"name": "Search de carro",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "44dc40bc-1f1d-44f1-b35f-b0ae7e85cd65"
+									}
+								}
+							],
+							"_postman_id": "ce3edda1-dc03-4f5a-a25c-1abc90458d0c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"carParameters\": {\r\n\"dropoffLocationId\": 2701199,\r\n\"pickupLocationId\": 2701199,\r\n\"dropoffDate\": {\r\n\"year\":2023,\r\n\"month\": 3,\r\n\"day\": 7,\r\n\"hour\": 10,\r\n\"minutes\": 0\r\n},\r\n\"pickupDate\": {\r\n\"year\": 2023,\r\n\"month\": 3,\r\n\"day\": 6,\r\n\"hour\": 10,\r\n\"minutes\": 0\r\n}\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Método responsável por realizar a pesquisa de carros."
+							},
+							"response": []
+						},
+						{
+							"name": "PreOrder Carro",
+							"_postman_id": "1a2a7542-3a75-4dc8-9c9a-cffda031299e",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"travellers\": [\r\n    {\r\n      \"ageGroup\": \"adult\",\r\n      \"age\": 24\r\n    }\r\n  ],\r\n  \"cars\": [ \r\n       {\r\n\t\t  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"car\": {\r\n                    \"acrissCode\": \"ECMM\",\r\n                    \"category\": \"economy\",\r\n                    \"type\": \"twoOrFourDoors\",\r\n                    \"transmission\": \"manual\",\r\n                    \"drive\": \"unspecified\",\r\n                    \"fuel\": \"multifuel\",\r\n                    \"fuelTypeSpecified\": true,\r\n                    \"hasAirConditioning\": true,\r\n                    \"modelName\": \"RENAULT KWID | FIAT MOBI | OU SIMILARES\",\r\n                    \"description\": \"RENAULT KWID | FIAT MOBI | OU SIMILARES\",\r\n                    \"numberOfPassengers\": \"5\",\r\n                    \"numberOfBags\": \"2\",\r\n                    \"numberOfDoors\": 0,\r\n                    \"doorCountSpecified\": false,\r\n                    \"imageUrl\": \"https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=UN&cnt=BR&vehcat=ECMM&item=0&stamp=VEHICLE_0__0__1544028570247&file=3.JPEG\",\r\n                    \"externalProperties\": {\r\n                        \"OriginalSource\": \"Amadeus\",\r\n                        \"ExternalGUID\": \"BEFCA447F1C243E68AEA5E37DC30B968\",\r\n                        \"Indice\": \"1\",\r\n                        \"NumberOfPassengers\": \"5\",\r\n                        \"NumberOfBags\": \"2\",\r\n                        \"DoorCountSpecified\": \"False\",\r\n                        \"Diaria\": \"129,9\"\r\n                    },\r\n                    \"id\": 0\r\n                },\r\n                \"companyIndex\": 1,\r\n                \"company\": {\r\n                    \"id\": 41,\r\n                    \"iataCode\": \"UN\",\r\n                    \"name\": \"UNIDAS\"\r\n                },\r\n                \"sourceType\": \"Mobility\",\r\n                \"fareSummary\": {\r\n                    \"agencyCommission\": 0.0,\r\n                    \"agencyCommissionPercentage\": 15.00,\r\n                    \"fareType\": \"total\",\r\n                    \"currency\": \"BRL\",\r\n                    \"originalCurrency\": \"BRL\",\r\n                    \"rateCode\": \"325025\",\r\n                    \"fareAmount\": 129.9,\r\n                    \"originalFareAmount\": 129.9,\r\n                    \"periodFare\": 129.9,\r\n                    \"originalPeriodFare\": 129.9,\r\n                    \"taxesAmount\": 0.0,\r\n                    \"originalTaxesAmount\": 0.0,\r\n                    \"exchangeRate\": 1.0,\r\n                    \"dropOffRate\": 0.0,\r\n                    \"exchangeRateType\": \"iata\",\r\n                    \"estimatedTotalFare\": 129.9,\r\n                    \"originalEstimatedTotalFare\": 129.9,\r\n                    \"externalProperties\": {},\r\n                    \"carRateQualifier\": \"unknown\",\r\n                    \"carRateIncludedItems\": [\r\n                        {\r\n                            \"code\": \"9\",\r\n                            \"description\": \"Km Livre\"\r\n                        },\r\n                        {\r\n                            \"code\": \"CDW\",\r\n                            \"description\": \"Proteção Colisão e Danos\"\r\n                        },\r\n                        {\r\n                            \"code\": \"TP\",\r\n                            \"description\": \"Proteção Roubo\"\r\n                        },\r\n                        {\r\n                            \"code\": \"TPC\",\r\n                            \"description\": \"Proteção a Terceiros\"\r\n                        },\r\n                        {\r\n                            \"code\": \"TAXAS LOCAIS\",\r\n                            \"description\": \"Taxas Locais\"\r\n                        },\r\n                        {\r\n                            \"code\": \"ADS\",\r\n                            \"description\": \"Motorista Adicional\"\r\n                        }\r\n                    ],\r\n                    \"fareDescription\": \"Km Livre, Inclusive (com franquia + motorista adicional)\",\r\n                    \"governmentTaxAmount\": 0.0,\r\n                    \"originalGovernmentTaxAmount\": 0.0,\r\n                    \"displayTotalAmount\": 129.9,\r\n                    \"originalDisplayTotalAmount\": 129.9,\r\n                    \"markupedEstimatedFareAmount\": 129.9,\r\n                    \"originalMarkupedEstimatedFareAmount\": 129.9\r\n                },\r\n                \"pickupLocation\": {\r\n                    \"name\": \"SAOT06\",\r\n                    \"address\": {\r\n                        \"street\": \"Rodovia Santos Dumont - 0.\",\r\n                        \"district\": \"SP\",\r\n                        \"city\": \"CAMPINAS\",\r\n                        \"country\": \"BR\",\r\n                        \"latitude\": -230082.0,\r\n                        \"longitude\": -4713756.0,\r\n                        \"externalProperties\": {}\r\n                    },\r\n                    \"operationTimes\": [\r\n                        {\r\n                            \"dayOfWeek\": \"sunday\",\r\n                            \"openingTime\": {\r\n                                \"hour\": 5,\r\n                                \"minutes\": 0,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"closingTime\": {\r\n                                \"hour\": 23,\r\n                                \"minutes\": 59,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            }\r\n                        }\r\n                    ],\r\n                    \"specialEquipments\": [],\r\n                    \"company\": {\r\n                        \"id\": 0,\r\n                        \"iataCode\": \"UN\",\r\n                        \"name\": \"UNIDAS\"\r\n                    },\r\n                    \"externalProperties\": {\r\n                        \"OriginalLocationId\": \"2701199\",\r\n                        \"LocationType\": \"Unknown\",\r\n                        \"Indice\": \"1\",\r\n                        \"Sufixo\": \"LOJA EM TERMINAL\",\r\n                        \"IataLocal\": \"SAOT06\"\r\n                    },\r\n                    \"sourcesIds\": {\r\n                        \"Mobility\": \"CPQ\"\r\n                    },\r\n                    \"isAirportShop\": false,\r\n                    \"locationId\": 252381,\r\n                    \"type\": \"pickup\",\r\n                    \"id\": 0\r\n                },\r\n                \"dropoffLocation\": {\r\n                    \"name\": \"SAOT06\",\r\n                    \"address\": {\r\n                        \"street\": \"Rodovia Santos Dumont - 0.\",\r\n                        \"district\": \"SP\",\r\n                        \"city\": \"CAMPINAS\",\r\n                        \"country\": \"BR\",\r\n                        \"latitude\": -230082.0,\r\n                        \"longitude\": -4713756.0,\r\n                        \"externalProperties\": {}\r\n                    },\r\n                    \"operationTimes\": [\r\n                        {\r\n                            \"dayOfWeek\": \"sunday\",\r\n                            \"openingTime\": {\r\n                                \"hour\": 5,\r\n                                \"minutes\": 0,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            },\r\n                            \"closingTime\": {\r\n                                \"hour\": 23,\r\n                                \"minutes\": 59,\r\n                                \"seconds\": 0,\r\n                                \"millisecond\": 0\r\n                            }\r\n                        }\r\n                    ],\r\n                    \"specialEquipments\": [],\r\n                    \"company\": {\r\n                        \"id\": 0,\r\n                        \"iataCode\": \"UN\",\r\n                        \"name\": \"UNIDAS\"\r\n                    },\r\n                    \"externalProperties\": {\r\n                        \"OriginalLocationId\": \"2701199\",\r\n                        \"LocationType\": \"Unknown\",\r\n                        \"Indice\": \"1\",\r\n                        \"Sufixo\": \"LOJA EM TERMINAL\",\r\n                        \"IataLocal\": \"SAOT06\"\r\n                    },\r\n                    \"sourcesIds\": {\r\n                        \"Mobility\": \"CPQ\"\r\n                    },\r\n                    \"isAirportShop\": false,\r\n                    \"locationId\": 252381,\r\n                    \"type\": \"pickup\",\r\n                    \"id\": 0\r\n                },\r\n                \"specialEquipmentsIncluded\": [],\r\n                \"externalProperties\": {\r\n                    \"TotalPrePago\": \"129,9\",\r\n                    \"Diaria\": \"129,9\",\r\n                    \"DiariaNet\": \"129,9\",\r\n                    \"Franquia\": \"0\",\r\n                    \"Markup\": \"0\",\r\n                    \"PercentualDeComissaoAgencia\": \"15,00\",\r\n                    \"PercentualDescontoAplicado\": \"0\",\r\n                    \"PercentualDescontoMaximo\": \"100,00\",\r\n                    \"PercentualRAV\": \"0\",\r\n                    \"PercentualTaxaDeEmissao\": \"0\",\r\n                    \"TarifaNet\": \"129,9\",\r\n                    \"ValorCambioCredito\": \"0\",\r\n                    \"ValorComissaoAtualParaCalculoDoCredito\": \"0\",\r\n                    \"ValorComissaoDoCredito\": \"0\",\r\n                    \"ValorCredito\": \"0\",\r\n                    \"ValorRAV\": \"0\",\r\n                    \"ValorReembolso\": \"0\",\r\n                    \"CodigoTarifario\": \"3603\",\r\n                    \"SearchToken\": \"0cdf0886-b8d8-4afb-af0f-94c9c81f9ada\",\r\n                    \"LoginInformationName\": \"\"\r\n                },\r\n                \"mileage\": {\r\n                    \"isFreeMileage\": true,\r\n                    \"milesOrKilometersIncluded\": 0.0,\r\n                    \"unit\": \"unspecified\",\r\n                    \"extraAmountPerMilesOrKilometers\": 0.0\r\n                },\r\n                \"pickupDate\": {\r\n                    \"year\": 2023,\r\n                    \"month\": 3,\r\n                    \"day\": 6,\r\n                    \"dayOfWeek\": \"monday\",\r\n                    \"hour\": 10,\r\n                    \"minutes\": 0,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"dropoffDate\": {\r\n                    \"year\": 2023,\r\n                    \"month\": 3,\r\n                    \"day\": 7,\r\n                    \"dayOfWeek\": \"tuesday\",\r\n                    \"hour\": 10,\r\n                    \"minutes\": 0,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"loginInformationId\": 8,\r\n                \"cancellationPolicy\": {\r\n                    \"penaltyAmount\": 0.0,\r\n                    \"currency\": \"BRL\",\r\n                    \"cancellationLimitDays\": 0,\r\n                    \"cancellationLimitHours\": 0,\r\n                    \"description\": \"Ao término desta locação, será cobrada uma taxa de lavagem mínima, no valor de R$ 22,00.\\r\\nImportante: A retirada do veículo está sujeita a análise de crédito que será realizada em  loja durante a abertura do contrato.\\r\\n\",\r\n                    \"allowCancellation\": false,\r\n                    \"onlyUsefulDays\": false,\r\n                    \"externalProperties\": {}\r\n                }\r\n            }\r\n        \r\n   ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/PreOrder",
+								"description": "Método responsável por realizar a tarifação de carro."
+							},
+							"response": []
+						},
+						{
+							"name": "ProcessOrder Carro",
+							"_postman_id": "5a6af1ae-eee8-4c1d-bd60-e82a2031d160",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {},
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envsiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"travellers\": [\r\n{\r\n\"firstName\": \"Rony\",\r\n\"middleName\": \"Rodrigues\",\r\n\"lastName\": \"Oliveira\",\r\n\"birthDate\": {\r\n\"year\": 1998,\r\n\"month\": 9,\r\n\"day\": 11\r\n},\r\n\"email\": \"email@gmail.com\",\r\n\"phoneNumber\": \"11930064242\",\r\n\"nationalityCode\": \"BR\",\r\n\"gender\": \"male\"\r\n}\r\n]\r\n,\"requester\": {\r\n\"firstName\": \"Rony\",\r\n\"middleName\": \"Rodrigues\",\r\n\"lastName\": \"Oliveira\",\r\n\"email\": \"rony.oliveira@envisiontecnologia.com.br\",\r\n\"documents\": [\r\n{\r\n\"number\": \"422.571.328-82\",\r\n\"documentType\": \"cpf\"\r\n}\r\n]\r\n}\r\n\r\n,\"contactInformations\": [\r\n{\r\n\"phoneNumber\": \"11930064242\",\r\n\"name\": \"Rony\",\r\n\"email\": \"rony.oliveira@envisiontecnologia.com.br\",\r\n\"document\": \"42257132882\"\r\n},\r\n],\r\n\"searchRQ\": {\r\n\"carParameters\": {\r\n\"dropoffLocationId\": 2701199,\r\n\"pickupLocationId\": 2701199,\r\n\"dropoffDate\": {\r\n\"year\":2023,\r\n\"month\": 3,\r\n\"day\": 7,\r\n\"hour\": 10,\r\n\"minutes\": 0\r\n},\r\n\"pickupDate\": {\r\n\"year\": 2023,\r\n\"month\": 3,\r\n\"day\": 6,\r\n\"hour\": 10,\r\n\"minutes\": 0\r\n}\r\n}\r\n},\r\n\"cars\": [ \r\n    {\r\n                \"currency\": \"BRL\",\r\n                \"exchangeRate\": 1.0,\r\n                \"exchangeRateType\": \"iata\",\r\n                \"fareAmount\": 129.9,\r\n                \"fareType\": \"total\",\r\n                \"estimatedTotalFare\": 129.9,\r\n                \"markupedEstimatedFareAmount\": 129.9,\r\n                \"governmentTaxAmount\": 0.0,\r\n                \"totalTaxes\": 0.0,\r\n                \"totalBaseFare\": 129.9,\r\n                \"totalOtherCharges\": 0.0,\r\n                \"totalSpecialEquipments\": 0.0,\r\n                \"otherCharges\": [\r\n                    {\r\n                        \"description\": \"COLLISION DAMAGE WAIVER COMBO PLUS\",\r\n                        \"type\": \"Balcão\",\r\n                        \"includedInRate\": \"Excluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 47.90\r\n                    },\r\n                    {\r\n                        \"description\": \"FULL COVERAGE\",\r\n                        \"type\": \"Balcão\",\r\n                        \"includedInRate\": \"Excluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 78.00\r\n                    },\r\n                    {\r\n                        \"description\": \"Km Livre\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Proteção Colisão e Danos\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Proteção Roubo\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Proteção a Terceiros\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Taxas Locais\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Motorista Adicional\",\r\n                        \"type\": \"TaxasComissionadas\",\r\n                        \"includedInRate\": \"Incluso\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Taxa Administrativa\",\r\n                        \"type\": \"\",\r\n                        \"includedInRate\": \"\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Taxa Devolução\",\r\n                        \"type\": \"\",\r\n                        \"includedInRate\": \"\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Taxa Local\",\r\n                        \"type\": \"\",\r\n                        \"includedInRate\": \"\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    },\r\n                    {\r\n                        \"description\": \"Taxa Pré-paga\",\r\n                        \"type\": \"\",\r\n                        \"includedInRate\": \"\",\r\n                        \"currency\": \"BRL\",\r\n                        \"amount\": 0.0\r\n                    }\r\n                ],\r\n                \"carSpecialEquipmentsAvailable\": [],\r\n                \"carQuote\": {\r\n                    \"car\": {\r\n                        \"acrissCode\": \"ECMM\",\r\n                        \"category\": \"economy\",\r\n                        \"type\": \"twoOrFourDoors\",\r\n                        \"transmission\": \"manual\",\r\n                        \"drive\": \"unspecified\",\r\n                        \"fuel\": \"multifuel\",\r\n                        \"fuelTypeSpecified\": true,\r\n                        \"hasAirConditioning\": true,\r\n                        \"modelName\": \"RENAULT KWID | FIAT MOBI | OU SIMILARES\",\r\n                        \"description\": \"RENAULT KWID | FIAT MOBI | OU SIMILARES\",\r\n                        \"numberOfPassengers\": \"5\",\r\n                        \"numberOfBags\": \"2\",\r\n                        \"numberOfDoors\": 0,\r\n                        \"doorCountSpecified\": false,\r\n                        \"imageUrl\": \"https://multimedia.amadeus.com/mdc/retrieveCarItem?ctg=VEHICLE&prov=UN&cnt=BR&vehcat=ECMM&item=0&stamp=VEHICLE_0__0__1544028570247&file=3.JPEG\",\r\n                        \"externalProperties\": {\r\n                            \"OriginalSource\": \"Amadeus\",\r\n                            \"ExternalGUID\": \"BEFCA447F1C243E68AEA5E37DC30B968\",\r\n                            \"Indice\": \"1\",\r\n                            \"NumberOfPassengers\": \"5\",\r\n                            \"NumberOfBags\": \"2\",\r\n                            \"DoorCountSpecified\": \"False\",\r\n                            \"Diaria\": \"129,9\"\r\n                        },\r\n                        \"id\": 0\r\n                    },\r\n                    \"companyIndex\": 1,\r\n                    \"company\": {\r\n                        \"id\": 41,\r\n                        \"iataCode\": \"UN\",\r\n                        \"name\": \"UNIDAS\"\r\n                    },\r\n                    \"sourceType\": \"Mobility\",\r\n                    \"fareSummary\": {\r\n                        \"agencyCommission\": 19.49,\r\n                        \"agencyCommissionPercentage\": 15.00,\r\n                        \"fareType\": \"total\",\r\n                        \"currency\": \"BRL\",\r\n                        \"originalCurrency\": \"BRL\",\r\n                        \"rateCode\": \"325025\",\r\n                        \"fareAmount\": 129.9,\r\n                        \"originalFareAmount\": 129.9,\r\n                        \"periodFare\": 129.9,\r\n                        \"originalPeriodFare\": 129.9,\r\n                        \"taxesAmount\": 0.0,\r\n                        \"originalTaxesAmount\": 0.0,\r\n                        \"exchangeRate\": 1.0,\r\n                        \"dropOffRate\": 0.0,\r\n                        \"exchangeRateType\": \"iata\",\r\n                        \"estimatedTotalFare\": 129.9,\r\n                        \"originalEstimatedTotalFare\": 129.9,\r\n                        \"externalProperties\": {},\r\n                        \"carRateQualifier\": \"unknown\",\r\n                        \"carRateIncludedItems\": [\r\n                            {\r\n                                \"code\": \"9\",\r\n                                \"description\": \"Km Livre\"\r\n                            },\r\n                            {\r\n                                \"code\": \"CDW\",\r\n                                \"description\": \"Proteção Colisão e Danos\"\r\n                            },\r\n                            {\r\n                                \"code\": \"TP\",\r\n                                \"description\": \"Proteção Roubo\"\r\n                            },\r\n                            {\r\n                                \"code\": \"TPC\",\r\n                                \"description\": \"Proteção a Terceiros\"\r\n                            },\r\n                            {\r\n                                \"code\": \"TAXAS LOCAIS\",\r\n                                \"description\": \"Taxas Locais\"\r\n                            },\r\n                            {\r\n                                \"code\": \"ADS\",\r\n                                \"description\": \"Motorista Adicional\"\r\n                            }\r\n                        ],\r\n                        \"fareDescription\": \"Km Livre, Inclusive (com franquia + motorista adicional)\",\r\n                        \"governmentTaxAmount\": 0.0,\r\n                        \"originalGovernmentTaxAmount\": 0.0,\r\n                        \"displayTotalAmount\": 129.9,\r\n                        \"originalDisplayTotalAmount\": 129.9,\r\n                        \"markupedEstimatedFareAmount\": 129.9,\r\n                        \"originalMarkupedEstimatedFareAmount\": 129.9\r\n                    },\r\n                    \"pickupLocation\": {\r\n                        \"name\": \"SAOT06\",\r\n                        \"address\": {\r\n                            \"street\": \"Rodovia Santos Dumont - 0.\",\r\n                            \"district\": \"SP\",\r\n                            \"city\": \"CAMPINAS\",\r\n                            \"country\": \"BR\",\r\n                            \"latitude\": -230082.0,\r\n                            \"longitude\": -4713756.0,\r\n                            \"externalProperties\": {}\r\n                        },\r\n                        \"operationTimes\": [\r\n                            {\r\n                                \"dayOfWeek\": \"sunday\",\r\n                                \"openingTime\": {\r\n                                    \"hour\": 5,\r\n                                    \"minutes\": 0,\r\n                                    \"seconds\": 0,\r\n                                    \"millisecond\": 0\r\n                                },\r\n                                \"closingTime\": {\r\n                                    \"hour\": 23,\r\n                                    \"minutes\": 59,\r\n                                    \"seconds\": 0,\r\n                                    \"millisecond\": 0\r\n                                }\r\n                            }\r\n                        ],\r\n                        \"specialEquipments\": [],\r\n                        \"company\": {\r\n                            \"id\": 0,\r\n                            \"iataCode\": \"UN\",\r\n                            \"name\": \"UNIDAS\"\r\n                        },\r\n                        \"externalProperties\": {\r\n                            \"OriginalLocationId\": \"2701199\",\r\n                            \"LocationType\": \"Unknown\",\r\n                            \"Indice\": \"1\",\r\n                            \"Sufixo\": \"LOJA EM TERMINAL\",\r\n                            \"IataLocal\": \"SAOT06\"\r\n                        },\r\n                        \"sourcesIds\": {\r\n                            \"Mobility\": \"CPQ\"\r\n                        },\r\n                        \"isAirportShop\": false,\r\n                        \"locationId\": 252381,\r\n                        \"type\": \"pickup\",\r\n                        \"id\": 0\r\n                    },\r\n                    \"dropoffLocation\": {\r\n                        \"name\": \"SAOT06\",\r\n                        \"address\": {\r\n                            \"street\": \"Rodovia Santos Dumont - 0.\",\r\n                            \"district\": \"SP\",\r\n                            \"city\": \"CAMPINAS\",\r\n                            \"country\": \"BR\",\r\n                            \"latitude\": -230082.0,\r\n                            \"longitude\": -4713756.0,\r\n                            \"externalProperties\": {}\r\n                        },\r\n                        \"operationTimes\": [\r\n                            {\r\n                                \"dayOfWeek\": \"sunday\",\r\n                                \"openingTime\": {\r\n                                    \"hour\": 5,\r\n                                    \"minutes\": 0,\r\n                                    \"seconds\": 0,\r\n                                    \"millisecond\": 0\r\n                                },\r\n                                \"closingTime\": {\r\n                                    \"hour\": 23,\r\n                                    \"minutes\": 59,\r\n                                    \"seconds\": 0,\r\n                                    \"millisecond\": 0\r\n                                }\r\n                            }\r\n                        ],\r\n                        \"specialEquipments\": [],\r\n                        \"company\": {\r\n                            \"id\": 0,\r\n                            \"iataCode\": \"UN\",\r\n                            \"name\": \"UNIDAS\"\r\n                        },\r\n                        \"externalProperties\": {\r\n                            \"OriginalLocationId\": \"2701199\",\r\n                            \"LocationType\": \"Unknown\",\r\n                            \"Indice\": \"1\",\r\n                            \"Sufixo\": \"LOJA EM TERMINAL\",\r\n                            \"IataLocal\": \"SAOT06\"\r\n                        },\r\n                        \"sourcesIds\": {\r\n                            \"Mobility\": \"CPQ\"\r\n                        },\r\n                        \"isAirportShop\": false,\r\n                        \"locationId\": 252381,\r\n                        \"type\": \"pickup\",\r\n                        \"id\": 0\r\n                    },\r\n                    \"specialEquipmentsIncluded\": [],\r\n                    \"externalProperties\": {\r\n                        \"TotalPrePago\": \"129,9\",\r\n                        \"Diaria\": \"129,9\",\r\n                        \"DiariaNet\": \"129,9\",\r\n                        \"Franquia\": \"0\",\r\n                        \"Markup\": \"0\",\r\n                        \"PercentualDeComissaoAgencia\": \"15,00\",\r\n                        \"PercentualDescontoAplicado\": \"0\",\r\n                        \"PercentualDescontoMaximo\": \"100,00\",\r\n                        \"PercentualRAV\": \"0\",\r\n                        \"PercentualTaxaDeEmissao\": \"0\",\r\n                        \"TarifaNet\": \"129,9\",\r\n                        \"ValorCambioCredito\": \"0\",\r\n                        \"ValorComissaoAtualParaCalculoDoCredito\": \"0\",\r\n                        \"ValorComissaoDoCredito\": \"0\",\r\n                        \"ValorCredito\": \"0\",\r\n                        \"ValorRAV\": \"0\",\r\n                        \"ValorReembolso\": \"0\",\r\n                        \"CodigoTarifario\": \"3603\",\r\n                        \"SearchToken\": \"0cdf0886-b8d8-4afb-af0f-94c9c81f9ada\",\r\n                        \"LoginInformationName\": \"\"\r\n                    },\r\n                    \"mileage\": {\r\n                        \"isFreeMileage\": true,\r\n                        \"milesOrKilometersIncluded\": 0.0,\r\n                        \"unit\": \"unspecified\",\r\n                        \"extraAmountPerMilesOrKilometers\": 0.0\r\n                    },\r\n                    \"pickupDate\": {\r\n                        \"year\": 2023,\r\n                        \"month\": 3,\r\n                        \"day\": 6,\r\n                        \"dayOfWeek\": \"monday\",\r\n                        \"hour\": 10,\r\n                        \"minutes\": 0,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"dropoffDate\": {\r\n                        \"year\": 2023,\r\n                        \"month\": 3,\r\n                        \"day\": 7,\r\n                        \"dayOfWeek\": \"tuesday\",\r\n                        \"hour\": 10,\r\n                        \"minutes\": 0,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"loginInformationId\": 8,\r\n                    \"cancellationPolicy\": {\r\n                        \"penaltyAmount\": 0.0,\r\n                        \"currency\": \"BRL\",\r\n                        \"cancellationLimitDays\": 0,\r\n                        \"cancellationLimitHours\": 0,\r\n                        \"description\": \"Ao término desta locação, será cobrada uma taxa de lavagem mínima, no valor de R$ 22,00.\\r\\nImportante: A retirada do veículo está sujeita a análise de crédito que será realizada em  loja durante a abertura do contrato.\\r\\n\",\r\n                        \"allowCancellation\": false,\r\n                        \"onlyUsefulDays\": false,\r\n                        \"externalProperties\": {}\r\n                    }\r\n                }\r\n            }\r\n ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
+								"description": "Método responsável por criar a reserva de carro."
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "4249d031-46d7-4210-a646-af3b1fdc66e5",
+					"description": "Em Cars temos os métodos para carro, como pesquisa, tarifação e reserva",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "1033b331-ae92-4ef8-a220-4e1ed65fc9ba",
+			"description": "Dentro do Shopping temos alguns métodos como por exemplo: pesquisa para determinados produtos, tarifação e criação da reserva."
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "GetRecords",
+					"_postman_id": "3c2e32cc-c200-4ff1-a880-df853759485f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"password": "Aa,123456",
+								"username": "rony.oliveira@envisiontecnologia.com.br",
+								"headerPrefix": "Bearer ",
+								"tokenType": "bearer",
+								"accessTokenUrl": "https://api.travelagent.com.br/token",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n\"criteria\": \"LastChangeDate >= '2023-03-13 09:42' && LastChangeDate <= '2023-03-14 11:41'\"\r\n//\"criteria\": \"(Created >= '2022-09-01 13:00:00' && Created <= '2022-09-30 23:00:00') && ServiceTypeName = 'Issue'\"  \r\n//\"criteria\": \"LastChangeDate >= '2020-11-19 15:00:00' && ServiceTypeName = 'ServiceOrder'\"  \r\n//\"criteria\": \"LastChangeDate >= '2021-03-21 15:00:00' && ServiceTypeName = 'Issue'\"  \r\n// \"sortFields\": \"id\",   \r\n// \"pagingPivotId\": 3710   \r\n//\"criteria\": \"id = 4384\"  \r\n//\"criteria\": \"id = 4871\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://api.travelagent.com.br/Records/Query",
+						"description": "Método responsável por realizar consultas por determinados produtos, ordem de serviços e etc."
+					},
+					"response": []
+				},
+				{
+					"name": "ProcessRecords",
+					"_postman_id": "fd4d75a4-3ced-4b3f-80e5-9124905d4ee4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"password": "Aa,123456",
+								"username": "rony.oliveira@envisiontecnologia.com.br",
+								"headerPrefix": "Bearer ",
+								"tokenType": "bearer",
+								"accessTokenUrl": "https://api.travelagent.com.br/token",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    companyContext: {\r\n\r\n        TravelAgency: {\r\n\r\n            Id: 11111\r\n        },\r\n\r\n        Customer: {\r\n\r\n            Id: 22222\r\n        }\r\n    },\r\n\r\n    record: {\r\n        \"children\": [\r\n            {\r\n                \"Description\": \"Credito_Envision\",\r\n                \"value\": 9000.00,\r\n                \"type\": \"Credit\"\r\n            }\r\n        ],\r\n        \"type\": \"ServiceOrder\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://api.travelagent.com.br/Records"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "ff707a1b-556a-4586-b7be-714c142119f5",
+			"description": "No Orders temos os métodos de consultas."
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "RetrievePnrs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const moment = require('moment');\r",
+									"\r",
+									"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+									"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+									"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+									"\r",
+									"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+									"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+									"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+									""
+								],
+								"type": "text/javascript",
+								"id": "e7458b36-15bd-48e8-a412-2e1bd4d8d81f"
+							}
+						}
+					],
+					"_postman_id": "ad5cf128-571b-4722-8692-93907c48e259",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"password": "Aa,123456",
+								"username": "rony.oliveira@envisiontecnologia.com.br",
+								"accessTokenUrl": "https://api.travelagent.com.br/token",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header",
+								"tokenType": "bearer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 28396,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs",
+						"description": "Método responsável por atualizar os localizadores."
+					},
+					"response": []
+				},
+				{
+					"name": "CancelPnrs",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const moment = require('moment');\r",
+									"\r",
+									"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+									"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+									"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+									"\r",
+									"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+									"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+									"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+									""
+								],
+								"type": "text/javascript",
+								"id": "6a4bc541-0fa2-40d3-8e31-c8852b64adf3"
+							}
+						}
+					],
+					"_postman_id": "1f2a3069-a6ba-4509-9b57-9b031bbee4f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"password": "Aa,123456",
+								"username": "rony.oliveira@envisiontecnologia.com.br",
+								"accessTokenUrl": "https://api.travelagent.com.br/token",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header",
+								"tokenType": "bearer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 22222,\r\n      \"name\": \"Envision Agencia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://api.travelagent.com.br/Shopping/CancelPnrs",
+						"description": "Método responsável para realizar o cancelamento."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9c200ed2-5d90-4262-9266-7cfd2026b904",
+			"description": "Em Bookings temos as opções para retrivar o localizador ou realizar o cancelamento do mesmo."
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Create SystemAccount",
+					"_postman_id": "5a75d33c-b4f4-4941-afee-0d3363123a76",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"accessTokenUrl": "https://api.travelagent.com.br/token",
+								"password": "Aa,123456",
+								"username": "rony.oliveira@envisiontecnologia.com.br",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header",
+								"tokenType": "bearer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"systemAccountName\": \"CONTAS ENVISION\",\r\n    \"systemAccountType\": \"travelAgent\",\r\n    \"parentSystemAccountId\": 18272,\r\n    \"copyFromSystemAccountId\": 35678,\r\n    \"company\": {\r\n        \"companyName\": \"CONTAS ENVISION\",\r\n        \"companyType\": \"Customer\",\r\n        \"externalId\": \"CONTAS ENVISION\",\r\n        \"companyAddress\": {\r\n            \"street\": \"Rua TT\",\r\n            \"number\": \"88\",\r\n            \"zipCode\": \"0123456\",\r\n            \"city\": \"São Paulo\",\r\n            \"state\": \"SP\",\r\n            \"country\": \"Brasil\"\r\n        }\r\n    },\r\n    \"costCenterDefault\": {\r\n        \"name\": \"CONTAS ENVISION\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://https:/api.travelagent.com.br/Profile/SystemAccounts/Create",
+						"description": "Método responsável por criar contas de sistema."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "d80b2b14-f2f7-4b9d-91f6-7e1d4dfc5e16",
+			"description": "O Profile e responsável pelo métodos de criar cadastros de entidades do sistema."
+		}
+	],
+	"variable": [
+		{
+			"id": "a680532d-e76a-4099-8b3f-767e57dc873a",
+			"key": "departureDay",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "d55ad072-4622-4e73-a2d6-04dd420fd79f",
+			"key": "departureMonth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "1ec10861-9b18-4f52-a978-f5fb8562af02",
+			"key": "departureYear",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "8bfb4d03-002c-48cf-ab70-b93be81cfde2",
+			"key": "returnDay",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "49a0a6e3-9720-437b-83a7-bf6cb7beefdf",
+			"key": "returnMonth",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "12b30750-c425-4742-a361-170ad0eb5d53",
+			"key": "returnYear",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
