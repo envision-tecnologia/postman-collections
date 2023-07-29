@@ -34,6 +34,24 @@
 												],
 												"type": "text/javascript"
 											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "aaf26540-5ea8-4ed5-a56d-c2a512a53056",
+												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"\r",
+													"    pm.test(\"Your test name\", function () {\r",
+													"        var jsonData = pm.response.json();\r",
+													"        pm.expect(jsonData.value).to.eql(100);\r",
+													"    });\r",
+													"var firstFlightOptions = \r",
+													"pm.collectionVariables.set(\"variable_key\", \"variable_value\");"
+												],
+												"type": "text/javascript"
+											}
 										}
 									],
 									"id": "9ca2147a-777b-4066-a647-82983f7bda7e",
@@ -59,7 +77,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"RIO\",\r\n                \"destination\": \"BSB\",\r\n                \"departureDate\": {\r\n                 \"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\r\n                  \r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": []\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1153,32 +1171,32 @@
 	],
 	"variable": [
 		{
-			"id": "293fb76c-afba-4b90-b3cb-4d6030372dbf",
+			"id": "40d374ac-cdf9-41bb-84a9-6ffe323f63c0",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "1ad36297-a9d5-4905-8acb-7bf02c92b318",
+			"id": "1c34cb75-015f-4e00-bf3a-5002baaa295e",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "6b9c0121-0aaa-4c56-b057-c4af93cddd4b",
+			"id": "441de67d-0a28-4f1e-9a81-3bfc707b7af1",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "e783c975-cf56-41f1-8b6b-24f02c024c30",
+			"id": "2299ca10-9e04-420e-9b41-67ac7fabf8c8",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "7c4d80b3-d69b-4d7e-8624-dfe7599aed7f",
+			"id": "c777f80f-22b8-4b4a-8feb-79f2d4aa25e5",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "feff1311-846c-4dbe-95a5-4c35754b10c2",
+			"id": "dba6f7a8-18d2-4c95-a0a0-228ed46c5826",
 			"key": "returnYear",
 			"value": ""
 		}
