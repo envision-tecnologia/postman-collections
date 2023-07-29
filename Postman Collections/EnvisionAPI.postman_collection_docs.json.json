@@ -43,8 +43,8 @@
 										"auth": {
 											"type": "oauth2",
 											"oauth2": {
-												"password": "Aa,123456",
-												"username": "rony.oliveira@envisiontecnologia.com.br",
+												"password": "Env#M@r2023",
+												"username": "envision",
 												"accessTokenUrl": "https://api.travelagent.com.br/token",
 												"challengeAlgorithm": "S256",
 												"grant_type": "password_credentials",
@@ -58,7 +58,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n\t\"companyContext\": {\r\n\t\t\"consolidator\": {\r\n\t\t\t\"id\": 11111\r\n\t\t},\r\n\t\t\"travelAgency\": {\r\n\t\t\t\"id\": 22222\r\n\t\t}\r\n\t},\r\n\t\"airParameters\": {\r\n\t\t\"groupingType\": \"cityPair\",\r\n\t\t\"cityPairRequests\": [{\r\n\t\t\t\t\"origin\": \"SAO\",\r\n\t\t\t\t\"destination\": \"MIA\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t},\r\n\t\t\t\r\n\t\t\t{\r\n\t\t\t\t\"origin\": \"MIA\",\r\n\t\t\t\t\"destination\": \"SAO\",\r\n\t\t\t\t\"departureDate\": {\r\n\t\t\t\t\t\"year\": {{returnYear}},\r\n\t\t\t\t\t\"month\": {{returnMonth}},\r\n\t\t\t\t\t\"day\": {{returnDay}},\r\n\t\t\t\t\t\"hour\": 0,\r\n\t\t\t\t\t\"minutes\": 0,\r\n\t\t\t\t\t\"seconds\": 0,\r\n\t\t\t\t\t\"millisecond\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"ciaCodes\": [\r\n\t\t\t\t\t\r\n\t\t\t\t],\r\n\t\t\t\t\"cabin\": \"Economic\",\r\n\t\t\t\t\"timeWindow\": {\r\n\t\t\t\t\t\"min\": 0,\r\n\t\t\t\t\t\"max\": 0\r\n\t\t\t\t},\r\n\t\t\t\t\"nonStop\": true,\r\n\t\t\t\t\"baggageAllowance\": \"indifferent\"\r\n\t\t\t}\r\n\t\t\t\r\n\t\t]\r\n\t},\r\n\t\"sortParameters\": {\r\n\t\t\"sortBy\": \"price\",\r\n\t\t\"descending\": false\r\n\t},\r\n\t\"asynchronous\": false,\r\n\t\"travellers\": [{\r\n\t\t\t\"ageGroup\": \"adult\",\r\n\t\t\t\"age\": 1\r\n\t\t}\r\n\t],\r\n\t\"supplierSystems\": [\r\n\r\n\t]\r\n}\r\n",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"RIO\",\r\n                \"destination\": \"BSB\",\r\n                \"departureDate\": {\r\n                 \"year\": {{departureYear}},\r\n\t\t\t\t\t\"month\": {{departureMonth}},\r\n\t\t\t\t\t\"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\r\n                  \r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1078,32 +1078,32 @@
 	],
 	"variable": [
 		{
-			"id": "e817259d-6be9-49d0-9de9-61269202e7cf",
+			"id": "5dcf570f-94bb-42fb-aacc-37c89e9190fa",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "80c93a48-a43d-43f9-a14c-0990b9ffd131",
+			"id": "bd64e4bb-c0db-4393-b1da-793e90dffcbb",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "5b1b8b11-a7b0-4533-a8ef-65164899f8ac",
+			"id": "878d536d-8b9b-490b-8eb0-25b621e6c16a",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "bee63a22-92ba-44e1-9b0d-dfc62064915e",
+			"id": "ce7e42b1-32fd-46d4-b558-12937660ff98",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "9389e5b5-ccb7-4f77-8feb-372fc8fddc3c",
+			"id": "38517f26-9212-408e-a193-fb32efd14621",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "f59d857b-0b8d-44b1-97c3-3ff3c5352c36",
+			"id": "d8cbd59a-c363-4b12-ba17-1d68119418dc",
 			"key": "returnYear",
 			"value": ""
 		}
