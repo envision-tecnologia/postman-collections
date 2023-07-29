@@ -13,6 +13,11 @@
 					"name": "Flights",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "85be4ef8-b0b9-42e5-bbc6-a75b1863539d"
+						},
+						{
 							"name": "Search Flights Prod Filtro cias",
 							"event": [
 								{
@@ -35,7 +40,7 @@
 									}
 								}
 							],
-							"_postman_id": "40f05056-9086-487d-9aad-8736597b3b45",
+							"id": "40f05056-9086-487d-9aad-8736597b3b45",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -93,7 +98,7 @@
 									}
 								}
 							],
-							"_postman_id": "3bef078d-8a33-45ee-934f-43504827a357",
+							"id": "3bef078d-8a33-45ee-934f-43504827a357",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -151,7 +156,7 @@
 									}
 								}
 							],
-							"_postman_id": "e72470c3-ee99-4548-9116-f7eabdda3bee",
+							"id": "e72470c3-ee99-4548-9116-f7eabdda3bee",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -208,7 +213,7 @@
 									}
 								}
 							],
-							"_postman_id": "af271f3e-d0b9-4dca-908a-63fe4e7fc898",
+							"id": "af271f3e-d0b9-4dca-908a-63fe4e7fc898",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -266,7 +271,7 @@
 									}
 								}
 							],
-							"_postman_id": "8e3a9790-def3-4166-ba60-970c3b752602",
+							"id": "8e3a9790-def3-4166-ba60-970c3b752602",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -324,7 +329,7 @@
 									}
 								}
 							],
-							"_postman_id": "d5d183dc-1893-4e57-bb6a-8f3f62b77f40",
+							"id": "d5d183dc-1893-4e57-bb6a-8f3f62b77f40",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -361,7 +366,7 @@
 						},
 						{
 							"name": "PreOrder Aereo",
-							"_postman_id": "984a3f50-6cbf-45ad-99da-7443a71d5fde",
+							"id": "984a3f50-6cbf-45ad-99da-7443a71d5fde",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -398,7 +403,7 @@
 						},
 						{
 							"name": "ProcessOrder Aereo",
-							"_postman_id": "61d3ffd9-60a8-41a9-9bef-0d2ee8d071f3",
+							"id": "61d3ffd9-60a8-41a9-9bef-0d2ee8d071f3",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -435,7 +440,7 @@
 						},
 						{
 							"name": "IssueTickets",
-							"_postman_id": "5c5582dd-f2c4-4a36-a556-efdd340b7feb",
+							"id": "5c5582dd-f2c4-4a36-a556-efdd340b7feb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -470,9 +475,8 @@
 							"response": []
 						}
 					],
-					"_postman_id": "f0d25fc5-bc94-4d1b-9534-cc0bfe1a1abc",
-					"description": "No Flights temos os métodos do aéreo, como pesquisa, tarifação e reserva",
-					"_postman_isSubFolder": true
+					"id": "f0d25fc5-bc94-4d1b-9534-cc0bfe1a1abc",
+					"description": "No Flights temos os métodos do aéreo, como pesquisa, tarifação e reserva"
 				},
 				{
 					"name": "Hotels",
@@ -500,7 +504,7 @@
 									}
 								}
 							],
-							"_postman_id": "9b8cac57-403d-4936-9e47-d098a777929a",
+							"id": "9b8cac57-403d-4936-9e47-d098a777929a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -537,7 +541,7 @@
 						},
 						{
 							"name": "PreOrder Hotel",
-							"_postman_id": "c9b85ed2-6616-41ae-a75a-401efa6c4560",
+							"id": "c9b85ed2-6616-41ae-a75a-401efa6c4560",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {},
 								"disableBodyPruning": true
@@ -575,7 +579,7 @@
 						},
 						{
 							"name": "ProcessOrder Hotel",
-							"_postman_id": "2a78efb0-cf3a-418f-8a7c-db6d7bcea963",
+							"id": "2a78efb0-cf3a-418f-8a7c-db6d7bcea963",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {},
 								"disableBodyPruning": true
@@ -612,9 +616,8 @@
 							"response": []
 						}
 					],
-					"_postman_id": "a798a7d9-bca4-4bd3-9967-71c859738afc",
-					"description": "Em Hotels temos os métodos para hotel, como pesquisa, tarifação e reserva.",
-					"_postman_isSubFolder": true
+					"id": "a798a7d9-bca4-4bd3-9967-71c859738afc",
+					"description": "Em Hotels temos os métodos para hotel, como pesquisa, tarifação e reserva."
 				},
 				{
 					"name": "Cars",
@@ -642,7 +645,7 @@
 									}
 								}
 							],
-							"_postman_id": "ce3edda1-dc03-4f5a-a25c-1abc90458d0c",
+							"id": "ce3edda1-dc03-4f5a-a25c-1abc90458d0c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -679,7 +682,7 @@
 						},
 						{
 							"name": "PreOrder Carro",
-							"_postman_id": "1a2a7542-3a75-4dc8-9c9a-cffda031299e",
+							"id": "1a2a7542-3a75-4dc8-9c9a-cffda031299e",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {},
 								"disableBodyPruning": true
@@ -717,7 +720,7 @@
 						},
 						{
 							"name": "ProcessOrder Carro",
-							"_postman_id": "5a6af1ae-eee8-4c1d-bd60-e82a2031d160",
+							"id": "5a6af1ae-eee8-4c1d-bd60-e82a2031d160",
 							"protocolProfileBehavior": {
 								"disabledSystemHeaders": {},
 								"disableBodyPruning": true
@@ -754,12 +757,11 @@
 							"response": []
 						}
 					],
-					"_postman_id": "4249d031-46d7-4210-a646-af3b1fdc66e5",
-					"description": "Em Cars temos os métodos para carro, como pesquisa, tarifação e reserva",
-					"_postman_isSubFolder": true
+					"id": "4249d031-46d7-4210-a646-af3b1fdc66e5",
+					"description": "Em Cars temos os métodos para carro, como pesquisa, tarifação e reserva"
 				}
 			],
-			"_postman_id": "1033b331-ae92-4ef8-a220-4e1ed65fc9ba",
+			"id": "1033b331-ae92-4ef8-a220-4e1ed65fc9ba",
 			"description": "Dentro do Shopping temos alguns métodos como por exemplo: pesquisa para determinados produtos, tarifação e criação da reserva."
 		},
 		{
@@ -767,7 +769,7 @@
 			"item": [
 				{
 					"name": "GetRecords",
-					"_postman_id": "3c2e32cc-c200-4ff1-a880-df853759485f",
+					"id": "3c2e32cc-c200-4ff1-a880-df853759485f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -805,7 +807,7 @@
 				},
 				{
 					"name": "ProcessRecords",
-					"_postman_id": "fd4d75a4-3ced-4b3f-80e5-9124905d4ee4",
+					"id": "fd4d75a4-3ced-4b3f-80e5-9124905d4ee4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -841,7 +843,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "ff707a1b-556a-4586-b7be-714c142119f5",
+			"id": "ff707a1b-556a-4586-b7be-714c142119f5",
 			"description": "No Orders temos os métodos de consultas."
 		},
 		{
@@ -870,7 +872,7 @@
 							}
 						}
 					],
-					"_postman_id": "ad5cf128-571b-4722-8692-93907c48e259",
+					"id": "ad5cf128-571b-4722-8692-93907c48e259",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -928,7 +930,7 @@
 							}
 						}
 					],
-					"_postman_id": "1f2a3069-a6ba-4509-9b57-9b031bbee4f1",
+					"id": "1f2a3069-a6ba-4509-9b57-9b031bbee4f1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -964,7 +966,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "9c200ed2-5d90-4262-9266-7cfd2026b904",
+			"id": "9c200ed2-5d90-4262-9266-7cfd2026b904",
 			"description": "Em Bookings temos as opções para retrivar o localizador ou realizar o cancelamento do mesmo."
 		},
 		{
@@ -972,7 +974,7 @@
 			"item": [
 				{
 					"name": "Create SystemAccount",
-					"_postman_id": "5a75d33c-b4f4-4941-afee-0d3363123a76",
+					"id": "5a75d33c-b4f4-4941-afee-0d3363123a76",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1008,46 +1010,40 @@
 					"response": []
 				}
 			],
-			"_postman_id": "d80b2b14-f2f7-4b9d-91f6-7e1d4dfc5e16",
+			"id": "d80b2b14-f2f7-4b9d-91f6-7e1d4dfc5e16",
 			"description": "O Profile e responsável pelo métodos de criar cadastros de entidades do sistema."
 		}
 	],
 	"variable": [
 		{
-			"id": "a680532d-e76a-4099-8b3f-767e57dc873a",
+			"id": "9f5952f9-da96-4998-8a78-d06c419316de",
 			"key": "departureDay",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "d55ad072-4622-4e73-a2d6-04dd420fd79f",
+			"id": "f1667010-a665-4ce1-a24e-5be51dde73f4",
 			"key": "departureMonth",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "1ec10861-9b18-4f52-a978-f5fb8562af02",
+			"id": "abc62a66-2f35-4ab0-ad11-6546f9cc5aec",
 			"key": "departureYear",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "8bfb4d03-002c-48cf-ab70-b93be81cfde2",
+			"id": "83e51179-01fe-4dc9-8de0-f5070b6262bb",
 			"key": "returnDay",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "49a0a6e3-9720-437b-83a7-bf6cb7beefdf",
+			"id": "7bb3006d-40a6-4c70-9581-c73511673683",
 			"key": "returnMonth",
-			"value": "",
-			"type": "string"
+			"value": ""
 		},
 		{
-			"id": "12b30750-c425-4742-a361-170ad0eb5d53",
+			"id": "f3c33867-d9ea-4007-8f4e-16e41700ca81",
 			"key": "returnYear",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
