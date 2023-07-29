@@ -18,7 +18,7 @@
 							"id": "85be4ef8-b0b9-42e5-bbc6-a75b1863539d"
 						},
 						{
-							"name": "New Folder",
+							"name": "Search Examples",
 							"item": [],
 							"id": "670ef416-c386-4f22-b3c1-05b2d77a0729"
 						},
@@ -1021,32 +1021,32 @@
 	],
 	"variable": [
 		{
-			"id": "11a279c4-ca1a-453f-a7f3-aeee177eaded",
+			"id": "c342a4d2-1667-4a32-a4e8-332d5a1e8daa",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "615788d6-330b-42b9-b4e5-c1bee7129db0",
+			"id": "284bf8f8-5308-4048-9d4d-5e1b0aab8c80",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "9fffa993-9d46-41f7-a5c5-0aa72019a84d",
+			"id": "bba7a8eb-8731-4794-b877-82dce904963f",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "e39c2beb-ba71-4cfa-bd6e-20dcf0a0162a",
+			"id": "7896aa76-8210-47bd-9509-22073b5fd962",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "4acc9b61-1cda-40bc-8250-cdf5bdc6915b",
+			"id": "f88e4c6f-fcf7-4a4d-a3ed-092ba7475abf",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "33cfc390-4748-4b36-bdee-e06587c0aaf0",
+			"id": "2e513bfc-6a93-4cbc-bf51-4b5231240a24",
 			"key": "returnYear",
 			"value": ""
 		}
