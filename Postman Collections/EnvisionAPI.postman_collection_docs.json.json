@@ -1175,33 +1175,43 @@
 	],
 	"variable": [
 		{
-			"id": "2d3b38b0-2120-493a-ab0a-27bd8b8d31d5",
+			"id": "3d07f547-e95b-40c8-9f73-7993ba145abb",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "ac6f12c1-96d5-4ed8-9aed-23f79a287aef",
+			"id": "1bbe365d-95a6-44bc-a96b-a2acd248b405",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "7d7bce64-a0b9-4ab2-a879-c1dd6f9c3e00",
+			"id": "8534f69a-ca73-4f5f-b47a-2a8909d97cf0",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "c4f33cf6-33d4-461e-b3da-68302de78e78",
+			"id": "ed98c024-6cc0-4f89-b25b-305a50fd606c",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "91c9750f-be87-435b-b88c-bbcef9188a93",
+			"id": "fe8418da-f657-4145-8d98-f9ab4152da6b",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "6b138b5a-9389-4d82-be25-a55e52bcf148",
+			"id": "bfccb9dc-3f1b-44ef-a160-717dfe7cddf0",
 			"key": "returnYear",
+			"value": ""
+		},
+		{
+			"id": "8806474b-884b-418a-a90a-04906dcc5fcb",
+			"key": "selectedFare",
+			"value": ""
+		},
+		{
+			"id": "a7e5d6ce-65bd-439d-ae40-ceb8f9a3facb",
+			"key": "selectedFlightGroup",
 			"value": ""
 		}
 	]
