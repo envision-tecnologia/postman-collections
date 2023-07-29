@@ -41,14 +41,16 @@
 												"id": "aaf26540-5ea8-4ed5-a56d-c2a512a53056",
 												"exec": [
 													"var jsonData = pm.response.json();\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.value).to.eql(100);\r",
+													"});\r",
 													"\r",
+													"var selectedFlightOption = jsonData.Root.airResponseData.flightsOptions[0];\r",
+													"var selectedFlightGroup = jsonData.Root.airResponseData.flightGroups[selectedFlightOption.FlightGroupIndexes[0]];\r",
 													"\r",
-													"    pm.test(\"Your test name\", function () {\r",
-													"        var jsonData = pm.response.json();\r",
-													"        pm.expect(jsonData.value).to.eql(100);\r",
-													"    });\r",
-													"var firstFlightOptions = \r",
-													"pm.collectionVariables.set(\"variable_key\", \"variable_value\");"
+													"pm.collectionVariables.set(\"selectedFlightOption\", selectedFlightOption);\r",
+													"pm.collectionVariables.set(\"selectedFlightGroup\", selectedFlightGroup);\r",
+													""
 												],
 												"type": "text/javascript"
 											}
@@ -1171,32 +1173,32 @@
 	],
 	"variable": [
 		{
-			"id": "40d374ac-cdf9-41bb-84a9-6ffe323f63c0",
+			"id": "a5cd7117-56af-4d07-9944-114f325870de",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "1c34cb75-015f-4e00-bf3a-5002baaa295e",
+			"id": "3a0b9127-3127-4f43-b41e-34f15abceec6",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "441de67d-0a28-4f1e-9a81-3bfc707b7af1",
+			"id": "272687e3-a7e6-471e-a89e-c59dd1d4f8fd",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "2299ca10-9e04-420e-9b41-67ac7fabf8c8",
+			"id": "499cf971-52c0-4403-9c5b-2cc897f58c56",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "c777f80f-22b8-4b4a-8feb-79f2d4aa25e5",
+			"id": "175e361a-b240-4f5c-b582-b8c8c9c43aab",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "dba6f7a8-18d2-4c95-a0a0-228ed46c5826",
+			"id": "d2b9490b-0fbe-46e4-a99f-48a6de680750",
 			"key": "returnYear",
 			"value": ""
 		}
