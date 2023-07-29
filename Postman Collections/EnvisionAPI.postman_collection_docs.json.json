@@ -50,8 +50,9 @@
 													"var selectedFlightGroup = jsonData.airResponseData.flightGroups[selectedFlightOption.flightGroupIndexes[0]];\r",
 													"var selectedFare = selectedFlightOption.brandedFares[0].faresByFlightGroup[0];\r",
 													"\r",
-													"pm.collectionVariables.set(\"selectedFare\", selectedFare);\r",
-													"pm.collectionVariables.set(\"selectedFlightGroup\", selectedFlightGroup);\r",
+													"\r",
+													"pm.collectionVariables.set(\"selectedFare\", JSON.stringify(selectedFare));\r",
+													"pm.collectionVariables.set(\"selectedFlightGroup\", JSON.stringify(selectedFlightGroup));\r",
 													""
 												],
 												"type": "text/javascript"
@@ -1175,42 +1176,42 @@
 	],
 	"variable": [
 		{
-			"id": "c2bf7395-1db9-4932-8f25-5b70967fcb7a",
+			"id": "36c00ae3-4f5e-4858-b113-0a55f184116e",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "6269d4d8-86e8-49bf-8c9e-a2b2af43ea90",
+			"id": "c941e319-3d23-4925-88ef-1b1963ca22e4",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "6ea41459-87dd-4a1b-93ab-1e1759986a53",
+			"id": "ae1f274d-9a1b-4b88-8a57-3d51b84e54b6",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "46662758-e54b-4389-8aa6-75d541afe80e",
+			"id": "f1cb809a-e799-4b40-a3d5-d1791109e9b6",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "630e2091-f3dc-407a-be6c-64b7064639ef",
+			"id": "d92fbd6b-ee82-4872-aa07-205e78b2dc59",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "b620b240-d5a6-4f34-a244-fe69f2433152",
+			"id": "e8c5b427-7b04-407f-bea6-97e754f0b9db",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "7f0096df-f633-49c2-8966-e1ac65e98cbb",
+			"id": "5f765e75-2033-4d9f-9ca3-aa12bd8442ba",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "e1fb7da6-af15-4618-a2b3-b7b8eb115f9a",
+			"id": "48d5c4cd-5bb8-43ee-8625-21732149a6f7",
 			"key": "selectedFlightGroup",
 			"value": ""
 		}
