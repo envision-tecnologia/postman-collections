@@ -18,6 +18,11 @@
 							"id": "85be4ef8-b0b9-42e5-bbc6-a75b1863539d"
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "670ef416-c386-4f22-b3c1-05b2d77a0729"
+						},
+						{
 							"name": "Search Flights Prod Filtro cias",
 							"event": [
 								{
@@ -1016,32 +1021,32 @@
 	],
 	"variable": [
 		{
-			"id": "26bd0ac7-4cf1-4203-893b-b8accf8a9a03",
+			"id": "f2327f37-c3a2-413d-8481-aa22b770da45",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "668bf5f8-c8fb-4554-9b9c-341e12f4cb2b",
+			"id": "f91db271-c53c-42d4-bdf4-84a92d477fc0",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "9d2d41ad-6052-436e-91a7-55c4304919dd",
+			"id": "010728fd-7693-4155-ae85-be65b1928115",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "8e5127ba-a436-4b71-baee-fb5eca9082fb",
+			"id": "13e1f796-6fcd-4d03-bc3a-ff68a1b17879",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "7764dcce-01d9-4828-a934-d3f58a2a3bcd",
+			"id": "dfc125c8-af7c-432d-984d-7c026dadebaf",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "377393f3-8ab8-44e7-be9d-a2861646dad1",
+			"id": "959463c6-6844-4feb-8089-7bd8674a5e38",
 			"key": "returnYear",
 			"value": ""
 		}
