@@ -24,10 +24,11 @@
 												"id": "eb586594-af08-488e-9f50-b584f1b1712d",
 												"exec": [
 													"const moment = require('moment');\r",
+													"const departureDate = moment().add(30,'days');\r",
 													"\r",
-													"pm.collectionVariables.set(\"departureDay\", moment().add(30,'days').format(\"DD\"));\r",
-													"pm.collectionVariables.set(\"departureMonth\", moment().add(30,'days').format(\"MM\"));\r",
-													"pm.collectionVariables.set(\"departureYear\", moment().add(30,'days').format(\"YYYY\"));\r",
+													"pm.collectionVariables.set(\"departureDay\", parseInt(departureDate.format(\"DD\")));\r",
+													"pm.collectionVariables.set(\"departureMonth\", parseInt(departureDate.format(\"MM\")));\r",
+													"pm.collectionVariables.set(\"departureYear\", parseInt(departureDate.format(\"YYYY\")));\r",
 													"\r",
 													""
 												],
@@ -1078,32 +1079,32 @@
 	],
 	"variable": [
 		{
-			"id": "5dcf570f-94bb-42fb-aacc-37c89e9190fa",
+			"id": "90d91329-9daa-4324-a14c-8bdab4114758",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "bd64e4bb-c0db-4393-b1da-793e90dffcbb",
+			"id": "8ac9fd0b-5afb-46a8-8d16-2d6231bdcaae",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "878d536d-8b9b-490b-8eb0-25b621e6c16a",
+			"id": "8fe7c161-c9fa-4b26-b515-b866f3685a1b",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "ce7e42b1-32fd-46d4-b558-12937660ff98",
+			"id": "f8d8452e-1ae6-4696-b5bf-99f6c81122d1",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "38517f26-9212-408e-a193-fb32efd14621",
+			"id": "ec36acd7-4bad-47f3-b835-0cdf6004a59b",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "d8cbd59a-c363-4b12-ba17-1d68119418dc",
+			"id": "ec9cc160-b00a-403f-a594-f0e6c3165427",
 			"key": "returnYear",
 			"value": ""
 		}
