@@ -1199,43 +1199,53 @@
 	],
 	"variable": [
 		{
-			"id": "72b7912c-3274-4e85-a9b5-598322199087",
+			"id": "708fefda-09bd-4741-8f91-199591bfd430",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "07b72a3b-f8c6-40c4-87c6-e33b2a3b0e6b",
+			"id": "bd6de179-2ad7-4a64-b66f-1e1a59e88585",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "0f299e0b-4e2a-42dc-b2fc-0f1b49848cc3",
+			"id": "e8b09256-caa0-49b0-9470-3c4ace378a12",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "60ac7268-c4a7-4cf1-96b6-1cee58675b8d",
+			"id": "245d1e59-2c36-4564-9645-d3316fc6cade",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "828eb75c-8bcf-44d1-9f4d-a82ffa743917",
+			"id": "0f2235e2-cb56-4930-8d2f-2305ec0298c8",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "6e7f5d79-2ae2-4ed5-820e-0b5241eceacc",
+			"id": "3ef17523-1e72-4fee-a146-860e4e9b763e",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "d14c3007-8a65-4906-80da-359eef101339",
+			"id": "89a4a936-277c-4988-8732-6d2cc9cc25bc",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "7e87c00d-e687-4f66-bf17-e4abca47c8ce",
+			"id": "cd26ee5b-45bf-45f6-9a10-54c4c4765301",
 			"key": "selectedFlightGroup",
+			"value": ""
+		},
+		{
+			"id": "e7ce6c1e-1efe-41d8-b0c8-defcaa565bd2",
+			"key": "bookingFares",
+			"value": ""
+		},
+		{
+			"id": "272a69d5-8a0d-4de5-b3e0-de9c6207c6bd",
+			"key": "flightGroups",
 			"value": ""
 		}
 	]
