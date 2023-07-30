@@ -179,7 +179,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"Passageiro\",\r\n            \"lastName\": \"Envision\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n}",
+											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"Passageiro\",\r\n            \"lastName\": \"Envision\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requester\": {\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"firstName\": \"Silvio\",\r\n        \"lastName\": \"Envision\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"67169526166\",\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ]\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1199,42 +1199,42 @@
 	],
 	"variable": [
 		{
-			"id": "d7aea8d5-2cac-4fbc-91e3-82ab990694a2",
+			"id": "72b7912c-3274-4e85-a9b5-598322199087",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "4e5afa4c-6ad4-44c1-810c-fd1eab2ab659",
+			"id": "07b72a3b-f8c6-40c4-87c6-e33b2a3b0e6b",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "b6c801ab-9055-4a4f-8893-6976771698b6",
+			"id": "0f299e0b-4e2a-42dc-b2fc-0f1b49848cc3",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "f14732b4-9980-438d-ac54-294a8b0366ab",
+			"id": "60ac7268-c4a7-4cf1-96b6-1cee58675b8d",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "476aa645-e5a2-457d-a1c9-d16f3036586c",
+			"id": "828eb75c-8bcf-44d1-9f4d-a82ffa743917",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "502a3ee2-d038-4cae-994b-a1e4badd8cbe",
+			"id": "6e7f5d79-2ae2-4ed5-820e-0b5241eceacc",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "66483148-9986-42b3-a233-da26862bb059",
+			"id": "d14c3007-8a65-4906-80da-359eef101339",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "407cda1d-9e6a-486b-a8f8-80142a128e20",
+			"id": "7e87c00d-e687-4f66-bf17-e4abca47c8ce",
 			"key": "selectedFlightGroup",
 			"value": ""
 		}
