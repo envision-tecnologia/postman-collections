@@ -96,6 +96,29 @@
 								},
 								{
 									"name": "PreOrder Flights",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "19820617-c04c-45fc-996b-9b417202fcd9",
+												"exec": [
+													"var jsonData = pm.response.json();\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.value).to.eql(100);\r",
+													"});\r",
+													"\r",
+													"// Armazena os objetos necessarios para o ProcessOrder\r",
+													"var bookingFares = jsonData.bookingFares;\r",
+													"var flightGroups = jsonData.flightGroups;\r",
+													"\r",
+													"pm.collectionVariables.set(\"bookingFares\", JSON.stringify(bookingFares));\r",
+													"pm.collectionVariables.set(\"flightGroups\", JSON.stringify(flightGroups));\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "9491aaae-958a-4cf9-99da-5cf4f0a6f9e3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -1176,42 +1199,42 @@
 	],
 	"variable": [
 		{
-			"id": "fa6e6299-571f-4585-8685-f11169bd81cf",
+			"id": "888f7227-7a13-4206-a312-9e02e66aedfd",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "cd7b4912-bd59-49c9-9365-57f348999d29",
+			"id": "de376a41-caba-438d-bc6b-085e7c7d2f22",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "13f72520-87e7-41d8-9721-faffa15f2b61",
+			"id": "226a336c-1d93-4fb8-89d2-aa3fc5d290d9",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "1339bc85-c452-441c-9c6b-cd8f69e37593",
+			"id": "d5ac82f1-192d-4150-be50-6b5eee9121ba",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "b629ed15-ad87-4c93-9d16-7989ad8c8ec4",
+			"id": "42d45669-a386-4f76-86ca-7ad031338fba",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "8eb30edc-f9dc-420a-a1b0-1f125d8891d7",
+			"id": "b031cda1-cb73-476a-9785-8999f0f33f5d",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "ca788fa7-91d5-45a0-a4f2-16f6e0fc679a",
+			"id": "8f295181-90e2-4ce9-8c71-587fd40601ec",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "21dd9cd3-0a25-40b8-895d-b213130a9b0f",
+			"id": "c3d8e1db-212c-4d78-9aa5-6a32adcfeb0c",
 			"key": "selectedFlightGroup",
 			"value": ""
 		}
