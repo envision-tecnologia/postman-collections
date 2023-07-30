@@ -172,7 +172,6 @@
 													"var locator = jsonData.parentRecord.children[0].pnrs[0].locator;\r",
 													"var supplierSystem = jsonData.parentRecord.children[0].pnrs[0].supplierSystem;\r",
 													"\r",
-													"\r",
 													"pm.collectionVariables.set(\"serviceOrderId\", serviceOrderId);\r",
 													"pm.collectionVariables.set(\"locator\", locator);\r",
 													"pm.collectionVariables.set(\"supplierSystem\", supplierSystem);\r",
@@ -1226,52 +1225,52 @@
 	],
 	"variable": [
 		{
-			"id": "9f4f5261-c507-4b7e-95d7-f9cb339711a6",
+			"id": "131a1ee7-aa64-4710-9cc8-c8ea965c82ec",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "0068e1ba-799c-44ec-aa0b-251670f7673c",
+			"id": "de80ff5c-5603-4dc6-96fd-36f77b6601cd",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "c7cdeaa6-1fa3-4db9-be20-8dc42539f4e9",
+			"id": "1be8f268-0e79-4bc7-bb50-474ba63a9b1b",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "fa722f6b-49a1-4180-b2b9-602c9f0a3275",
+			"id": "ea35ea1f-eeba-43a1-b016-834de56130e1",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "97dc167e-27ac-4869-b787-e465de73a555",
+			"id": "1a4d19a5-7b51-4f2e-9c57-4c3f4b3e39c3",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "c58b4f3c-2ded-4f9b-94cb-a43a3e4bac48",
+			"id": "3066ac11-75a2-451b-a52f-5a82800720be",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "f7be3a99-f25b-441f-8898-a2190d74e251",
+			"id": "528217f5-15b5-4356-8d05-7c1ad7600857",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "379491e7-189f-4e79-b091-26ef4cf456f2",
+			"id": "2f28e2a4-6311-41f8-b225-c1ba188cf912",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "d0003192-0e13-49f6-a435-89651fac4736",
+			"id": "005150dc-53ea-404a-8a8d-a196adcc9532",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "b1428845-c4db-4a1d-877a-a5706cb95e93",
+			"id": "c50bfff3-6ef4-44e9-bcbc-303a2362e032",
 			"key": "flightGroups",
 			"value": ""
 		}
