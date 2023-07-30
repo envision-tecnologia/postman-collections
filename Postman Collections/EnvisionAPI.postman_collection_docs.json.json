@@ -174,9 +174,9 @@
 													"\r",
 													"\r",
 													"\r",
-													"pm.collectionVariables.set(\"serviceOrderId\", serviceOrderId));\r",
-													"pm.collectionVariables.set(\"locator\", locator));\r",
-													"pm.collectionVariables.set(\"supplierSystem\", supplierSystem));\r",
+													"pm.collectionVariables.set(\"serviceOrderId\", serviceOrderId);\r",
+													"pm.collectionVariables.set(\"locator\", locator);\r",
+													"pm.collectionVariables.set(\"supplierSystem\", supplierSystem);\r",
 													"\r",
 													""
 												],
@@ -1227,52 +1227,52 @@
 	],
 	"variable": [
 		{
-			"id": "aaa28d4b-71bb-4562-bd00-52ef11db0ced",
+			"id": "641b5c61-2edf-44a2-a1ae-6cca96874e0e",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "c7c4e5eb-f1fd-4691-8ab3-51822b0d7f48",
+			"id": "d39e004f-8842-4373-895a-dcf2c4347013",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "901a28d7-44ab-42d6-918b-029fd69692b5",
+			"id": "100297a2-7a0b-45c4-9a41-b1c7835bd078",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "0852d5ab-1306-40bc-bd69-95254021825f",
+			"id": "a234fe4e-d729-49d3-96cd-2415cc4899c1",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "06b2dc7a-e3d7-45dc-ac54-5bf706c58041",
+			"id": "a21bd017-42fb-46d9-95ab-d9d23069fe6b",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "e805fbed-faf5-4680-a534-590feae390b7",
+			"id": "7b215ad9-2a38-465e-8d59-0272f58c970c",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "009094cf-be1f-4270-9381-91c6354788c1",
+			"id": "55ec964e-ef16-4d4d-a565-fc9aaf88db6b",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "1f1c1bfa-d396-41f4-bc84-44303b7b5625",
+			"id": "88e06ef2-2e2e-4c6d-8ac1-25dd77f3e608",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "1a58a0dd-7da9-4cb4-abc9-8883dd96a9d6",
+			"id": "ff95c4e9-53e4-4c4b-9830-340410114e69",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "b9c326d5-9e3e-4fb5-bcec-78759cc523b3",
+			"id": "b377ccce-4a63-4cea-b99b-a91fc44b3692",
 			"key": "flightGroups",
 			"value": ""
 		}
