@@ -168,10 +168,19 @@
 											"script": {
 												"id": "280922c7-7ebd-46cb-92eb-d3dab0b54389",
 												"exec": [
-													"var jsonData = pm.response.json();\r",
-													"pm.test(\"Check If Response is OK\", function () {\r",
-													"    pm.expect(jsonData.value).to.eql(100);\r",
+													"pm.test(\"Status code is 200\", function () {\r",
+													"  pm.response.to.have.status(200);\r",
 													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.parentRecord).to.greaterThan(0);\r",
+													"    pm.expect(jsonData.parentRecord.children).to.greaterThan(1);\r",
+													"    pm.expect(jsonData.parentRecord.children[0].pnrs).to.greaterThan(1);\r",
+													"\r",
+													"});\r",
+													"\r",
 													"\r",
 													"// Coleta o ID da Ordem de Serviço, e o Localizador, e o Fornecedor Responsável pelo localizador (SupplierSystem ou SourceType)\r",
 													"var serviceOrderId = jsonData.parentRecord.id;\r",
@@ -1235,67 +1244,67 @@
 	],
 	"variable": [
 		{
-			"id": "4a2a54ab-4ba0-40d7-9c99-ecb8f63bfb42",
+			"id": "4a8dc41d-a227-41d9-af90-f616767c71f4",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "33027fd9-d4d2-4312-ba8e-d6e1192ab702",
+			"id": "f9b47461-db6f-4865-812f-c5baf08408d8",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "c49caba0-e73f-4646-b87b-7a7a688040ad",
+			"id": "b165cd70-b56a-46e8-83f5-9110938e8f47",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "e91de601-e4eb-4950-a96f-19d207959bbb",
+			"id": "c1d57620-baaf-4692-94ba-3c86d887e000",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "9f4840fc-84cf-4799-b7bf-b763d2078bbc",
+			"id": "eaea2081-6ec8-4bbc-a9c1-30cf395f362b",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "74d278ea-29a3-49b9-ba5f-f5c4b04c51ac",
+			"id": "832490af-68c0-4358-9e38-2554b114c6bf",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "c356342f-1ff2-46f6-abb5-6c2b2c25b340",
+			"id": "0c355073-b482-40a2-9c87-c6172d72c531",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "27e09284-ba0f-45f5-bcaf-18b645ee705e",
+			"id": "39592c21-f65a-4f74-81a8-615756ca45ae",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "de7a349a-dd14-4787-b92c-76fc469360ae",
+			"id": "0dc5a20f-c2c2-4be6-bb94-6b25017ea92c",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "cd7b22ea-b001-432d-ba57-3d518bb3ee36",
+			"id": "778dd1b9-fc1a-4c52-b1e8-6142d1017027",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "626a10f6-1bcb-455b-8c3f-c08c4546c107",
+			"id": "fa4770ca-ac8d-4f9e-9bd2-dc310748ec2f",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "ea899b6d-af4d-4b54-860f-bc7857cf0e19",
+			"id": "2fd2c6f5-778a-47f7-b808-8c80fc50897b",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "1725aed0-a1f2-4d68-9a84-bac14fab797c",
+			"id": "937372dc-b0fa-48ab-adac-42608d0bd169",
 			"key": "supplierSystem",
 			"value": ""
 		}
