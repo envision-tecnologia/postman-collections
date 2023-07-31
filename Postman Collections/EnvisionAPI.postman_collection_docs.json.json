@@ -603,7 +603,7 @@
 							"name": "Cancel PNR",
 							"item": [
 								{
-									"name": "New Request",
+									"name": "CancelPnrs",
 									"id": "2468f5d0-4e3d-442e-9bbe-3f358426b05d",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -1270,67 +1270,67 @@
 	],
 	"variable": [
 		{
-			"id": "2c516d73-d104-4458-882d-fad4076d37b8",
+			"id": "81ae1f91-d4f5-4c07-8fe7-ba1051eab2af",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "a543de08-5b16-4c66-ac37-92d09fc8b01b",
+			"id": "7ec04ea5-62b6-4897-8d6d-df13febd5fd7",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "0b0b030c-651c-4061-9f15-006947183535",
+			"id": "48c976e0-5e85-4ce2-b9ac-fa6198c0becc",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "ef18547b-484f-4e30-a147-a34bd25a823d",
+			"id": "59d4636c-bbe5-47e2-a5cc-b17597f2d716",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "b436edfe-72ce-446a-98d1-f2fc0799f6a0",
+			"id": "069e13c7-a22c-4071-9b7f-5be8c2514d1c",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "c637e2b0-52fc-42da-8cc4-76346dbc9f6b",
+			"id": "61a0b68b-64fd-4ddb-986d-870cb8f970a5",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "bf6c6877-039c-46b1-a811-c59d76ccad5b",
+			"id": "19a53482-498a-4e18-88c9-3b91628f5b64",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "6598093d-fe61-447d-9609-75b5cfa7c80b",
+			"id": "053f73ec-7f75-48c3-8812-da29f54f3eb1",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "6acc44b1-f950-4753-8f89-84a563a9c675",
+			"id": "b9bfdb57-d396-4e55-94bb-dbab040a4fb2",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "0bd329ec-24a5-4806-993c-e21ed6c4cd8f",
+			"id": "d49d3f03-b281-4231-9269-b03e9ac52e9c",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "c07d56d7-e43f-4a14-a35b-f3c9da784c83",
+			"id": "7d143773-9307-4a23-90c9-994362eb24ce",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "49a8203d-2c2d-4fe5-987f-c042d066364e",
+			"id": "3a0bff9b-8fdd-4361-ab65-964f2b0a04c5",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "b91e2ae5-d1d7-4488-86ad-37e1f21b2c6b",
+			"id": "1c2a5b3b-1a22-4a41-8105-a4f6f44944c9",
 			"key": "supplierSystem",
 			"value": ""
 		}
