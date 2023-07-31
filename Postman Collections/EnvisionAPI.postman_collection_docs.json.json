@@ -1049,7 +1049,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"PASSAGEIRO ENVISION\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"PASSAGEIRO Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1605,77 +1605,77 @@
 	],
 	"variable": [
 		{
-			"id": "8fbf33c7-07cf-41c0-b2e4-95205698f6f3",
+			"id": "c7c94f5c-c730-4d75-9e78-0287b0788f18",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "1001a2ee-958c-44f8-89a7-2529d6edbb66",
+			"id": "7c7b0898-9bc0-431d-b609-de5bed5ee32f",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "c66a72d3-0382-4020-b1ad-6757b48d284a",
+			"id": "6de5992c-ad4d-4bad-83e3-ebb39dd079ec",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "97c71235-e3e4-462d-8d54-6a2beb003957",
+			"id": "c70d43da-9c9d-474a-8c93-9d8d0d378a5c",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "349974f2-bfab-42bb-a05c-ff0310bafe7a",
+			"id": "a6137b81-9cc6-4763-9221-34c96df2d1dd",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "78a320c9-b97e-4151-9e42-c8ad8b30c099",
+			"id": "cd39561b-dba9-446f-9821-c4bca92caf68",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "4a7c6d1b-8c4b-4836-a4d6-6a538e76c42b",
+			"id": "67f867b1-d9e5-4fb6-9851-e21c9953afa2",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "323009b9-929a-4ae9-8a5d-d2b4757148d1",
+			"id": "e81bc196-f201-4e16-b36d-874f536aacb5",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "8d992cf7-2cd2-4feb-92ee-166d95b67bc6",
+			"id": "a97aa072-4ff3-4907-bf43-aa045664f0c5",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "f52257ab-e56b-45c2-aa81-6c0a313649f2",
+			"id": "c6744baf-cca0-45cf-8429-1eba0d8c16db",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "fb7ae5a8-32d7-4c98-a28d-46480dd609bb",
+			"id": "51b25549-1578-4f1b-85a2-a4b275624555",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "2f1a3496-03da-4683-8dc9-d8a7a926eb48",
+			"id": "a86b55d9-81ea-4e82-bd72-a905e23a5b66",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "74f0a1cf-6fba-4a5d-b0d2-7fe421a5c823",
+			"id": "2c3f2884-a3ef-40c7-8f6b-48b5555d6400",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "fafc2217-1207-414f-a69a-10cbf7c5115c",
+			"id": "173ae487-51b9-4cb5-8687-480a1db653f9",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "7fb2407c-29a1-4235-982c-a9905011d134",
+			"id": "516e145e-065d-40ff-b08a-436c8c63eed8",
 			"key": "currencyCode",
 			"value": ""
 		}
