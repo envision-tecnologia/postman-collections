@@ -834,8 +834,32 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "GET",
-										"header": []
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Env#M@r2023",
+												"username": "envision",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"tickets\": [\r\n    {\r\n      \"travellerName\": \"string\",\r\n      \"comission\": \"string\",\r\n      \"endorsement\": \"string\",\r\n      \"tourCode\": \"string\",\r\n      \"pnrLocator\": \"string\",\r\n      \"supplierSystem\": \"string\"\r\n    }\r\n  ],\r\n  \"payments\": [\r\n    {\r\n      \"identification\": \"string\",\r\n      \"description\": \"string\",\r\n      \"totalValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"points\": 0,\r\n      \"firstInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"otherInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"authorizationTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"authorizationCode\": \"string\",\r\n      \"installments\": 0,\r\n      \"interest\": 0,\r\n      \"externalProperties\": \"string\",\r\n      \"transactionId\": \"string\",\r\n      \"reversalTransactionId\": \"string\",\r\n      \"transactionTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"status\": \"none\",\r\n      \"method\": \"creditCard\",\r\n      \"owner\": {\r\n        \"name\": \"string\",\r\n        \"document\": \"string\",\r\n        \"birthDate\": {\r\n          \"year\": 0,\r\n          \"month\": 0,\r\n          \"day\": 0,\r\n          \"dayOfWeek\": \"sunday\",\r\n          \"hour\": 0,\r\n          \"minutes\": 0,\r\n          \"seconds\": 0,\r\n          \"millisecond\": 0\r\n        },\r\n        \"email\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"string\",\r\n          \"number\": \"string\",\r\n          \"complement\": \"string\",\r\n          \"zipCode\": \"string\",\r\n          \"neighborhood\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"string\",\r\n          \"country\": \"string\",\r\n          \"longitude\": 0,\r\n          \"latitude\": 0,\r\n          \"id\": 0\r\n        },\r\n        \"buyerId\": 0,\r\n        \"documentType\": \"string\"\r\n      },\r\n      \"creditCardInformation\": {\r\n        \"registeredCreditCardId\": 0,\r\n        \"creditCardNumber\": \"string\",\r\n        \"securityCode\": \"string\",\r\n        \"expireYear\": 0,\r\n        \"expireMonth\": 0,\r\n        \"providerCode\": \"string\",\r\n        \"providerName\": \"string\"\r\n      },\r\n      \"bankTransferInformation\": {\r\n        \"bankName\": \"string\",\r\n        \"transferorName\": \"string\",\r\n        \"tax\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        }\r\n      },\r\n      \"pointOfSaleInformation\": {\r\n        \"percentCharged\": 0,\r\n        \"absoluteValue\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        },\r\n        \"cardNumber\": \"string\",\r\n        \"cardProvider\": \"string\",\r\n        \"transactionType\": \"credit\",\r\n        \"posId\": \"string\"\r\n      },\r\n      \"airTicketReplacementInformation\": {\r\n        \"ticketNumber\": \"string\"\r\n      }\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/IssueTickets"
 									},
 									"response": []
 								}
@@ -1494,67 +1518,67 @@
 	],
 	"variable": [
 		{
-			"id": "68921925-9c3f-4a3d-8691-6cb92875aa89",
+			"id": "47c8b01e-e803-4ff2-b33d-e9963514b11d",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "9e1c04e3-1bdc-4b40-8727-ff649abe18c1",
+			"id": "7a17eec1-2712-471f-b0d6-d12b08cd2736",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "022b59c7-3014-4e84-95bf-a2b1d419504e",
+			"id": "102224d9-de75-4d5b-b229-2dee9cb08d42",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "bb508265-1df9-400a-bd0a-0af464b560b5",
+			"id": "b01b47cc-c341-46aa-b06f-70a270729eac",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "c9275f5d-263b-4f90-b408-4c0415076c99",
+			"id": "cfef8789-e1e2-4360-8d65-8dfaf1d44c37",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "ee76f53b-3ef5-4c2e-871a-3e43e8256cbe",
+			"id": "5bffdaf5-05ea-4e54-abf1-449e0b0ecb5f",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "ff2893c0-20d9-404d-a307-1cf08ed3ac7a",
+			"id": "4213c3f8-9a9e-4467-b9b4-fb16abc72779",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "d95f8873-a8d7-4472-ab75-8b67b89af299",
+			"id": "89ae5f8f-dade-4dfb-b1cf-abf7bcae22bc",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "45070ad6-320d-4065-947a-52cbf810330a",
+			"id": "e109fc42-7d23-4bf3-8c71-7b87d0a2e830",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "4fa98fbf-40b5-4fc2-bdbb-3a0a80115f8b",
+			"id": "13a69c1a-47c3-44c3-a123-3215d01d6337",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "7f9e6f0e-4f96-4ef1-b93f-ae2f28fe1e9b",
+			"id": "e71e26d7-0e4b-4b91-98af-49c694458b71",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "1729106e-ff41-4603-a31f-38d9862bbe6e",
+			"id": "59da47af-4297-43d0-b1af-d091a518d890",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "1ddabb90-6c58-42ce-9c60-af52eb2228a9",
+			"id": "9ae863e9-1672-491a-9ab5-f53c94512a9a",
 			"key": "supplierSystem",
 			"value": ""
 		}
