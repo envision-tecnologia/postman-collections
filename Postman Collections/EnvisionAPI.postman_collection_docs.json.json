@@ -852,7 +852,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"tickets\": [\r\n    {\r\n      \"travellerName\": \"string\",\r\n      \"comission\": \"string\",\r\n      \"endorsement\": \"string\",\r\n      \"tourCode\": \"string\",\r\n      \"pnrLocator\": \"string\",\r\n      \"supplierSystem\": \"string\"\r\n    }\r\n  ],\r\n  \"payments\": [\r\n    {\r\n      \"identification\": \"string\",\r\n      \"description\": \"string\",\r\n      \"totalValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"points\": 0,\r\n      \"firstInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"otherInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"authorizationTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"authorizationCode\": \"string\",\r\n      \"installments\": 0,\r\n      \"interest\": 0,\r\n      \"externalProperties\": \"string\",\r\n      \"transactionId\": \"string\",\r\n      \"reversalTransactionId\": \"string\",\r\n      \"transactionTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"status\": \"none\",\r\n      \"method\": \"creditCard\",\r\n      \"owner\": {\r\n        \"name\": \"string\",\r\n        \"document\": \"string\",\r\n        \"birthDate\": {\r\n          \"year\": 0,\r\n          \"month\": 0,\r\n          \"day\": 0,\r\n          \"dayOfWeek\": \"sunday\",\r\n          \"hour\": 0,\r\n          \"minutes\": 0,\r\n          \"seconds\": 0,\r\n          \"millisecond\": 0\r\n        },\r\n        \"email\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"string\",\r\n          \"number\": \"string\",\r\n          \"complement\": \"string\",\r\n          \"zipCode\": \"string\",\r\n          \"neighborhood\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"string\",\r\n          \"country\": \"string\",\r\n          \"longitude\": 0,\r\n          \"latitude\": 0,\r\n          \"id\": 0\r\n        },\r\n        \"buyerId\": 0,\r\n        \"documentType\": \"string\"\r\n      },\r\n      \"creditCardInformation\": {\r\n        \"registeredCreditCardId\": 0,\r\n        \"creditCardNumber\": \"string\",\r\n        \"securityCode\": \"string\",\r\n        \"expireYear\": 0,\r\n        \"expireMonth\": 0,\r\n        \"providerCode\": \"string\",\r\n        \"providerName\": \"string\"\r\n      },\r\n      \"bankTransferInformation\": {\r\n        \"bankName\": \"string\",\r\n        \"transferorName\": \"string\",\r\n        \"tax\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        }\r\n      },\r\n      \"pointOfSaleInformation\": {\r\n        \"percentCharged\": 0,\r\n        \"absoluteValue\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        },\r\n        \"cardNumber\": \"string\",\r\n        \"cardProvider\": \"string\",\r\n        \"transactionType\": \"credit\",\r\n        \"posId\": \"string\"\r\n      },\r\n      \"airTicketReplacementInformation\": {\r\n        \"ticketNumber\": \"string\"\r\n      }\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"tickets\": [\r\n    {\r\n      \"travellerName\": \"Passageiro Envision\",\r\n      \"tourCode\": \"string\",\r\n      \"pnrLocator\": {{locator}},\r\n      \"supplierSystem\": {{supplierSystem}}\r\n    }\r\n  ],\r\n  \"payments\": [\r\n    {\r\n      \"identification\": \"string\",\r\n      \"description\": \"string\",\r\n      \"totalValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"points\": 0,\r\n      \"firstInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"otherInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"authorizationTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"authorizationCode\": \"string\",\r\n      \"installments\": 0,\r\n      \"interest\": 0,\r\n      \"externalProperties\": \"string\",\r\n      \"transactionId\": \"string\",\r\n      \"reversalTransactionId\": \"string\",\r\n      \"transactionTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"status\": \"none\",\r\n      \"method\": \"creditCard\",\r\n      \"owner\": {\r\n        \"name\": \"string\",\r\n        \"document\": \"string\",\r\n        \"birthDate\": {\r\n          \"year\": 0,\r\n          \"month\": 0,\r\n          \"day\": 0,\r\n          \"dayOfWeek\": \"sunday\",\r\n          \"hour\": 0,\r\n          \"minutes\": 0,\r\n          \"seconds\": 0,\r\n          \"millisecond\": 0\r\n        },\r\n        \"email\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"string\",\r\n          \"number\": \"string\",\r\n          \"complement\": \"string\",\r\n          \"zipCode\": \"string\",\r\n          \"neighborhood\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"string\",\r\n          \"country\": \"string\",\r\n          \"longitude\": 0,\r\n          \"latitude\": 0,\r\n          \"id\": 0\r\n        },\r\n        \"buyerId\": 0,\r\n        \"documentType\": \"string\"\r\n      },\r\n      \"creditCardInformation\": {\r\n        \"registeredCreditCardId\": 0,\r\n        \"creditCardNumber\": \"string\",\r\n        \"securityCode\": \"string\",\r\n        \"expireYear\": 0,\r\n        \"expireMonth\": 0,\r\n        \"providerCode\": \"string\",\r\n        \"providerName\": \"string\"\r\n      },\r\n      \"bankTransferInformation\": {\r\n        \"bankName\": \"string\",\r\n        \"transferorName\": \"string\",\r\n        \"tax\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        }\r\n      },\r\n      \"pointOfSaleInformation\": {\r\n        \"percentCharged\": 0,\r\n        \"absoluteValue\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        },\r\n        \"cardNumber\": \"string\",\r\n        \"cardProvider\": \"string\",\r\n        \"transactionType\": \"credit\",\r\n        \"posId\": \"string\"\r\n      },\r\n      \"airTicketReplacementInformation\": {\r\n        \"ticketNumber\": \"string\"\r\n      }\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1518,67 +1518,67 @@
 	],
 	"variable": [
 		{
-			"id": "47c8b01e-e803-4ff2-b33d-e9963514b11d",
+			"id": "725d64a8-60e4-4324-ab9e-fff3a2457205",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "7a17eec1-2712-471f-b0d6-d12b08cd2736",
+			"id": "bb56aaad-9230-4d3d-a7d3-7784a0a30ce0",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "102224d9-de75-4d5b-b229-2dee9cb08d42",
+			"id": "9f7fbfa8-e527-4c3a-821c-2d529d674a66",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "b01b47cc-c341-46aa-b06f-70a270729eac",
+			"id": "8f61c30e-b815-4e38-91a4-d51bb3273723",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "cfef8789-e1e2-4360-8d65-8dfaf1d44c37",
+			"id": "86b20315-200e-42cd-b8db-f796631876c4",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "5bffdaf5-05ea-4e54-abf1-449e0b0ecb5f",
+			"id": "e2c97489-e746-42a5-a542-9d9b2ccd5f48",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "4213c3f8-9a9e-4467-b9b4-fb16abc72779",
+			"id": "e277f278-9628-45a9-8792-84208f80d131",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "89ae5f8f-dade-4dfb-b1cf-abf7bcae22bc",
+			"id": "11dad350-0ce8-43c7-866d-aaa7f11eb9b0",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "e109fc42-7d23-4bf3-8c71-7b87d0a2e830",
+			"id": "2975a867-d336-4276-bfd0-ab4a20ff9529",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "13a69c1a-47c3-44c3-a123-3215d01d6337",
+			"id": "c7e0d057-d221-4039-bcf5-30cdb6287274",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "e71e26d7-0e4b-4b91-98af-49c694458b71",
+			"id": "428934c8-03c2-400b-8558-2a22c624a356",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "59da47af-4297-43d0-b1af-d091a518d890",
+			"id": "5189de37-48b1-4dba-90f7-1119c340e81f",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "9ae863e9-1672-491a-9ab5-f53c94512a9a",
+			"id": "43a1def9-018c-47e5-b378-e6f198531619",
 			"key": "supplierSystem",
 			"value": ""
 		}
