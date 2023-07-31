@@ -1177,14 +1177,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"ticketNumber\":\"{{ticketNumber}}\",\r\n      \"locator\": \"{{locator}}\",\r\n      \"supplierSystem\": \"{{supplierSystem}}\"\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"ticketNumber\":\"{{ticketNumber}}\",\r\n      \"pnrLocator\": \"{{locator}}\",\r\n      \"supplierSystem\": \"{{supplierSystem}}\"\r\n    }\r\n  ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "https://api.travelagent.com.br/Shopping/Air/CancelTickets"
+										"url": "https://api.travelagent.com.br/Shopping/Air/CancelAirTickets"
 									},
 									"response": []
 								}
@@ -1733,82 +1733,82 @@
 	],
 	"variable": [
 		{
-			"id": "f441696e-cb2d-44f1-b3ee-0bbf895864c8",
+			"id": "6847e7d8-74ed-4bdc-973e-eaca17678314",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "8d19444a-4903-44ef-9867-45108fb73fa9",
+			"id": "3be9924b-9167-4564-b13f-1d6debb77089",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "8653415b-58d8-499a-bf7a-77e5041aea41",
+			"id": "a332a195-67dd-4bdf-aead-be07b17f17a3",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "fb61431d-0d04-4c74-96eb-5428238f2b4a",
+			"id": "968ce9a7-8582-4a82-a63f-475f77536de0",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "021d2382-e81b-4700-85fe-132495d0a6eb",
+			"id": "db08d6a9-289d-4fb8-968a-6c7d968584be",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "be104ce5-7788-4461-9dc3-4c1db733b37b",
+			"id": "8402cee0-b70d-40d0-8bb5-d1d549ea7518",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "407d5c38-8259-499d-b69a-6e1dc69d8a2a",
+			"id": "e08d5d3c-75d0-4f4d-98f9-f38ecbab52ab",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "e4b282d0-3952-415f-855c-f7e416642b06",
+			"id": "b6ca85a9-74ed-4c59-8b44-86cb52b4ee48",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "509126dc-a5b0-470a-9dc2-9aef200c9f83",
+			"id": "13b80697-69f4-4999-949e-11542f938b95",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "3939f0d4-8907-47e6-b8e3-d3d358210063",
+			"id": "6d83cdb4-2ad6-456a-9d93-97a8f1cb9266",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "21101b1a-8b90-46b5-9f7d-9dbb28c0e9e2",
+			"id": "7c517cf8-9e5a-459e-9335-e73f1c15172d",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "2fba1134-7791-4c3c-896c-fbb1794c0e4b",
+			"id": "7bd79d87-c242-4e45-9ce5-36d704716aeb",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "0b49a54e-f438-4854-a52c-f8a22d98eebe",
+			"id": "264cae2d-0970-4a21-895d-51faa3bd7831",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "dd82f88f-31c7-4586-8f53-3e2f034f8932",
+			"id": "407fe898-3c5c-4a7a-bf05-76e7ee39f916",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "1579e14f-b61f-40a1-865c-e9369ffa0373",
+			"id": "18586e7e-d09e-4251-87ca-dcc3051b57ae",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "c846b776-cae2-45e5-b8ab-7ad56a63bcef",
+			"id": "862da7a7-e35f-487d-b2db-54b37e6ae19c",
 			"key": "ticketNumber",
 			"value": ""
 		}
