@@ -1034,9 +1034,9 @@
 										"auth": {
 											"type": "oauth2",
 											"oauth2": {
-												"username": "paulo.martins@hurb.com",
-												"password": "paveGa1000*",
-												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"accessTokenUrl": "http://localhost/EnvisionAPI/token",
+												"password": "Env#M@r2023",
+												"username": "envision",
 												"challengeAlgorithm": "S256",
 												"grant_type": "password_credentials",
 												"authUrl": "https://www.travelagent.com.br/api/token",
@@ -1049,7 +1049,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"Passageiro Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"PASSAGEIRO ENVISION\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1605,77 +1605,77 @@
 	],
 	"variable": [
 		{
-			"id": "650d3065-32b7-4c8c-b8ac-f6a883cc8c58",
+			"id": "8fbf33c7-07cf-41c0-b2e4-95205698f6f3",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "4cc14389-e8a9-4840-ba8b-805936398d3a",
+			"id": "1001a2ee-958c-44f8-89a7-2529d6edbb66",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "47dfac3b-b5a4-4ecc-8f3b-48d01c465429",
+			"id": "c66a72d3-0382-4020-b1ad-6757b48d284a",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "3687e452-dc0c-4838-8bb3-70b1094f503e",
+			"id": "97c71235-e3e4-462d-8d54-6a2beb003957",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "3faa945c-8857-4618-b95c-64b9648625db",
+			"id": "349974f2-bfab-42bb-a05c-ff0310bafe7a",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "ee50c81b-4bbf-479a-a12b-39fa706b9b26",
+			"id": "78a320c9-b97e-4151-9e42-c8ad8b30c099",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "c1226c23-4aa8-4ec7-8861-19186ff9483e",
+			"id": "4a7c6d1b-8c4b-4836-a4d6-6a538e76c42b",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "3d61269c-efca-462f-bdbc-f981907b4847",
+			"id": "323009b9-929a-4ae9-8a5d-d2b4757148d1",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "894bfa81-9d4e-48a3-82ce-6655edd1e9d6",
+			"id": "8d992cf7-2cd2-4feb-92ee-166d95b67bc6",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "1fe7fda9-4b5f-4b99-913f-6f4864e75718",
+			"id": "f52257ab-e56b-45c2-aa81-6c0a313649f2",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "294fc306-1a23-4645-9588-41a5544c4f0b",
+			"id": "fb7ae5a8-32d7-4c98-a28d-46480dd609bb",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "6b233710-630f-43b1-8266-5febd19e161f",
+			"id": "2f1a3496-03da-4683-8dc9-d8a7a926eb48",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "6163fae6-f56b-4b60-be51-abec68ce8b1f",
+			"id": "74f0a1cf-6fba-4a5d-b0d2-7fe421a5c823",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "b16713a2-b55e-43f5-a60e-a43b075ad9e6",
+			"id": "fafc2217-1207-414f-a69a-10cbf7c5115c",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "9e6b7a53-a4f6-4d3e-8307-6093f69efbe5",
+			"id": "7fb2407c-29a1-4235-982c-a9905011d134",
 			"key": "currencyCode",
 			"value": ""
 		}
