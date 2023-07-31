@@ -826,6 +826,18 @@
 										"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs"
 									},
 									"response": []
+								},
+								{
+									"name": "New Request",
+									"id": "d2fea66c-4fd1-4b1b-b84f-5d9ab59cde6d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
 								}
 							],
 							"id": "e66c9632-323c-4336-a629-eb3520e72584"
@@ -1482,67 +1494,67 @@
 	],
 	"variable": [
 		{
-			"id": "423a9c85-b398-4591-91e4-281837e9ccf6",
+			"id": "11b74463-1d27-429b-b402-65df1c577a2f",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "001d58e8-3de6-4e32-bf71-a256849054d2",
+			"id": "51f6f3da-30c6-439c-b8d7-e5bea1bbbded",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "901ae962-1397-4484-9850-a7f4e43de758",
+			"id": "8922d7ca-4cc1-48e3-9afa-30a40614889e",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "d27d62da-c9c7-46c0-9253-c401ffce3d5a",
+			"id": "39d7cd1a-cb2a-4182-8f34-d55295b16b0b",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "31bb52fe-4f80-4e75-9018-f4e8c66187d5",
+			"id": "ca2823b0-8eee-4ba2-abb1-76764ffae576",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "f2730283-dfe2-413c-b64b-2e797d6223d3",
+			"id": "ab26eee7-2f54-4525-ba1f-e610d4113f95",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "aab792a6-b8f6-49bd-8134-45939f2385d4",
+			"id": "6f37d1d5-fc35-4d3b-8a88-76b76f8582a4",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "ca82a286-ab7d-47de-8019-942e2b3d5a06",
+			"id": "18d10aad-2441-474e-aa17-19aff70e979f",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "af09b7ee-5010-4f83-a908-a299de6e6e0d",
+			"id": "2bbddfa7-5dce-4b6e-9730-88fa1fe64939",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "336a8b88-db3d-4bbb-a403-139ff839ea61",
+			"id": "b34193f0-5ccc-47d3-a7f8-9601c3104b0d",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "16e9d116-70f3-49d0-b49c-1b4b7d409765",
+			"id": "ffcfa4bd-b738-4d51-8fd0-85760bfeda48",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "b6300608-3318-4d1c-aff2-28e0d541b168",
+			"id": "dbd1a826-30df-45ee-b33b-491d4f0efdaa",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "5389f585-09b9-4a63-8b06-bdcb2b5b75ce",
+			"id": "15722712-837c-475c-8316-7e67cd9bfa76",
 			"key": "supplierSystem",
 			"value": ""
 		}
