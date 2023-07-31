@@ -698,6 +698,14 @@
 													"    pm.expect(responseData.pnrs.length).to.equal(1);\r",
 													"});\r",
 													"\r",
+													"\r",
+													"pm.test(\"The pnr is canceled.\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    pm.expect(responseData.pnrs[0].status).to.equal('canceled');\r",
+													"});\r",
+													"\r",
+													"\r",
+													"\r",
 													""
 												],
 												"type": "text/javascript"
@@ -1474,67 +1482,67 @@
 	],
 	"variable": [
 		{
-			"id": "8204073d-43e6-43f2-91e3-66b76592090b",
+			"id": "423a9c85-b398-4591-91e4-281837e9ccf6",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "3171bd48-6bfc-498a-bceb-71f7cbac3d9f",
+			"id": "001d58e8-3de6-4e32-bf71-a256849054d2",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "ab5c8309-86c7-4ef1-8f71-5218b043d7e0",
+			"id": "901ae962-1397-4484-9850-a7f4e43de758",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "f85abac4-f4cf-4154-8591-b09bbe1accc9",
+			"id": "d27d62da-c9c7-46c0-9253-c401ffce3d5a",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "f3262783-c9e9-444f-84f9-802c9e642720",
+			"id": "31bb52fe-4f80-4e75-9018-f4e8c66187d5",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "1c034251-4bcb-431c-b568-d1d6bc485aea",
+			"id": "f2730283-dfe2-413c-b64b-2e797d6223d3",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "ea75d5a5-0d27-42c0-a612-c4b490df8d46",
+			"id": "aab792a6-b8f6-49bd-8134-45939f2385d4",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "5c1d01e6-c42b-4aff-ad34-0f5c6c86161c",
+			"id": "ca82a286-ab7d-47de-8019-942e2b3d5a06",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "ad3a1a85-2e13-41a1-b38f-73ba3c220675",
+			"id": "af09b7ee-5010-4f83-a908-a299de6e6e0d",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "ac13e3ca-e575-4199-b06e-4eb0a9165bee",
+			"id": "336a8b88-db3d-4bbb-a403-139ff839ea61",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "77801f50-051c-4620-90a0-190cfa720050",
+			"id": "16e9d116-70f3-49d0-b49c-1b4b7d409765",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "8feef83e-5bab-42d2-a66f-212ad0d90796",
+			"id": "b6300608-3318-4d1c-aff2-28e0d541b168",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "dcade3b0-6cbf-41bf-b379-63cd9567c575",
+			"id": "5389f585-09b9-4a63-8b06-bdcb2b5b75ce",
 			"key": "supplierSystem",
 			"value": ""
 		}
