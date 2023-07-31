@@ -1023,6 +1023,42 @@
 										"url": "https://api.travelagent.com.br/Shopping/IssueTickets"
 									},
 									"response": []
+								},
+								{
+									"name": "IssueTickets Copy",
+									"id": "57f8bd28-cfcb-462e-96c8-31394a16efde",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"username": "paulo.martins@hurb.com",
+												"password": "paveGa1000*",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"Passageiro Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "http://localhost/EnvisionAPI/Shopping/Air/IssueTickets"
+									},
+									"response": []
 								}
 							],
 							"id": "388581b9-117c-4742-b65a-89c9a0d4acfd"
@@ -1569,77 +1605,77 @@
 	],
 	"variable": [
 		{
-			"id": "4a731661-5514-4b50-8257-5db2d88ed13c",
+			"id": "650d3065-32b7-4c8c-b8ac-f6a883cc8c58",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "1d2ee24d-4e6a-4f81-a0e6-0b1c0f2f8443",
+			"id": "4cc14389-e8a9-4840-ba8b-805936398d3a",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "768db17a-4942-4b41-81b0-6406146bb8df",
+			"id": "47dfac3b-b5a4-4ecc-8f3b-48d01c465429",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "b3323631-1065-44a6-9108-f6dc100a2c36",
+			"id": "3687e452-dc0c-4838-8bb3-70b1094f503e",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "0365b83f-a355-4d0e-befe-d6e90feded9d",
+			"id": "3faa945c-8857-4618-b95c-64b9648625db",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "9af5bd4f-10b0-46db-8b8c-71c984dfc2a8",
+			"id": "ee50c81b-4bbf-479a-a12b-39fa706b9b26",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "22e94e1b-681c-4ca5-86b0-6a09a32af909",
+			"id": "c1226c23-4aa8-4ec7-8861-19186ff9483e",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "dc8545e3-8af0-4dc5-87c3-e84e77db69f4",
+			"id": "3d61269c-efca-462f-bdbc-f981907b4847",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "07c204d9-1d46-446e-b0fc-5b8aa24b2a6d",
+			"id": "894bfa81-9d4e-48a3-82ce-6655edd1e9d6",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "7fcef678-4001-4fad-a675-297b22dd1e26",
+			"id": "1fe7fda9-4b5f-4b99-913f-6f4864e75718",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "663eb165-8bfb-4cd2-af4b-1595a72a55b6",
+			"id": "294fc306-1a23-4645-9588-41a5544c4f0b",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "620ecafb-d2f0-46c4-9cc4-a2803af87b9e",
+			"id": "6b233710-630f-43b1-8266-5febd19e161f",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "49fc35da-bbd2-4e27-9a79-44befff37922",
+			"id": "6163fae6-f56b-4b60-be51-abec68ce8b1f",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "c7e7534e-53bc-49da-af6b-1defd6946c48",
+			"id": "b16713a2-b55e-43f5-a60e-a43b075ad9e6",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "522cdfe6-7616-4083-a26b-c5fe0f581484",
+			"id": "9e6b7a53-a4f6-4d3e-8307-6093f69efbe5",
 			"key": "currencyCode",
 			"value": ""
 		}
