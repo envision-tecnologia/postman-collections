@@ -863,7 +863,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"tickets\": [\r\n    {\r\n      \"travellerName\": \"Passageiro Envision\",\r\n      \"tourCode\": \"string\",\r\n      \"pnrLocator\": {{locator}},\r\n      \"supplierSystem\": {{supplierSystem}}\r\n    }\r\n  ],\r\n  \"payments\": [\r\n    {\r\n      \"identification\": \"string\",\r\n      \"description\": \"string\",\r\n      \"totalValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"points\": 0,\r\n      \"firstInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"otherInstallmentValue\": {\r\n        \"value\": 0,\r\n        \"currencyCode\": \"string\"\r\n      },\r\n      \"authorizationTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"authorizationCode\": \"string\",\r\n      \"installments\": 0,\r\n      \"interest\": 0,\r\n      \"externalProperties\": \"string\",\r\n      \"transactionId\": \"string\",\r\n      \"reversalTransactionId\": \"string\",\r\n      \"transactionTime\": {\r\n        \"year\": 0,\r\n        \"month\": 0,\r\n        \"day\": 0,\r\n        \"dayOfWeek\": \"sunday\",\r\n        \"hour\": 0,\r\n        \"minutes\": 0,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"status\": \"none\",\r\n      \"method\": \"creditCard\",\r\n      \"owner\": {\r\n        \"name\": \"string\",\r\n        \"document\": \"string\",\r\n        \"birthDate\": {\r\n          \"year\": 0,\r\n          \"month\": 0,\r\n          \"day\": 0,\r\n          \"dayOfWeek\": \"sunday\",\r\n          \"hour\": 0,\r\n          \"minutes\": 0,\r\n          \"seconds\": 0,\r\n          \"millisecond\": 0\r\n        },\r\n        \"email\": \"string\",\r\n        \"address\": {\r\n          \"street\": \"string\",\r\n          \"number\": \"string\",\r\n          \"complement\": \"string\",\r\n          \"zipCode\": \"string\",\r\n          \"neighborhood\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"string\",\r\n          \"country\": \"string\",\r\n          \"longitude\": 0,\r\n          \"latitude\": 0,\r\n          \"id\": 0\r\n        },\r\n        \"buyerId\": 0,\r\n        \"documentType\": \"string\"\r\n      },\r\n      \"creditCardInformation\": {\r\n        \"registeredCreditCardId\": 0,\r\n        \"creditCardNumber\": \"string\",\r\n        \"securityCode\": \"string\",\r\n        \"expireYear\": 0,\r\n        \"expireMonth\": 0,\r\n        \"providerCode\": \"string\",\r\n        \"providerName\": \"string\"\r\n      },\r\n      \"bankTransferInformation\": {\r\n        \"bankName\": \"string\",\r\n        \"transferorName\": \"string\",\r\n        \"tax\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        }\r\n      },\r\n      \"pointOfSaleInformation\": {\r\n        \"percentCharged\": 0,\r\n        \"absoluteValue\": {\r\n          \"value\": 0,\r\n          \"currencyCode\": \"string\"\r\n        },\r\n        \"cardNumber\": \"string\",\r\n        \"cardProvider\": \"string\",\r\n        \"transactionType\": \"credit\",\r\n        \"posId\": \"string\"\r\n      },\r\n      \"airTicketReplacementInformation\": {\r\n        \"ticketNumber\": \"string\"\r\n      }\r\n    }\r\n  ]\r\n}",
+											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"Passageiro Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"{{locator}}\",\r\n            \"supplierSystem\": \"{{supplierSystem}}\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"registeredCreditCardId\": 0,\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1529,77 +1529,77 @@
 	],
 	"variable": [
 		{
-			"id": "039a8aef-f3d6-4fc1-b631-89ff9b9d7b93",
+			"id": "a98151b3-06ff-4b94-894a-10a336dadbac",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "37bbf9b2-5bcd-409e-aca4-1b26db359928",
+			"id": "93dd37d1-adae-4d3a-ae23-c4feafe4ffda",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "d1f6c2cd-8787-4ee3-916a-2b7efb2d84a3",
+			"id": "1097a46f-403c-438d-8ad4-058e91251ba4",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "573a6cdb-a1c4-463a-9d22-f82e7f88c217",
+			"id": "b8f40328-9999-441c-8a20-06f0683c2a64",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "abee7247-2784-4158-97aa-4ad3b333937f",
+			"id": "235756c7-6a21-4f52-a7b8-b31ffda2315c",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "00ace691-37e8-4bd5-bb99-2ce3f0c83fba",
+			"id": "2d300974-ad45-4e1a-aa1e-821de5c4e1f5",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "f85ab34b-4c96-4cb6-9e41-456b29215f3b",
+			"id": "f15b938e-af63-45c1-b89d-32d7f06d6525",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "700cc6be-8a94-47c6-a0c0-e85288ef4fe4",
+			"id": "e058e814-205f-4f5e-91f5-62b873ffe104",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "99b29fdd-7853-4c88-8d6c-f3a209580e00",
+			"id": "b248e687-e099-4482-82cd-16d7538166e6",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "3ebc49d1-500c-4763-8435-5893af2e41bc",
+			"id": "f97ff352-25dd-4473-9586-e0dee0ffded9",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "8c6b3722-57c1-401f-8f0e-a1ee9d889409",
+			"id": "ecc4f79d-233e-44aa-a874-9d3386921563",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "bd303c93-4475-4145-839a-d7c314d99da7",
+			"id": "e822249a-d854-43d3-8758-5f0edd4ccc22",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "eebe70e5-519c-4485-b330-4c4ffcc528de",
+			"id": "67714969-8361-4546-8703-5f747fbc58b4",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "7b5cddb4-d114-4611-bcaa-3c57c5f73792",
+			"id": "b5e5c80b-dc90-47e6-b378-d57e38cf29bb",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "9fed3922-69a2-461c-9d8e-eb3e22c6fa6b",
+			"id": "5bfa47dc-115e-41ee-ab21-3c6093d6350b",
 			"key": "currencyCode",
 			"value": ""
 		}
