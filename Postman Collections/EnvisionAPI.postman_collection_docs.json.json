@@ -548,6 +548,92 @@
 										"url": "https://api.travelagent.com.br/Shopping/Air/IssueTickets"
 									},
 									"response": []
+								},
+								{
+									"name": "RetrievePnrs With IssuedTickets",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "bb7acc12-e9a2-484a-b50d-9391a4920d05",
+												"exec": [
+													"\r",
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.expect(pm.response.code).to.equal(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"ParentRecord object is present in the response\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.parentRecord).to.exist;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The children array is present and contains at least one element\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.parentRecord.children).to.exist.and.to.be.an('array').with.lengthOf.at.least(1);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The 'pnrs' array is present and contains the expected number of elements\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.pnrs).to.exist.and.to.be.an('array');\r",
+													"    pm.expect(responseData.pnrs.length).to.equal(1);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"// Setar as variaveis necessarias para emissão.\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.collectionVariables.set(\"totalValue\",  jsonData.pnrs[0].totalValue.value);\r",
+													"pm.collectionVariables.set(\"currencyCode\",  jsonData.pnrs[0].totalValue.currencyCode);\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "05572651-e77f-49dd-8027-9a5f78907f94",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "oauth2",
+											"oauth2": {
+												"password": "Env#M@r2023",
+												"username": "envision",
+												"accessTokenUrl": "https://api.travelagent.com.br/token",
+												"challengeAlgorithm": "S256",
+												"grant_type": "password_credentials",
+												"authUrl": "https://www.travelagent.com.br/api/token",
+												"addTokenTo": "header",
+												"client_authentication": "header",
+												"tokenType": "bearer"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"{{locator}}\",\r\n      \"supplierSystem\": \"{{supplierSystem}}\"\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs"
+									},
+									"response": []
 								}
 							],
 							"id": "e66c9632-323c-4336-a629-eb3520e72584"
@@ -1647,77 +1733,77 @@
 	],
 	"variable": [
 		{
-			"id": "022bfa3b-4f9a-4eb4-ab75-70521f363e81",
+			"id": "757c46f1-7fa5-4780-aba4-9bdd5d95ed37",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "5f25ac07-ff5f-4efe-8eb9-c33af1b358c4",
+			"id": "5ece5ac7-ecc2-42bf-a490-1287cb8a7418",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "2581df3f-855e-4afd-8b03-934d9ccac4de",
+			"id": "f55d250d-03d2-445c-ae06-da74ac089a48",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "b06b7972-739c-431b-a8a4-c33b4dfdeadb",
+			"id": "31b55029-4656-4842-9a45-66b4592440e5",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "2d7a6326-4efe-4577-a2f6-f7cbd12808a8",
+			"id": "2e01a01e-f15c-4977-b3ec-79cd20cc1877",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "aab64dda-b76d-4b23-8940-cfcdf846920c",
+			"id": "aab55eec-8413-4fb3-a4fe-8559c739a95f",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "4097b0c1-a773-409a-97d8-861d6f55b6aa",
+			"id": "8f292d4b-f3e2-4231-a9fb-d23d18ae86f9",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "64f92203-87cf-4913-9488-2311974270f0",
+			"id": "2fce9357-ecdb-4175-93c4-ff2d6fc8b402",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "1d3c199a-8cad-4922-8da4-999a3803dbcf",
+			"id": "b9244b63-113f-4a7a-a033-4d3cf8c1064c",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "cad37720-0a58-4bbc-8f60-d10f71cfd21e",
+			"id": "79a79f07-f101-409f-a20e-3edfa8eeaf43",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "64cacb13-6eb0-4f59-aa24-9cb53311a1ed",
+			"id": "0b992ab8-dbe9-4c79-bc70-0df08794d138",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "100d3cd3-24b7-486d-bef9-651e47123a12",
+			"id": "fbe33a4d-463e-4a10-a126-0e820c9f78bb",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "a91838e0-0f05-4060-a3f2-7f2db0e3f798",
+			"id": "a5ea5f09-313e-4ba2-8bb2-5778b73e8673",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "4bb275d8-a86e-4914-a077-a87a8016a403",
+			"id": "71e266e4-10f1-4fe4-83d9-075a29c1e86b",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "f89153a9-d9fd-4811-8735-2746031b330e",
+			"id": "a31754bd-5759-4b1b-8a8e-ece55a0ff64d",
 			"key": "currencyCode",
 			"value": ""
 		}
