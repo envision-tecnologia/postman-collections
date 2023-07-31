@@ -110,7 +110,7 @@
 												"id": "19820617-c04c-45fc-996b-9b417202fcd9",
 												"exec": [
 													"pm.test(\"Status code is 200\", function () {\r",
-													"  pm.response.to.have.status(200);\r",
+													"    pm.response.to.have.status(200);\r",
 													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
@@ -127,6 +127,31 @@
 													"\r",
 													"pm.collectionVariables.set(\"bookingFares\", JSON.stringify(bookingFares));\r",
 													"pm.collectionVariables.set(\"flightGroups\", JSON.stringify(flightGroups));\r",
+													"\r",
+													"\r",
+													"\r",
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"FlightGroups array is present and has expected number of elements\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.flightGroups).to.exist;\r",
+													"    pm.expect(responseData.flightGroups).to.be.an('array');\r",
+													"    pm.expect(responseData.flightGroups).to.have.lengthOf(1);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Validate bookingFares array\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.bookingFares).to.exist;\r",
+													"    pm.expect(responseData.bookingFares).to.be.an('array');\r",
+													"    pm.expect(responseData.bookingFares).to.have.lengthOf(1);\r",
+													"});\r",
+													"\r",
 													""
 												],
 												"type": "text/javascript"
@@ -1301,67 +1326,67 @@
 	],
 	"variable": [
 		{
-			"id": "35550383-a3df-4d55-b1c3-a451f0a9f118",
+			"id": "b301ca27-ed9f-493b-a1c9-15d35de0f9b9",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "b2cabb60-25b6-4882-a63f-697aa7192d26",
+			"id": "33ff1116-9294-4bfc-8721-2568a6893150",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "cc642d2b-6ddd-4f52-87ca-a870d7e36d60",
+			"id": "fbd20412-9c88-4f62-b03a-ed7e18d4573e",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "5b37e6d8-fd01-432d-aa42-d7eb4173ed0b",
+			"id": "287e7961-9e19-4373-834b-354d2a2e2c29",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "8e1e3cc1-b57b-4104-81c5-4d7581be00e5",
+			"id": "7485e791-b063-4724-aab6-f47d92698ef8",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "aa475b46-de2c-463e-ade6-2d3f14735dd7",
+			"id": "dd89bc37-8728-48c9-be25-c0939604d5f4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "35012014-8084-4f3a-b02c-00e086a8ea34",
+			"id": "5e4db7be-a1db-409e-a71d-2b976fe60192",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "a286802f-c67b-461f-a9d4-47f5a0d52087",
+			"id": "51dac797-5338-4079-8982-dab60cc400b5",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "0158b4a6-3b25-4b7e-8ca1-8d543b6aa552",
+			"id": "b1c218ef-e12d-4aea-a709-675cfe1f02af",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "8ec8016e-5e4b-496b-9f54-2be874dae4ba",
+			"id": "d9ab4d3a-f0b4-4387-a3c7-51e5d66b8e43",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "14aa6258-14de-45f2-9c03-666956688326",
+			"id": "2b7ccbf5-6abc-4720-a27b-6c3695aab0ed",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "90247395-1896-402e-bf29-404d6adbcccf",
+			"id": "40bef627-18bb-411e-938a-b91585f757b1",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "c38b9343-e1c8-4bd8-93e2-4069c7ed49ab",
+			"id": "1df57880-31f9-405d-8e42-95b2e567ad52",
 			"key": "supplierSystem",
 			"value": ""
 		}
