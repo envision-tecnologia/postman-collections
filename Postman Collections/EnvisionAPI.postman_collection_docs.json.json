@@ -651,6 +651,45 @@
 								},
 								{
 									"name": "RetrievePnrs",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "bb7acc12-e9a2-484a-b50d-9391a4920d05",
+												"exec": [
+													"\r",
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.expect(pm.response.code).to.equal(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"ParentRecord object is present in the response\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.parentRecord).to.exist;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The children array is present and contains at least one element\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.parentRecord.children).to.exist.and.to.be.an('array').with.lengthOf.at.least(1);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The 'pnrs' array is present and contains the expected number of elements\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.pnrs).to.exist.and.to.be.an('array');\r",
+													"    pm.expect(responseData.pnrs.length).to.equal(1);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "3c1036a6-08a2-4625-9858-5a6d1ab84072",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -1340,67 +1379,67 @@
 	],
 	"variable": [
 		{
-			"id": "6b312d98-285e-4311-ba82-377b963541ad",
+			"id": "c7127bcd-2d6e-4a1b-89e2-256496918527",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "2e5b5494-f547-4c38-8f25-eae9c95a9210",
+			"id": "95add178-af44-4182-8e29-cde57243d3d0",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "7adf1e3b-fbc0-46d7-9102-46da17570c31",
+			"id": "c55c99f0-dd02-469a-a06b-cf6bceea1423",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "849a7932-085a-4e2a-99e1-aacea4b09b3a",
+			"id": "93bbe801-16b7-4c05-b096-537652b6967c",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "b2a7f206-6da9-4492-ba80-788f0e431dd5",
+			"id": "0136d1f9-2464-487f-a849-c2f621c2ce40",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "e1d871a9-2d59-4289-990d-93a3d39444f5",
+			"id": "7225a893-fa66-4a39-bf3c-5a5983e440fe",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "3e8ff3a6-1a87-4b2b-9b05-f582096584ab",
+			"id": "21315d9b-4c37-4925-8fd8-cb04ec496e07",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "ba97005e-097b-447b-a924-e43609522bc4",
+			"id": "1dc79952-1a8e-4edc-b198-0f31d82c0759",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "6c977a0d-1bda-4c4f-8b61-d18e10d63529",
+			"id": "f0cce522-6b5d-4a9e-8381-980dc655b560",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "bece65a8-f16e-49bd-a487-f32c77ef1de2",
+			"id": "318b3ca8-948a-4c27-9ffb-734b348b171f",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "9eca30d4-c38d-4014-9c28-0eb1b66ec68a",
+			"id": "8367453c-7732-4b24-ae12-320e8bbf47c4",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "cf3d70e4-0a50-4443-a545-622a46cca36a",
+			"id": "5f3c2aa1-2e13-4913-a583-5537f7af6047",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "2fc2c688-9c7d-43e2-b868-232a378ae08f",
+			"id": "896416a3-09b6-470e-a37c-d2b551fcdc78",
 			"key": "supplierSystem",
 			"value": ""
 		}
