@@ -40,9 +40,6 @@
 											"script": {
 												"id": "aaf26540-5ea8-4ed5-a56d-c2a512a53056",
 												"exec": [
-													"pm.test(\"Status code is 200\", function () {\r",
-													"  pm.response.to.have.status(200);\r",
-													"});\r",
 													"\r",
 													"var jsonData = pm.response.json();\r",
 													"\r",
@@ -60,6 +57,37 @@
 													"\r",
 													"pm.collectionVariables.set(\"selectedFare\", JSON.stringify(selectedFare));\r",
 													"pm.collectionVariables.set(\"selectedFlightGroup\", JSON.stringify(selectedFlightGroup));\r",
+													"\r",
+													"\r",
+													"\r",
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.expect(pm.response.code).to.equal(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Validate that searchCompleted field is true\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.searchCompleted).to.be.true;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Air response data is present in the response\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    pm.expect(responseData.airResponseData).to.exist;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The flightsOptions array should have more than one element\", function () {\r",
+													"    pm.expect(jsonData.airResponseData.flightsOptions).to.exist.and.to.be.an('array');\r",
+													"    pm.expect(jsonData.airResponseData.flightsOptions).to.have.lengthOf.at.least(2);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The flightGroups array must have more than one element\", function () {\r",
+													"    pm.expect(jsonData.airResponseData.flightGroups).to.be.an('array').and.to.have.lengthOf.at.least(2);\r",
+													"});\r",
+													"\r",
 													""
 												],
 												"type": "text/javascript"
@@ -89,7 +117,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": []\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1541,77 +1569,77 @@
 	],
 	"variable": [
 		{
-			"id": "7aaf4193-2a3f-4e8b-b4b5-040eb31fd58a",
+			"id": "1a80d7c3-f103-49b7-9452-7c8ae23129a6",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "9190c6d5-851a-4eb5-8aba-063db2272df0",
+			"id": "b3892b05-99c0-4abc-97d6-b37e285a0009",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "427a29b1-4d49-45d8-b422-a19fc7ceca01",
+			"id": "118517b8-d52d-4e56-b2e0-c1c9febe0a2d",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "34ee1db6-2f68-491b-a792-6ea268a9d8ea",
+			"id": "71252e8f-051d-4ada-a844-7026181b135a",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "d255f9eb-3da3-438b-9f39-59e927b6436d",
+			"id": "ae202a01-98ec-4246-922f-4d30574f9b51",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "f9c3e5b0-b0b9-407b-bd84-41049e016875",
+			"id": "877b47a6-af61-487d-ba4f-2c282e35b5f7",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "c818eee3-8f00-4109-a807-96ae0a33c34b",
+			"id": "27552a77-50a7-439c-bf62-d990346245a2",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "0706cf54-9bcf-4448-a06b-e5d0f367204a",
+			"id": "8aae91d2-5d0d-4c21-9337-a53804766d84",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "6d1453ff-03b6-4344-8204-2a215f38405a",
+			"id": "a69d88f3-43ac-48eb-a99f-372b33855c25",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "a6b52878-7d83-4177-b8f5-9efb9a28380e",
+			"id": "16376ec5-9ed9-45b0-aa87-69a29be1f791",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "c401d739-4af7-4741-a42f-c6283ba9f649",
+			"id": "2127d5f6-38c0-4242-9296-59524533c2a9",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "ed630d4c-90b3-4cc5-8f73-7d839562dbe8",
+			"id": "a83883f6-f0c0-43b8-a28d-3680f38e2e94",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "1153ff2d-9946-4911-850a-ea796b8ea563",
+			"id": "385e0880-6505-441e-b33f-948ea2077b67",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "8e30f2f5-119f-4406-9210-bd83c9a81948",
+			"id": "1eb33dcf-fca6-41b9-a1bd-b83cc464f6fe",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "52341e9f-d778-4ac8-a554-8dc0c1913b04",
+			"id": "d62cd86f-105f-4942-829d-2d03748a0d19",
 			"key": "currencyCode",
 			"value": ""
 		}
