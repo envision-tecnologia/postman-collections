@@ -156,7 +156,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"travellers\": [{\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ],\r\n    \"air\": {\r\n        \"flightsSelections\": [{\r\n                \"flightGroup\": {{selectedFlightGroup}},\r\n                \"fare\": {{selectedFare}}\r\n            }\r\n        ]\r\n    }\r\n}\r\n",
+											"raw": "{\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ],\r\n    \"air\": {\r\n        \"flightsSelections\": [\r\n            {\r\n                \"flightGroup\": {{selectedFlightGroup}},\r\n                \"fare\": {{selectedFare}}\r\n            }\r\n        ]\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1251,67 +1251,67 @@
 	],
 	"variable": [
 		{
-			"id": "718cff89-13c8-4c1c-ab30-d3a1f088bcba",
+			"id": "f015dfcf-c366-4f6b-a5d7-6a19819996ba",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "a73ef6ea-52e8-4b23-98f8-d468d8b89e22",
+			"id": "5f6fd8b1-d322-4846-9e6c-27df400a1e10",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "ad856ef2-11fa-4a5c-add4-1f9f24108a6f",
+			"id": "e5a38e41-381c-4056-b435-070b22d23001",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "2a732546-4400-4eb7-97ae-4fa093a2298b",
+			"id": "a2c05d07-e3ba-4990-8e37-10412cc8065a",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "c3628c8a-350e-491b-bd97-eb3612d0af62",
+			"id": "7b3bdaed-f8e4-4a2b-9a7a-21f92d1830ad",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "1f509386-d46a-42ef-aff7-a3480d8a3287",
+			"id": "b3412279-83a1-473e-8684-e78660acc30d",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "a3321967-b4d8-4e62-9f0f-eeeeb38c744e",
+			"id": "0f73bdd3-ba1f-4795-8915-65a09c907f44",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "4d7d7017-c651-42c3-b30e-8f81a33ea205",
+			"id": "f1eb688f-9cff-4f10-8b3b-55d04dabf85a",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "81c7b09e-6345-4a61-afdb-361614035085",
+			"id": "f9e5d358-e180-4ba3-96ec-bd335cce4580",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "f509017b-e35e-47ef-b7c8-d05942aeae8f",
+			"id": "04cb1a33-040b-43d6-9f55-22892e240142",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "9db163d9-ef9a-43ba-8669-f172f6b008d7",
+			"id": "623876ce-4743-42d6-88f3-326609865235",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "a91555d3-4251-4bbb-abdd-9813e74743c5",
+			"id": "92045d3a-8a32-42ed-83b9-79ac504a99f9",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "1a77e295-fca9-4a7d-889b-b1d0e49629a4",
+			"id": "1ba13fff-07b6-4a43-a155-d50cd47773e5",
 			"key": "supplierSystem",
 			"value": ""
 		}
