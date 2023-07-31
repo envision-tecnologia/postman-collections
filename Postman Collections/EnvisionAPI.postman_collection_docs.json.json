@@ -1203,6 +1203,38 @@
 									"name": "RepricePNR",
 									"item": [
 										{
+											"name": "GetCommercialAgreements",
+											"id": "02bad9b5-5ba4-4693-baa8-a16563720867",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": {
+														"password": "2023@EnvAbr!L",
+														"username": "suporte.copastur",
+														"grant_type": "password_credentials",
+														"addTokenTo": "header",
+														"accessTokenUrl": "https://api.travelagent.com.br/token"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 93176,\r\n      \"name\": \"Copastur Lazer\",\r\n      \"systemAccountId\": 36208\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 93176,\r\n      \"name\": \"Copastur Lazer\",\r\n      \"systemAccountId\": 36208\r\n    }\r\n  },\r\n  \"flightGroups\": [\r\n    {\r\n      \"originId\": 2702955,\r\n      \"destinationId\": 2701273,\r\n      \"arrivalTime\": {\r\n        \"year\": 2023,\r\n        \"month\": 11,\r\n        \"day\": 24,\r\n        \"dayOfWeek\": \"friday\",\r\n        \"hour\": 6,\r\n        \"minutes\": 35,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"departureTime\": {\r\n        \"year\": 2023,\r\n        \"month\": 11,\r\n        \"day\": 24,\r\n        \"dayOfWeek\": \"friday\",\r\n        \"hour\": 5,\r\n        \"minutes\": 30,\r\n        \"seconds\": 0,\r\n        \"millisecond\": 0\r\n      },\r\n      \"issuerAirCompanyCode\": \"AD\",\r\n      \"supplierSystem\": \"Azul\",\r\n      \"durationInMinutes\": 65,\r\n      \"flights\": [\r\n        {\r\n          \"arrivalAirportId\": 2701273,\r\n          \"departureAirportId\": 2702955,\r\n          \"durationInMinutes\": 65,\r\n          \"layoverInMinutes\": 0,\r\n          \"arrivalDateTime\": {\r\n            \"year\": 2023,\r\n            \"month\": 11,\r\n            \"day\": 24,\r\n            \"dayOfWeek\": \"friday\",\r\n            \"hour\": 6,\r\n            \"minutes\": 35,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n          },\r\n          \"departureDateTime\": {\r\n            \"year\": 2023,\r\n            \"month\": 11,\r\n            \"day\": 24,\r\n            \"dayOfWeek\": \"friday\",\r\n            \"hour\": 5,\r\n            \"minutes\": 30,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n          },\r\n          \"cabinType\": \"economic\",\r\n          \"airCompanyCode\": \"AD\",\r\n          \"status\": \"confirmed\",\r\n          \"operatedByAirCompanyCode\": \"AD\",\r\n          \"flightNumber\": \"4365\",\r\n          \"externalProperties\": \"{\\\"OpSuffix\\\":\\\" \\\",\\\"LegStatuses\\\":\\\"Normal\\\",\\\"LiftStatus249552972\\\":\\\"Emitido\\\"}\",\r\n          \"legs\": [],\r\n          \"classOfService\": \"U\",\r\n          \"aircraftType\": \"E95\"\r\n        }\r\n      ],\r\n      \"externalProperties\": \"{\\\"SellKey\\\":\\\"AD~4365~ ~~VIX~11/24/2023 05:30~SDU~11/24/2023 06:35~~\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":0.0,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":1,\\\\\\\"FareAmount\\\\\\\":106.9000,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":106.9000,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":\\\\\\\"BRL\\\\\\\",\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":40.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[\\\\\\\"U\\\\\\\"],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"U60MATBG\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":\\\\\\\"60D1\\\\\\\",\\\\\\\"CiaCode\\\\\\\":\\\\\\\"AD\\\\\\\",\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":18,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":null,\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":106.9000,\\\\\\\"DisplayFareAmount\\\\\\\":106.9000,\\\\\\\"ExternalProperties\\\\\\\":{\\\\\\\"SellKey\\\\\\\":\\\\\\\"0~U~~AD~U60MATBG~60D1~~0~0~~X\\\\\\\"},\\\\\\\"Quantity\\\\\\\":1,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":1,\\\\\\\"BrandedFaresFamily\\\\\\\":\\\\\\\"Azul\\\\\\\",\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\",\\\"EAPILoginInformationId\\\":\\\"720\\\"}\",\r\n      \"stops\": 0\r\n    }\r\n  ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.travelagent.com.br/Shopping/Air/GetCommercialAgreements"
+											},
+											"response": []
+										},
+										{
 											"name": "SearchFarePnr",
 											"id": "3b711f46-c716-4f5d-b751-77bf63c16f30",
 											"protocolProfileBehavior": {
@@ -1822,82 +1854,82 @@
 	],
 	"variable": [
 		{
-			"id": "d54f015e-5d67-4fa5-8c91-11502bcee699",
+			"id": "9391216e-b0d2-47c4-a8d1-bf2f2392d2b2",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "818e522b-bac4-4643-a15e-1f0219221bdc",
+			"id": "f06b9148-fdd1-4760-9d26-ddf96e994ef6",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "78c487d7-2606-4a6f-9add-3e535e4699bc",
+			"id": "c1a239f7-803c-4436-9f47-107f86006622",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "72c20b9e-eeb0-4457-a480-5b34ceb6d1b1",
+			"id": "a6a881bf-edcd-482e-9f06-c992ed2ac3f7",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "ee41782b-1b9b-4c18-beb7-3371a8f5f125",
+			"id": "241c6d8d-7521-4e2b-9cc0-5f69c1385ac3",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "31659fb6-c769-40b9-84ac-9756a5111c10",
+			"id": "f9b93547-9f4f-4c32-804b-23386844cf3c",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "212de2e9-3551-4f39-8240-d52d0c7cb29d",
+			"id": "77372674-3244-4c5b-976d-b7ac444bd18b",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "dd608580-025e-46c6-8ccf-e208919e4a29",
+			"id": "5c7abaf2-8876-4b6a-980f-e0abed201a0f",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "b7240462-0fbe-4f03-a1a3-e6387eb10df3",
+			"id": "c2c485ba-784f-4c3a-ac11-fb87b5e48855",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "0a1924a2-3271-4108-a111-4788fbedcd5a",
+			"id": "263cf1bd-50a7-4554-be07-b91344d0e100",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "670da83f-acc3-4ee3-81cc-44c35dc401d0",
+			"id": "741abac0-0d84-46d1-b786-0eee5158d7e2",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "b20e82d5-f254-4d48-a9f6-faa72bb97d03",
+			"id": "498b7af8-378c-408a-9d03-b0e54eb2a5ed",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "6aebed46-6db8-42cc-9561-ec601a11bdc8",
+			"id": "badb867c-a6e6-41b7-9649-259c11d6446c",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "f04b894b-adf0-4b3c-9b80-a6fe24c41789",
+			"id": "235b3854-7f0a-49f8-9b83-156aa261443d",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "9f3dd63d-c908-4772-b80d-853a45c98572",
+			"id": "ef75f6f5-7fa9-48fd-93f9-ce083604a85f",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "1b5023fe-9344-48fe-a061-b995a5bf9f68",
+			"id": "001d32a0-e77b-497d-837c-e5365369b601",
 			"key": "ticketNumber",
 			"value": ""
 		}
