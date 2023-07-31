@@ -1038,8 +1038,86 @@
 								},
 								{
 									"name": "IssueTickets",
-									"item": [],
+									"item": [
+										{
+											"name": "IssueTickets",
+											"id": "5c5582dd-f2c4-4a36-a556-efdd340b7feb",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": {
+														"username": "paulo.martins@hurb.com",
+														"password": "paveGa1000*",
+														"accessTokenUrl": "https://api.travelagent.com.br/token",
+														"challengeAlgorithm": "S256",
+														"grant_type": "password_credentials",
+														"authUrl": "https://www.travelagent.com.br/api/token",
+														"addTokenTo": "header",
+														"client_authentication": "header",
+														"tokenType": "bearer"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"tickets\": [{\r\n            \"travellerName\": \"PASSAGEIRO ENVISION\",\r\n            \"pnrLocator\": \"3N8MRP\",\r\n            \"supplierSystem\": \"Amadeus\"\r\n        }\r\n    ],\r\n    \"payments\": [{\r\n            \"totalValue\": {\r\n                \"value\": 184.15,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"method\": \"invoice\"\r\n        }\r\n    ]\r\n}\r\n",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "https://api.travelagent.com.br/Shopping/IssueTickets"
+											},
+											"response": []
+										},
+										{
+											"name": "IssueTickets Copy",
+											"id": "57f8bd28-cfcb-462e-96c8-31394a16efde",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"auth": {
+													"type": "oauth2",
+													"oauth2": {
+														"accessTokenUrl": "http://localhost/EnvisionAPI/token",
+														"password": "Env#M@r2023",
+														"username": "envision",
+														"challengeAlgorithm": "S256",
+														"grant_type": "password_credentials",
+														"authUrl": "https://www.travelagent.com.br/api/token",
+														"addTokenTo": "header",
+														"client_authentication": "header",
+														"tokenType": "bearer"
+													}
+												},
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"PASSAGEIRO Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "http://localhost/EnvisionAPI/Shopping/Air/IssueTickets"
+											},
+											"response": []
+										}
+									],
 									"id": "a327d489-a096-41ae-98b1-20077738c480"
+								},
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "9b5dd3ae-2ceb-48c8-a800-749ecf9f664b"
 								},
 								{
 									"name": "ProcessOrder Aereo",
@@ -1075,78 +1153,6 @@
 										},
 										"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
 										"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
-									},
-									"response": []
-								},
-								{
-									"name": "IssueTickets",
-									"id": "5c5582dd-f2c4-4a36-a556-efdd340b7feb",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "oauth2",
-											"oauth2": {
-												"username": "paulo.martins@hurb.com",
-												"password": "paveGa1000*",
-												"accessTokenUrl": "https://api.travelagent.com.br/token",
-												"challengeAlgorithm": "S256",
-												"grant_type": "password_credentials",
-												"authUrl": "https://www.travelagent.com.br/api/token",
-												"addTokenTo": "header",
-												"client_authentication": "header",
-												"tokenType": "bearer"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"tickets\": [{\r\n            \"travellerName\": \"PASSAGEIRO ENVISION\",\r\n            \"pnrLocator\": \"3N8MRP\",\r\n            \"supplierSystem\": \"Amadeus\"\r\n        }\r\n    ],\r\n    \"payments\": [{\r\n            \"totalValue\": {\r\n                \"value\": 184.15,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"method\": \"invoice\"\r\n        }\r\n    ]\r\n}\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "https://api.travelagent.com.br/Shopping/IssueTickets"
-									},
-									"response": []
-								},
-								{
-									"name": "IssueTickets Copy",
-									"id": "57f8bd28-cfcb-462e-96c8-31394a16efde",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "oauth2",
-											"oauth2": {
-												"accessTokenUrl": "http://localhost/EnvisionAPI/token",
-												"password": "Env#M@r2023",
-												"username": "envision",
-												"challengeAlgorithm": "S256",
-												"grant_type": "password_credentials",
-												"authUrl": "https://www.travelagent.com.br/api/token",
-												"addTokenTo": "header",
-												"client_authentication": "header",
-												"tokenType": "bearer"
-											}
-										},
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": \"PASSAGEIRO Envision\",\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"OFLTJL\",\r\n            \"supplierSystem\": \"GolGWS\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": 196.07,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"creditCard\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            },\r\n            \"creditCardInformation\": {\r\n                \"creditCardNumber\": \"4646464646464644\",\r\n                \"securityCode\": \"737\",\r\n                \"expireYear\": 2030,\r\n                \"expireMonth\": 3,\r\n                \"providerCode\": \"VI\",\r\n                \"providerName\": \"Visa\"\r\n            }\r\n        }\r\n    ]\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "http://localhost/EnvisionAPI/Shopping/Air/IssueTickets"
 									},
 									"response": []
 								}
@@ -1742,82 +1748,82 @@
 	],
 	"variable": [
 		{
-			"id": "bd589555-0212-4805-b660-39a4620c0b03",
+			"id": "c9fd064b-794f-4fd6-9e8c-e734cf5033da",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "a876781d-0470-4649-834c-fb38cb1e0b73",
+			"id": "42e4fc7f-1ea8-42d4-8c3b-a52cb3f0c738",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "14e1ef65-24aa-4f5e-8908-acb30fb151bb",
+			"id": "4ba190d9-5e1f-4b2c-8e11-75d985d9e22d",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "950c85db-a14f-496a-9fb6-0ab0fbbcb8b3",
+			"id": "98a45802-cfb5-49aa-a191-0dae0a37f87f",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "389f5a30-3805-4ebc-9e27-a061cfb946a2",
+			"id": "6ae0da52-820f-4a69-b86c-84b43efb206a",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "b960f6f0-bb67-4811-8044-49436636b05e",
+			"id": "e9df1dd2-715e-49ce-bbf5-62994920e78f",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "e489b2a5-84e7-4c75-8e94-3780c339ea55",
+			"id": "e5a19a62-ee18-4efc-9ac9-33a187df5db4",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "89b14ce3-e77d-4b5f-b768-500762c5b37c",
+			"id": "dac6abfb-9df7-4414-83ef-471a43a90b74",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "1ca6d5a7-8536-4c21-a5b4-3545dd30e160",
+			"id": "17424e6d-ce3a-4f81-ab55-aa33f261636b",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "f631b595-b1b7-44ed-91d7-79de2812087d",
+			"id": "5e62d0ea-a2d1-4b82-bebd-42b152208381",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "6584aa01-a62a-4be8-88cc-c0035541e962",
+			"id": "df0f2409-540f-40ba-89f3-aa0cf6af7d40",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "38c0f996-f66e-428e-9735-650c3cb93802",
+			"id": "c56dc169-9e0a-444a-9b80-aa4173ea4944",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "7f532edd-b923-44d1-9f5a-9786ee39f29c",
+			"id": "4fbe2ff6-44bc-49b5-bdba-2a6a5bb456e5",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "b71bb1b5-c772-4639-966e-7c1e061c58cb",
+			"id": "26dd0642-fedc-43af-bc2d-5ab1c2e725b5",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "2b84748f-2924-48e7-b7f5-34534cf194df",
+			"id": "6b9c46b8-ae4b-47f9-a70b-af417590e562",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "3072f9f3-530b-4f06-9a6a-f3883bed60cf",
+			"id": "5eb4b675-56d7-496d-8826-d7edb9b666bb",
 			"key": "ticketNumber",
 			"value": ""
 		}
