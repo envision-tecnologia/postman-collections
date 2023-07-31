@@ -870,7 +870,7 @@
 												}
 											}
 										},
-										"url": "https://api.travelagent.com.br/AirShopping/IssueTickets"
+										"url": "https://api.travelagent.com.br/Shopping/Air/IssueTickets"
 									},
 									"response": []
 								}
@@ -1529,77 +1529,77 @@
 	],
 	"variable": [
 		{
-			"id": "235027b4-eceb-47b4-8235-5fa48279608e",
+			"id": "548cadf0-952e-46bb-996f-80e64a91187c",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "e8ed6c7a-df61-4045-a729-735d131fed4e",
+			"id": "e47b1511-d64c-42b0-a4bc-6a5ce4e381bf",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "6aadacd1-a7b0-4d0e-b915-ea954a0b971a",
+			"id": "872155c2-2e70-4623-a2ea-fe5a438046ec",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "39808955-0627-49dc-83e4-c8fbd521e4a6",
+			"id": "cb781fec-ef9f-4f45-b15f-ca63ebda4180",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "27caef89-55b0-4cfd-bc2a-591a657b0f3b",
+			"id": "0d807bc9-79fa-45b9-9668-8074323f9070",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "9344238c-8dc8-431c-bdfc-e6434b810b34",
+			"id": "3d4a7cfe-14cf-4e84-813f-0dc8590310a4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "392a7102-8a45-4e4d-98cd-4cf92e1ec7cc",
+			"id": "df664924-34f0-4321-abb8-714525e1d657",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "accd926e-dcae-440a-8567-75eadfd77298",
+			"id": "d395d4d7-e648-4daf-ab4f-c23b07658d1c",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "77341520-8d21-49af-998f-c7a141aec64e",
+			"id": "6fc17eb2-5b92-4bb2-bd09-4f049a9c5b07",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "2c7e0572-e210-4ecb-8e14-ec7aca470ffb",
+			"id": "71ab7d46-4e6c-4d91-88fd-c41f4a450437",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "7ca3eee2-46e4-4c68-9709-a64ca3be7294",
+			"id": "b7dd3a47-bbef-4fb6-aa57-25a12e9ffc53",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "985355a1-4f6a-4d6b-b23f-dcbc2304b7de",
+			"id": "fde3b015-fc58-4860-9d14-b524c3131775",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "337e13ad-90c8-4622-ab19-85d15613ef77",
+			"id": "4a480cf1-5904-4dff-9606-d0207d6b7a71",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "6c7cfb3b-b402-49e2-8857-a174c16f5a33",
+			"id": "8e3d8c65-e2c7-42e7-a3b4-354973cb861c",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "57395463-af7f-40e3-ad62-b256484b0a9a",
+			"id": "774d359f-16c0-42da-aea1-f03e7a032c9d",
 			"key": "currencyCode",
 			"value": ""
 		}
