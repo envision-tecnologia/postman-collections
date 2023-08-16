@@ -16,6 +16,18 @@
 							"name": "Book 1 ADT One-Way",
 							"item": [
 								{
+									"name": "GetToken",
+									"id": "ae208d41-a070-41e6-935e-e9e38f0294c0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
 									"name": "Search Flights",
 									"event": [
 										{
@@ -293,18 +305,6 @@
 										},
 										"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
 										"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
-									},
-									"response": []
-								},
-								{
-									"name": "New Request",
-									"id": "ae208d41-a070-41e6-935e-e9e38f0294c0",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": []
 									},
 									"response": []
 								}
@@ -1895,82 +1895,82 @@
 	],
 	"variable": [
 		{
-			"id": "923edfec-4a53-415a-8e8c-b0e64f96c894",
+			"id": "6d831d3a-53b5-46ec-8d9d-4225dc9bd0a4",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "990e81ed-fbea-46a4-bf45-23bba4f4fa99",
+			"id": "812044a3-2f0f-4e40-8708-653f361df514",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "b02c1034-dc04-4908-ba3c-0344f64098db",
+			"id": "56f6a34c-065a-4b0a-809c-969acb4c2a15",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "8de05b6e-0d37-4a27-8ac2-6e5867fb24b1",
+			"id": "044b851a-3f35-4c6a-a02c-08242c761507",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "9e141ba0-63d7-4461-9799-9b6895faad97",
+			"id": "d07e80a3-a7e4-4ac4-afb4-0b647fac9b46",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "ff1dea7a-8ba4-4c68-a1c9-fad0b4565030",
+			"id": "1a628987-2ccd-4025-998a-000cb40c3fa4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "982b52af-60db-4b5f-a0d1-8e1a804bb454",
+			"id": "81cad8f6-4c2f-4667-a1e0-4188b7eb0273",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "f4460348-b311-491c-8069-b3b8679119b0",
+			"id": "201ebd1c-02cf-4497-96f0-ea7d14c17d43",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "3401d5bc-8f6e-439a-8ce8-0c6313a1bc0c",
+			"id": "4e9b7784-01f8-49b9-a5fe-ea4b81d80070",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "7d7d5762-363f-46d8-8b69-9e19056182fc",
+			"id": "adf4c446-177c-462b-864c-df2e005283b0",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "b5a2e816-e798-4479-af4b-2942a3bfd160",
+			"id": "6dc6e3bb-4af6-4410-aa2b-6863ff3f8db5",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "1e8a7314-7b7d-4591-ab6f-e10049532e94",
+			"id": "c3a7b135-adeb-4409-a40d-c0907a3b3c3d",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "d8540c07-027c-42c5-ae08-2e4f303954f7",
+			"id": "08e6dfbc-4297-4cf1-b16a-fdfce7e0b1a9",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "cb604f64-9dd3-4dbf-8704-9ab8644ea1bb",
+			"id": "3e1fc58c-2d55-4eac-becb-75db9910e330",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "c7c2bd0e-397f-4ee1-ba08-f56094922667",
+			"id": "c3fac96f-acbc-4783-8fa2-5d2e8d243bc5",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "56d30104-ba13-41e1-af50-3650eb986a44",
+			"id": "82ed0603-98f1-49df-97a5-08e37db31dce",
 			"key": "ticketNumber",
 			"value": ""
 		}
