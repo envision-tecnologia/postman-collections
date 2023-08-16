@@ -1387,11 +1387,6 @@
 								}
 							],
 							"id": "388581b9-117c-4742-b65a-89c9a0d4acfd"
-						},
-						{
-							"name": "New Folder",
-							"item": [],
-							"id": "13112ee0-1abf-4551-91da-438d8afc61c5"
 						}
 					],
 					"id": "f0d25fc5-bc94-4d1b-9534-cc0bfe1a1abc",
@@ -1931,86 +1926,91 @@
 			],
 			"id": "d80b2b14-f2f7-4b9d-91f6-7e1d4dfc5e16",
 			"description": "O Profile e responsável pelo métodos de criar cadastros de entidades do sistema."
+		},
+		{
+			"name": "Authorization",
+			"item": [],
+			"id": "13112ee0-1abf-4551-91da-438d8afc61c5"
 		}
 	],
 	"variable": [
 		{
-			"id": "fde00b3f-6904-4220-b632-6148a093e483",
+			"id": "5b169cde-85d6-4608-af2a-397255a6afd0",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "ff33f86b-e4cb-456f-92f3-c1b79978b99d",
+			"id": "2f655b21-116c-47de-abaa-c5f7be3744ef",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "e57b82d3-64ab-47e4-87f4-a7fe74f95df9",
+			"id": "00c59c90-fe68-48b8-9898-e0fb1e38742c",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "65c86ee5-11df-42cc-86bc-60568e2d7aaa",
+			"id": "b9168351-3d65-443c-b820-4cbc109e9d50",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "fde78158-ac61-432d-875d-be8cc62829bd",
+			"id": "21a3e6ce-6c4f-409b-992b-10ae1fccd7e3",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "1560cfc8-4cfd-4ba0-814b-2c50d8f6d0c5",
+			"id": "9d61b064-0a61-400e-a1a9-2a4ce0b527f8",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "1e36ee6c-5e6c-4aed-b9a5-d37355dcf517",
+			"id": "b2376b36-075d-4a18-a2ca-e91ed41d573d",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "1b7288ca-35ef-47b4-a9e9-97fd26169952",
+			"id": "d10e86a8-fd0e-4a8c-b996-f07593c7f695",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "1b231ba4-5574-4505-9eb5-fff30a231490",
+			"id": "0666b1de-6f46-438c-a11d-9e411d3ec40a",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "cb967efd-2b60-4f33-ae79-c34d5ab58d85",
+			"id": "a9376295-a855-42f0-a481-6db2311ff139",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "43cf1698-c616-4b15-a530-79df9211ff76",
+			"id": "9cc4d884-777e-4003-9bb0-d87af1d2bf53",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "669a32a1-4143-4d3f-bef7-f95e2978b68d",
+			"id": "464d4505-671e-4ca2-a964-3c18d3e14ecb",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "22c0d070-483c-460e-89b5-d07eaf4a1fc3",
+			"id": "948cdb74-6f65-4a9d-b4b5-2646be0e0975",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "d475c208-dd25-494e-9470-95e3bdd64266",
+			"id": "7552c793-d0b0-4860-a41b-2a248871c534",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "8f73bdec-f21b-4416-bbe6-469a9cc6a5a2",
+			"id": "80d5c987-cedf-4c85-9a5c-452a1fb871ee",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "01984919-ea6f-4b36-a878-197a7905ee97",
+			"id": "8cd8c975-60c6-47c9-a92d-510451a82bb3",
 			"key": "ticketNumber",
 			"value": ""
 		}
