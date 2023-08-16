@@ -7,6 +7,11 @@
 	},
 	"item": [
 		{
+			"name": "Start Here - Get Token",
+			"item": [],
+			"id": "13112ee0-1abf-4551-91da-438d8afc61c5"
+		},
+		{
 			"name": "Shopping",
 			"item": [
 				{
@@ -1682,6 +1687,129 @@
 			"name": "Orders",
 			"item": [
 				{
+					"name": "Bookings",
+					"item": [
+						{
+							"name": "RetrievePnrs",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "e7458b36-15bd-48e8-a412-2e1bd4d8d81f"
+									}
+								}
+							],
+							"id": "ad5cf128-571b-4722-8692-93907c48e259",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 28396,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs",
+								"description": "Método responsável por atualizar os localizadores."
+							},
+							"response": []
+						},
+						{
+							"name": "CancelPnrs",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"id": "6a4bc541-0fa2-40d3-8e31-c8852b64adf3"
+									}
+								}
+							],
+							"id": "1f2a3069-a6ba-4509-9b57-9b031bbee4f1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "Aa,123456",
+										"username": "rony.oliveira@envisiontecnologia.com.br",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 22222,\r\n      \"name\": \"Envision Agencia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/CancelPnrs",
+								"description": "Método responsável para realizar o cancelamento."
+							},
+							"response": []
+						}
+					],
+					"id": "9c200ed2-5d90-4262-9266-7cfd2026b904",
+					"description": "Em Bookings temos as opções para retrivar o localizador ou realizar o cancelamento do mesmo."
+				},
+				{
 					"name": "GetRecords",
 					"id": "3c2e32cc-c200-4ff1-a880-df853759485f",
 					"protocolProfileBehavior": {
@@ -1761,129 +1889,6 @@
 			"description": "No Orders temos os métodos de consultas."
 		},
 		{
-			"name": "Bookings",
-			"item": [
-				{
-					"name": "RetrievePnrs",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"const moment = require('moment');\r",
-									"\r",
-									"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-									"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-									"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-									"\r",
-									"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-									"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-									"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-									""
-								],
-								"type": "text/javascript",
-								"id": "e7458b36-15bd-48e8-a412-2e1bd4d8d81f"
-							}
-						}
-					],
-					"id": "ad5cf128-571b-4722-8692-93907c48e259",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"password": "Aa,123456",
-								"username": "rony.oliveira@envisiontecnologia.com.br",
-								"accessTokenUrl": "https://api.travelagent.com.br/token",
-								"challengeAlgorithm": "S256",
-								"grant_type": "password_credentials",
-								"authUrl": "https://www.travelagent.com.br/api/token",
-								"addTokenTo": "header",
-								"client_authentication": "header",
-								"tokenType": "bearer"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 28396,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs",
-						"description": "Método responsável por atualizar os localizadores."
-					},
-					"response": []
-				},
-				{
-					"name": "CancelPnrs",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"const moment = require('moment');\r",
-									"\r",
-									"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
-									"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
-									"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
-									"\r",
-									"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
-									"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
-									"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
-									""
-								],
-								"type": "text/javascript",
-								"id": "6a4bc541-0fa2-40d3-8e31-c8852b64adf3"
-							}
-						}
-					],
-					"id": "1f2a3069-a6ba-4509-9b57-9b031bbee4f1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"password": "Aa,123456",
-								"username": "rony.oliveira@envisiontecnologia.com.br",
-								"accessTokenUrl": "https://api.travelagent.com.br/token",
-								"challengeAlgorithm": "S256",
-								"grant_type": "password_credentials",
-								"authUrl": "https://www.travelagent.com.br/api/token",
-								"addTokenTo": "header",
-								"client_authentication": "header",
-								"tokenType": "bearer"
-							}
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"companyContext\": {\r\n    \"consolidator\": {\r\n      \"id\": 11111,\r\n      \"name\": \"Envision Tecnologia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    },\r\n    \"travelAgency\": {\r\n      \"id\": 22222,\r\n      \"name\": \"Envision Agencia\",\r\n      \"logo\": \"string\",\r\n      \"systemAccountId\":15080\r\n    }\r\n  },\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VPEGUU\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "https://api.travelagent.com.br/Shopping/CancelPnrs",
-						"description": "Método responsável para realizar o cancelamento."
-					},
-					"response": []
-				}
-			],
-			"id": "9c200ed2-5d90-4262-9266-7cfd2026b904",
-			"description": "Em Bookings temos as opções para retrivar o localizador ou realizar o cancelamento do mesmo."
-		},
-		{
 			"name": "Profile",
 			"item": [
 				{
@@ -1926,91 +1931,86 @@
 			],
 			"id": "d80b2b14-f2f7-4b9d-91f6-7e1d4dfc5e16",
 			"description": "O Profile e responsável pelo métodos de criar cadastros de entidades do sistema."
-		},
-		{
-			"name": "1 - Start Here - Get Token",
-			"item": [],
-			"id": "13112ee0-1abf-4551-91da-438d8afc61c5"
 		}
 	],
 	"variable": [
 		{
-			"id": "2e85bd1b-13b5-4dd4-aa9f-6181a6161b3a",
+			"id": "f0b89cb6-1813-4003-b0ad-544a3ee4abb2",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "37c2f917-dbaf-4ccb-beca-bcfeff2e8852",
+			"id": "bca869a6-4a4c-4afb-88f4-ecc279476150",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "b5f3971c-3291-468e-a22a-94979abb55e2",
+			"id": "114e9c07-f3d5-4b44-b821-07829467f4af",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "de569d29-6433-4279-9075-b82d1c7bc5a1",
+			"id": "c44d368f-9b9a-445e-879b-bedb354733b1",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "fc2aea5b-28cb-4c20-ad78-d8034a26a1c1",
+			"id": "e426f796-05c0-4c33-8a1a-df4320112491",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "5e50ef32-91f2-4057-aade-5d2eed343b2b",
+			"id": "55041b49-09c8-410a-a3c9-8deb7f23479e",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "f30cad97-e836-4bc7-82b2-e9fa9c606904",
+			"id": "449deea5-68c1-4ec3-a0ea-92136a338e1b",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "02eaf9c5-0119-4861-9981-45c46b0e186b",
+			"id": "d2071435-3b20-4631-9dbe-a49ffa050164",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "42cca589-b60d-4adf-ba30-f6ed886273a0",
+			"id": "1ae64f69-e898-4cc7-be47-4ceed2eb6987",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "eedbbf23-01e9-4d82-8efe-97675728742b",
+			"id": "a9897388-35db-41d5-9396-8b7379cf3cce",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "2dbbaa06-af09-4eb2-aa85-db3e9440ffdf",
+			"id": "098e71f8-0e22-49d4-989f-7395f7254b88",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "e097ab07-ef85-4386-ba28-536efc07e20b",
+			"id": "82d260b4-6ff7-4ba9-bc36-638a408c4cbd",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "532f660d-50ed-4f91-99f4-c9881411e12f",
+			"id": "7726f36f-fa75-4573-befd-2cc24e179ddb",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "c2109c0e-aacc-423a-80e4-5e6bfe296810",
+			"id": "06259f2b-f9a9-4241-a578-bd0884220d8d",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "e38f6ac9-f31e-4a43-a23a-03bb446c4180",
+			"id": "ace0f62c-1d3f-4bfa-85c5-b343da31d51d",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "ef112f20-4236-49af-a466-7532422039e0",
+			"id": "78593ef2-098b-4cbb-a718-aa248f7b2487",
 			"key": "ticketNumber",
 			"value": ""
 		}
