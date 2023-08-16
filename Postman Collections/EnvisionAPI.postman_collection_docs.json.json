@@ -11,24 +11,26 @@
 			"item": [
 				{
 					"name": "GetToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e3b9e4a1-127e-4064-91eb-0b046d6f660d",
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"access_token\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"id": "ae208d41-a070-41e6-935e-e9e38f0294c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"accessTokenUrl": "http://localhost/EnvisionApi/token",
-								"password": "S|t6efE0{",
-								"username": "copastur.api",
-								"challengeAlgorithm": "S256",
-								"grant_type": "password_credentials",
-								"authUrl": "https://www.travelagent.com.br/api/token",
-								"addTokenTo": "header",
-								"client_authentication": "header",
-								"tokenType": "bearer"
-							}
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [],
@@ -1958,99 +1960,99 @@
 	],
 	"variable": [
 		{
-			"id": "8cbe9964-8ae2-4ed7-8eac-0cbdafd097a4",
+			"id": "dd27a74a-7b07-4247-8b07-d5fad8b30757",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "0ac128f3-335d-4d18-8ce9-2740755748b4",
+			"id": "19f04db6-a329-4874-a73f-548cf8e3789e",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "fc425452-44e4-4999-86c2-3c8531a63514",
+			"id": "125e93c1-e369-4185-a8dc-3e7578705a62",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "5904c31c-58e4-4c92-87ca-5c1c9b40e51a",
+			"id": "1d3de8c8-9f77-43b3-ba3f-95771b5ae3c0",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "634119fe-1f2f-43be-8485-6157258e4014",
+			"id": "4d7c8c35-3d41-492b-b43a-43286d6a56c4",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "5fdbd98a-a9bc-4d40-b912-ffda7ba68ca7",
+			"id": "3007e9ae-c4c4-4481-8b8c-6817f04665e5",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "3526d6fc-7041-4ed9-a731-618945ca2064",
+			"id": "1a2eb091-cfaa-4e63-817a-9b80a63e5f01",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "b5c6233a-279a-47d2-937f-ebac60899ce2",
+			"id": "95efb121-f8c2-4856-8325-ca8e339990ee",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "8beafd43-88ef-4540-919c-291a0f801de8",
+			"id": "ffdc7468-26f9-4e18-8228-9d93de0e35c7",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "058f485c-6997-4d20-a26f-0cdc82937487",
+			"id": "a89db26e-1755-4b0b-9b13-d444a7ae1f31",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "d4de43bf-e212-4dcc-b0e4-ce699a786321",
+			"id": "ed704aee-b47e-4774-bfb1-83587bd825f1",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "94c43a74-50fb-45e8-9f95-ea4f093bd855",
+			"id": "0c17d536-b388-4801-8382-bfff4d2ef85d",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "10560e93-ec56-4532-ac8d-d9f9a23b26bd",
+			"id": "99878ad5-fb7a-4823-a853-523e05b95d2a",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "aea4cf0a-9c61-4842-bf3c-6c843b4881db",
+			"id": "73d6e832-53a6-4f7b-8b7c-af79ddba1b75",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "b65cc64f-9069-4158-b02e-268f0136372f",
+			"id": "eee7c384-7b48-41be-a845-565fcace9126",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "91ee612c-2e5a-41db-a4f2-0c02c1230155",
+			"id": "86d18b1a-e945-4fe9-aa49-33e28819ea8c",
 			"key": "ticketNumber",
 			"value": ""
 		},
 		{
-			"id": "a7a3c332-800b-43b2-b917-81baf1dd2bb6",
+			"id": "88450d51-53c5-4bba-86eb-e32b5ea70b0e",
 			"key": "username",
 			"value": "envision",
 			"type": "string"
 		},
 		{
-			"id": "c1df247e-4054-4af9-9aa7-2d6612c174c1",
+			"id": "b1febb37-26fe-485c-a64c-eefdad8ad734",
 			"key": "password",
 			"value": "Env#M@r2023",
 			"type": "string"
 		},
 		{
-			"id": "2c45a6e7-e780-4de5-9ff4-cb74b74ad673",
+			"id": "d44658de-924c-4840-bcb9-e06fa28f20e8",
 			"key": "access_token",
 			"value": ""
 		}
