@@ -1713,18 +1713,9 @@
 					},
 					"request": {
 						"auth": {
-							"type": "oauth2",
-							"oauth2": {
-								"password": "Aa,123456",
-								"username": "rony.oliveira@envisiontecnologia.com.br",
-								"headerPrefix": "Bearer ",
-								"tokenType": "bearer",
-								"accessTokenUrl": "https://api.travelagent.com.br/token",
-								"challengeAlgorithm": "S256",
-								"grant_type": "password_credentials",
-								"authUrl": "https://www.travelagent.com.br/api/token",
-								"addTokenTo": "header",
-								"client_authentication": "header"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{access_token}}"
 							}
 						},
 						"method": "POST",
@@ -1815,99 +1806,99 @@
 	],
 	"variable": [
 		{
-			"id": "550be287-9b6b-4c93-bc7f-32f0dc9fa7ac",
+			"id": "0edbcd68-6525-4ac5-a46e-d95b4afb058f",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "794a2ca4-e90e-44c1-b68f-7ef55ed92f45",
+			"id": "64b56406-3922-4b7e-b67f-553fcd333ea2",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "21cca47c-3c30-40f0-8ee3-4674c639c5fc",
+			"id": "6f7641f9-590d-4718-9da2-0c48cae0d60b",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "cfdd8c31-3642-4362-9308-671cf4504208",
+			"id": "5d1ba8da-2d53-44c1-9e1b-98bd254f3756",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "3f25feef-8b68-49ad-89c9-f0c596b1dcb4",
+			"id": "fdeb8a1f-86cd-4902-abfa-0013546638b7",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "bde02e47-3293-48ab-85fe-bf41a30ad43f",
+			"id": "52d6bcb0-9a33-47b5-9d80-f00d85d5e76d",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "7bdda88d-1780-45f0-b8e8-1489385dcfed",
+			"id": "db084a89-f140-4989-916c-e6e0e4090852",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "012bd816-36e0-4a25-aa7b-34718836c541",
+			"id": "d85dfe5a-3d3b-4e76-8a85-74c0ce93987f",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "71392a37-0a26-4ece-bfe7-37f499e50181",
+			"id": "0c6e2a94-b39e-4b31-a150-b0960a86a58c",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "60510ac6-c6c5-49c3-a248-bb6a2f054017",
+			"id": "6f712932-297f-498b-8718-e166417fc6f0",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "da23db66-4668-4469-9695-6214a1a0e78a",
+			"id": "4f724699-8785-4e8a-9df2-e4d4885d72bc",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "4b20aa28-4550-407d-ac16-693654bb06f7",
+			"id": "0ef65770-1a7d-4f5f-a5a0-86bcf554ffdc",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "434d46e3-69e4-4cd5-8510-82a100b1ac0d",
+			"id": "69dd8b46-8237-46d8-8c56-18f5d3d8fd58",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "78a0749d-5576-4f97-93ad-901196920042",
+			"id": "0b69d2ba-726d-47b0-a1f5-6742bfb09883",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "78e32e50-d4bd-47ff-bf88-7b48d3821c71",
+			"id": "991e4329-600f-4cdf-9088-5c93da8a298e",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "51fd38a5-a0eb-4d41-814e-202bc63c3f80",
+			"id": "db315040-02ab-4966-9351-e0229d7e766f",
 			"key": "ticketNumber",
 			"value": ""
 		},
 		{
-			"id": "916988d3-29e1-43a4-a980-307452d974d4",
+			"id": "6456192a-fbec-4a9c-b52a-82c69c9e8a9b",
 			"key": "username",
 			"value": "envision",
 			"type": "string"
 		},
 		{
-			"id": "a04f6373-20ae-4da2-ad25-5b46552aa96a",
+			"id": "062735ae-2107-426e-8076-2b3f27be6b5f",
 			"key": "password",
 			"value": "Env#M@r2023",
 			"type": "string"
 		},
 		{
-			"id": "6e2d90cb-e720-425b-aceb-070b2b9a03e2",
+			"id": "abeb17f3-10d8-4072-b0ab-a674babbc34d",
 			"key": "access_token",
 			"value": ""
 		}
