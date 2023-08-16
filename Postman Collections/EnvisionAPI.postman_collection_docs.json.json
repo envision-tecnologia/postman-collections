@@ -1928,89 +1928,89 @@
 			"description": "O Profile e responsável pelo métodos de criar cadastros de entidades do sistema."
 		},
 		{
-			"name": "Start Here - Get Token",
+			"name": "1 - Start Here - Get Token",
 			"item": [],
 			"id": "13112ee0-1abf-4551-91da-438d8afc61c5"
 		}
 	],
 	"variable": [
 		{
-			"id": "cae74fd5-7381-4f95-82f6-009ad7066870",
+			"id": "2e85bd1b-13b5-4dd4-aa9f-6181a6161b3a",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "7b341332-13ec-4039-8b5f-d72dc0816235",
+			"id": "37c2f917-dbaf-4ccb-beca-bcfeff2e8852",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "bf39e26d-9779-4550-9ecf-636182d8657a",
+			"id": "b5f3971c-3291-468e-a22a-94979abb55e2",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "f4f49aa2-8013-4b67-b8db-64719d1917fb",
+			"id": "de569d29-6433-4279-9075-b82d1c7bc5a1",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "848ad8c0-a0dd-495e-a606-2005fda39591",
+			"id": "fc2aea5b-28cb-4c20-ad78-d8034a26a1c1",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "9eb08e50-48c3-4cbf-b2df-2bf5aac9ffd6",
+			"id": "5e50ef32-91f2-4057-aade-5d2eed343b2b",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "970f01d8-9216-4a7f-9f99-00dcc42424bf",
+			"id": "f30cad97-e836-4bc7-82b2-e9fa9c606904",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "70168de0-a00f-4e6a-9a09-beaf0ac66a9c",
+			"id": "02eaf9c5-0119-4861-9981-45c46b0e186b",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "231ec390-644a-4699-81ce-8bed713a540b",
+			"id": "42cca589-b60d-4adf-ba30-f6ed886273a0",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "e919cc98-d41e-4524-b87a-5a1fab26875a",
+			"id": "eedbbf23-01e9-4d82-8efe-97675728742b",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "d9dba1b8-a938-474e-990c-e116275604ed",
+			"id": "2dbbaa06-af09-4eb2-aa85-db3e9440ffdf",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "499fc18f-b3a8-4e82-aabc-1a6417e5be36",
+			"id": "e097ab07-ef85-4386-ba28-536efc07e20b",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "1a732f04-f00e-4db3-a887-9b9f5760e669",
+			"id": "532f660d-50ed-4f91-99f4-c9881411e12f",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "862bf5f6-46ff-46e3-9ad5-c3084f0605ba",
+			"id": "c2109c0e-aacc-423a-80e4-5e6bfe296810",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "7bb24f72-45cf-4095-b554-ba6c92e24996",
+			"id": "e38f6ac9-f31e-4a43-a23a-03bb446c4180",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "6d74c2a3-03d6-43af-9e48-1d94ce2e30d3",
+			"id": "ef112f20-4236-49af-a466-7532422039e0",
 			"key": "ticketNumber",
 			"value": ""
 		}
