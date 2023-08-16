@@ -1454,6 +1454,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
+										"id": "44dc40bc-1f1d-44f1-b35f-b0ae7e85cd65",
 										"exec": [
 											"const moment = require('moment');\r",
 											"\r",
@@ -1466,8 +1467,7 @@
 											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
 											""
 										],
-										"type": "text/javascript",
-										"id": "44dc40bc-1f1d-44f1-b35f-b0ae7e85cd65"
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -1477,17 +1477,9 @@
 							},
 							"request": {
 								"auth": {
-									"type": "oauth2",
-									"oauth2": {
-										"password": "Aa,123456",
-										"username": "rony.oliveira@envisiontecnologia.com.br",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
-										"challengeAlgorithm": "S256",
-										"grant_type": "password_credentials",
-										"authUrl": "https://www.travelagent.com.br/api/token",
-										"addTokenTo": "header",
-										"client_authentication": "header",
-										"tokenType": "bearer"
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
 									}
 								},
 								"method": "POST",
@@ -1864,99 +1856,99 @@
 	],
 	"variable": [
 		{
-			"id": "238a60a1-da2a-4dbb-99a9-bfb8b56ae080",
+			"id": "5da7e937-b6cb-4b42-8e13-e5156e5e5e09",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "e17b97eb-fea0-49d5-8fa5-18d565f1ffc8",
+			"id": "f51c1541-defd-41d4-af6d-bbeac0a2cd41",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "4b3d5a9a-3e11-45c1-9f57-85bf0322e06e",
+			"id": "1231b354-1a0f-46fa-94e7-36865bd8d17f",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "0a49be10-428a-464a-8778-d2ac99f3ce22",
+			"id": "60eaddf0-da7b-4f3a-826f-fbcdc17a6e0a",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "35e4d57c-cd4e-49c1-808c-68cbf799cac9",
+			"id": "e1328156-5f34-414f-bf08-9a5972efe1f2",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "a10919d0-59a6-4dd4-9420-6ec16b0bf54e",
+			"id": "155c9ac9-71de-45cb-a9ac-19a59836b080",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "f26b9c63-da87-498f-bf6f-36c85ab4e82a",
+			"id": "f0af23fb-7249-420d-b0db-f74abd54f4a5",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "12e98baf-068a-49c1-8e17-6f22d72c6209",
+			"id": "9fa265f3-93fc-4342-934f-aefe8e69cbed",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "bd5c1bb8-1d4c-4dbd-b79a-e8f3f3fd1273",
+			"id": "6f018410-4765-420c-8a68-d8934bec1ae7",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "2ee2ff1e-bbc0-40f0-b0ac-136e0d32b4af",
+			"id": "f2c6a928-90d0-4584-a5f0-b2c1700559bf",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "07ec541d-b343-4a73-9f09-7dbfbc16afe7",
+			"id": "c539df51-9b5b-4142-8a05-d3b824a036c9",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "a3dc78f5-57ce-443b-a576-ed56af853517",
+			"id": "cf5a6e79-1516-4f47-9ddd-044e4081176c",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "de32b459-8022-4be7-b46b-52710508d9d6",
+			"id": "f35abbc5-76dd-460e-89df-18f39c8dd549",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "b2fc91cf-668d-4e3a-be2c-bd8b0ca4c456",
+			"id": "5329e02f-3d29-475d-8712-9ef2e344e7d8",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "e594abea-f3b8-4dde-ac46-e0560bcd06dc",
+			"id": "d4143aca-3196-4e9f-9f43-639e6a07bd1a",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "805d3c07-1e57-4fbb-905b-8f219828c5bb",
+			"id": "c37d6605-1d2d-4ec8-813f-40c43947bb76",
 			"key": "ticketNumber",
 			"value": ""
 		},
 		{
-			"id": "5be96546-2ac3-4977-8a03-a5610b630d57",
+			"id": "2aaa2df2-b976-4848-bcf3-b66176ee35cc",
 			"key": "username",
 			"value": "envision",
 			"type": "string"
 		},
 		{
-			"id": "7def5ba9-73e7-498c-a784-5d44678bf6b4",
+			"id": "d459e13d-e4f8-4b38-8402-6b83b550bdfc",
 			"key": "password",
 			"value": "Env#M@r2023",
 			"type": "string"
 		},
 		{
-			"id": "7be1870f-75eb-416f-baaf-48fdec099bb6",
+			"id": "5ba05371-83ce-4010-bb7b-26da038776e1",
 			"key": "access_token",
 			"value": ""
 		}
