@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "3325423d-d56d-47a7-b1c1-0801961c9613",
 		"name": "EnvisionAPI Flows",
-		"description": "Bem vindo a documentação da Envision API\n\nMontamos alguns exemplos para consultas e criação de cadastro e reserva para produtos diferentes.\n\nPara utilizar esta API, siga os seguintes passos:\n\n1 - Configure o username e a senha de acesso para a api na seção Variables da collection:\n\n<img src=\"https://content.pstmn.io/5452dd78-a953-4350-8f5a-d394f67af06c/aW1hZ2UucG5n\" alt=\"\" height=\"295\" width=\"1050\">\n\n2 - Execute o passo \"Start Here - Get Token\":\n\n<img src=\"https://content.pstmn.io/467c565e-cd82-4d2d-87a3-3bebb264008c/aW1hZ2UucG5n\" alt=\"\" height=\"199\" width=\"344\">\n\n3 - O resultado esperado desta chamada é retornar um access token conforme tela abaixo:\n\n<img src=\"https://content.pstmn.io/41f30ec8-9eca-4ec1-a3c5-01c6380488c3/aW1hZ2UucG5n\" alt=\"Resposta%20com%20access_token\" height=\"674\" width=\"1753\">\n\n4",
+		"description": "Bem vindo a documentação da Envision API\n\nMontamos alguns exemplos para consultas e criação de cadastro e reserva para produtos diferentes.\n\nPara utilizar esta API, siga os seguintes passos:\n\n1 - Configure o username e a senha de acesso para a api na seção Variables da collection:\n\n<img src=\"https://content.pstmn.io/5452dd78-a953-4350-8f5a-d394f67af06c/aW1hZ2UucG5n\" alt=\"\" height=\"295\" width=\"1050\">\n\n2 - Execute o passo \"Start Here - Get Token\":\n\n<img src=\"https://content.pstmn.io/467c565e-cd82-4d2d-87a3-3bebb264008c/aW1hZ2UucG5n\" alt=\"\" height=\"199\" width=\"344\">\n\n3 - O resultado esperado desta chamada é retornar um access token conforme tela abaixo:\n\n<img src=\"https://content.pstmn.io/41f30ec8-9eca-4ec1-a3c5-01c6380488c3/aW1hZ2UucG5n\" alt=\"Resposta%20com%20access_token\" height=\"674\" width=\"1753\">\n\n4 - Caso a variável access_token esteja preenchida, você já está autorizado para executar os demais métodos\n\n<img src=\"https://content.pstmn.io/158e6be0-a362-43af-8c75-b34cbaa8093d/aW1hZ2UucG5n\" alt=\"Variável%20access_token%20da%20collection%20preenchida\" height=\"195\" width=\"1287\">",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -1698,99 +1698,99 @@
 	],
 	"variable": [
 		{
-			"id": "8974685e-f923-4f9f-ba41-ffa686500918",
+			"id": "b0488352-0026-4500-84dd-2b57d4e0eadc",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "b95c6fc3-bc99-4131-b691-952239805ccb",
+			"id": "84f053df-98a5-45e4-8a2c-455fe0501187",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "564a74de-9aab-4e31-a99f-02cf7b38a0bc",
+			"id": "40a41d28-2c76-46b8-b9ce-543e30ed0660",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "d27000eb-a484-4bbc-afa8-944fa0bf30c7",
+			"id": "54866235-0ece-49de-91b0-26ed4aeb0841",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "a6228c84-682d-45c4-b2f7-70e7f6d0ea8a",
+			"id": "3046e63b-83dc-4410-9064-a51ead937d6a",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "076ebecb-685d-4d6b-90d0-6b30ca6bb071",
+			"id": "345862d8-bcb7-4c4f-9763-dc8a7a3ce633",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "a8aa9edf-adbb-40f9-aabf-6aaa00cfbe94",
+			"id": "a1ac71a2-5c0e-4efe-8f6d-11304a59dfc8",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "85cb33e3-4dc1-4d95-a2c7-97c627dd500d",
+			"id": "e8f7c401-9fd7-422b-abda-e409daa8f864",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "966c7dd9-4086-4f3b-8842-76777dc98434",
+			"id": "e7ff7e33-f6f6-4917-a4ce-029f83d279c6",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "7608495a-78cb-4a16-bf8c-1b55f11229fe",
+			"id": "12039f7d-9bea-4652-8c23-e0a15ea5d975",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "6f87e05c-bc59-44d8-8c8b-923009c4822c",
+			"id": "7b3c0526-7ca4-4660-bd67-ac14832de1e3",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "ba448e25-6eb5-4c9a-9eba-4e6aeb5eb915",
+			"id": "4436ac8c-0574-48fd-8515-b86687cec1bb",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "f74221d1-6584-42f7-aa80-6df130b49025",
+			"id": "f622d170-bdae-46d3-93e9-642d2fcbb203",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "26294ed6-3d28-49f2-b06b-bd3cd66e25e0",
+			"id": "c5615cb0-fa9a-46c0-8e1e-d10d5c5a7e84",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "b108f9f9-f450-4ea5-85fc-53251f1767bd",
+			"id": "c405eece-61f2-4c09-93ba-a5a4f2f6dd03",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "3d7c78c1-7241-4bd2-bec5-b0ce69c13d27",
+			"id": "34e95574-8c9a-42cc-9dad-334b7abed30e",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "d5416c05-c55d-4181-a35b-e16ef9a3617a",
+			"id": "3680d045-16fb-4044-a8e9-66477dd9a76b",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "03aafb93-9239-4ab0-b245-ebbbab683507",
+			"id": "e70d5a06-c6c4-44a6-9045-3419fbd0bc65",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "9fcb78e7-5285-4123-9523-d2643acf710d",
+			"id": "1835b894-09b5-4fa4-b4bc-624d0dba487c",
 			"key": "ticketNumber",
 			"value": ""
 		}
