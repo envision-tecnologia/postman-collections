@@ -1764,7 +1764,7 @@
 								}
 							}
 						},
-						"url": "http://https:/api.travelagent.com.br/Profile/SystemAccounts/Create",
+						"url": "https://api.travelagent.com.br/Profile/SystemAccounts/Create",
 						"description": "Método responsável por criar contas de sistema."
 					},
 					"response": []
@@ -1798,99 +1798,99 @@
 	],
 	"variable": [
 		{
-			"id": "2e8d9819-71f6-49cd-bc42-a69b9a29976d",
+			"id": "ebe0dec3-873b-49b8-afca-726b60d81d46",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "f27905f3-4e6e-46c5-8c02-f823926a5344",
+			"id": "654ec04e-cf58-4dac-af89-70514b1382ad",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "b2c14ab0-838c-43b5-9f41-b296241cd859",
+			"id": "f2b69289-dbea-4cfa-aa1e-220645d3980a",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "ae50e1a7-07f6-46d7-bb2c-5e02c997975e",
+			"id": "f9677ddb-9bd9-4f3c-8164-77fab4aa8899",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "2002a0b0-0bec-454e-99f6-e37f3b993145",
+			"id": "742db928-d39a-45b0-a8e4-82268116ab61",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "f38c6324-2eb0-4152-b771-c1128ed78aef",
+			"id": "6d548a48-d39d-47ac-9686-2d2ac38347c4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "1add7e18-0bfe-44c1-8b92-93bb43a9ff0b",
+			"id": "5ab878c7-7a60-470b-becf-be34be60f656",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "14e59701-817b-4f24-b75f-4e1aff4b60da",
+			"id": "19cf0d3b-55f7-4d04-8c7d-1b1749a5ad3f",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "22826199-1b01-4371-96f2-61272bdb6d52",
+			"id": "4c3e58c6-ace5-4ea5-9cf5-c75b73432b45",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "d190c97e-b7ab-438e-a462-dd540100db71",
+			"id": "db6e4cbc-35e6-42b1-bd9a-869bf232c8f9",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "34f1b1ef-d750-48df-920a-ede745edacef",
+			"id": "b45c91d8-1bdf-4d99-88ad-0a7ca2ff37a3",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "1cc13b67-435b-4a10-bbdb-e05de4aa9b42",
+			"id": "3d118fc3-fed2-485d-a1b3-fb7022715d90",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "3d561dd7-3d59-4eae-bc41-880c9d67c98e",
+			"id": "0edbf2ff-dab9-4ac3-8606-5bea75b4e5da",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "4e703403-d58e-465b-9aeb-8d1c88ca61ac",
+			"id": "6a27b517-abf4-4d1b-8217-497072fe5cf9",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "29598af7-fa47-4b08-bafb-12da5184588c",
+			"id": "e33b660e-6aa6-41b5-9207-c61252281342",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "23295ba5-0775-47fc-bff6-f7dd381de102",
+			"id": "bfcd27b7-20c2-4eb3-ba12-b4e44aae213b",
 			"key": "ticketNumber",
 			"value": ""
 		},
 		{
-			"id": "f9c7ebfd-155f-4bf4-b1ab-f4ac83b92054",
+			"id": "04283ed9-244d-4963-8d96-7e9ec3f8d7f8",
 			"key": "username",
 			"value": "envision",
 			"type": "string"
 		},
 		{
-			"id": "fa79ec70-6e90-4906-b72b-8319081c2fc2",
+			"id": "c5b53fb7-e993-408f-89d3-ab5664c7e02a",
 			"key": "password",
 			"value": "Env#M@r2023",
 			"type": "string"
 		},
 		{
-			"id": "9de1fd15-95fe-4822-b2a6-ab54373df475",
+			"id": "f505463e-18f5-4e53-8d25-d3ce66c13da4",
 			"key": "access_token",
 			"value": ""
 		}
