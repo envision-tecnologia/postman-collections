@@ -212,7 +212,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"LA\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1807,99 +1807,99 @@
 	],
 	"variable": [
 		{
-			"id": "c1f9e15a-7cf7-4e21-a2d2-c7e14b74f8cb",
+			"id": "1706493b-67e4-4f71-9ef9-39f5cea19577",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "0ccb0064-96ce-4679-b8a8-e2a81119b370",
+			"id": "d288fb33-1c22-4209-9ca1-e960c374a157",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "a4cdbe3b-7c3b-4527-b779-f58042a9d8c7",
+			"id": "62215ca1-20c0-4658-bd1c-c01930c8571a",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "f0219f29-d9ef-4557-ab37-80d44c619f48",
+			"id": "5f11bf51-4435-4aac-961f-80d0ac8ac992",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "7e4901bd-c2dc-401f-af40-72cca27fa8e0",
+			"id": "9ea76339-0534-4d86-b268-57669d1e5834",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "757c1445-6b65-4a90-a365-5222184fe4f8",
+			"id": "3557cf7b-4e25-499b-ba0c-2040f2646121",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "bebb78d4-e5e6-464a-bb58-1774d55c70fb",
+			"id": "c7dbbd51-1c93-4f28-8eee-55ad4dd215ac",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "553c0354-e788-4d95-b6e6-9c6b50135f70",
+			"id": "5be0283b-b577-4b9e-955d-095cf543eb79",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "7d3cde86-e65b-41e5-87fe-ec039096cea9",
+			"id": "59e9079b-6c68-4e5d-8959-16034ef12fe2",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "0bae5435-0e41-4c93-9272-1c73c7246581",
+			"id": "40e15c15-862d-4858-bf99-5439e8c4a363",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "304477d6-55c3-423d-9dee-bdb0433b4c33",
+			"id": "52202b7c-fd22-4080-9cce-57991ae7e9de",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "2dda5ae4-4fe4-48fa-b026-52fa3925b0f8",
+			"id": "e914d746-dab5-49e9-add3-e01acce634ce",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "55a36d2f-b3e5-4d61-af0d-af732d24fdbc",
+			"id": "f28a3287-c7d8-497a-93eb-6f0d0c988ac7",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "508b1580-7d63-430d-aabc-6260e0d6ca6f",
+			"id": "67278759-1cca-4c2a-88f0-2e623e08e4c1",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "9f1b8671-6a24-4788-a29f-7c5ec60b2f37",
+			"id": "91bef464-7615-4e33-8684-bb7b3aefc339",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "60c6632b-b8ae-4a7c-b34c-a5cb90f4e4fe",
+			"id": "3d8cc0d2-522e-4702-818b-1d883e6f1c14",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "2b7edc74-e273-4ae7-bd13-7d82d83dcc1a",
+			"id": "2ce340a5-3159-4abf-bece-baa1a7bc781a",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "f43a8c54-49a9-4542-ae45-c398f7fcf9b4",
+			"id": "3ed8e10a-f5f1-4123-ade6-fe83f130142d",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "bf38653a-8d7b-4b94-a7b8-2f35abcb713e",
+			"id": "28f268d2-a71c-4391-8b3d-c724d19a123f",
 			"key": "ticketNumber",
 			"value": ""
 		}
