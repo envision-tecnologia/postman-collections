@@ -429,7 +429,7 @@
 													"    console.info(errorMessage);\r",
 													"}\r",
 													"\r",
-													"pm.expect(jsonData.errors).to.exist;\r",
+													"pm.expect(jsonData.errors).to.not.exist;\r",
 													"pm.expect(jsonData.parentRecord).to.exist;\r",
 													"\r",
 													""
@@ -1704,99 +1704,99 @@
 	],
 	"variable": [
 		{
-			"id": "6aa74ad4-3ae1-42a3-9f56-d0cdf21c4f09",
+			"id": "98669739-b4d7-47af-ab5a-17caf095f945",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "16df586a-0781-451f-a780-8b4ff295d0bd",
+			"id": "92dc1343-b319-4a39-bf81-df8ea73f3fd3",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "67ae5bfc-1c4e-4a18-9db0-a419144952fe",
+			"id": "55e33d99-6489-4508-95e7-e0a852a3ce8f",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "8e37ca5e-6a07-46ff-8513-ee67a1d2e0f5",
+			"id": "f122f931-4346-49f2-88a7-44669847ba37",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "2eb4a68d-2d91-4d72-99c9-137c5d116f1c",
+			"id": "642994a1-1c1b-47c3-bcce-f0bca500eeea",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "d6d1ff40-78c4-438f-b329-c950c134f26f",
+			"id": "ce0e6eaa-afed-4cf6-bee2-a1b9c9abdf98",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "adf2dabc-acd6-4466-85c3-4e94357c4d85",
+			"id": "c175ea72-0459-4bf5-b0bd-66b5faf63590",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "8a02b5bb-8979-4042-85d0-8526998757d9",
+			"id": "e13a599e-737e-43d2-a1c9-eaefbc4fa2c2",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "f43d3af2-ec5e-4982-95fd-1eae182b75a5",
+			"id": "5943e737-32c2-46d0-9bdd-2601738286c4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "e90bd8dc-7733-4f99-b1ef-4748adf50d38",
+			"id": "75c3a743-3c81-4661-9b69-ba962fcdfb34",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "f8bbc510-d369-442d-91e3-9c570bbe35d1",
+			"id": "f64b984e-ffd9-40fa-a8bb-88cd1a9fbbd4",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "73df1c8c-4c78-4112-9332-3f48ad428bf8",
+			"id": "d46aecc8-655a-4185-befd-4e76b847350f",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "0362f7e6-dae2-43c0-b9a1-c9958837be3b",
+			"id": "01d9790a-eae7-4170-8495-04784043b8b4",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "0c823329-e75c-40ff-a118-232c810caca8",
+			"id": "37e3eb95-f545-4468-9c9d-484036da96ac",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "eced0680-ea57-4581-9ad2-7994fd62ce0e",
+			"id": "1e894cc8-54d2-4bdf-9804-5a1722a8aa08",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "f36d4f8b-ae46-4246-b7ad-1d03c685ce1d",
+			"id": "d2b4e87a-368e-471f-bb9a-6ec40a3c68ed",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "564355ef-3f8a-446c-8a06-e6224e47ef8a",
+			"id": "8ed0bf57-dc0c-46f3-b44c-d1e5d561058d",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "c8905454-7f5e-4f12-a29f-55736edc96d9",
+			"id": "bcaa2c18-34da-4606-b648-a7667a6feb13",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "b45cd3bc-8e9e-4696-88d2-dd935f92a1a8",
+			"id": "de9b54b3-5dda-485e-ac00-8311d054b308",
 			"key": "ticketNumber",
 			"value": ""
 		}
