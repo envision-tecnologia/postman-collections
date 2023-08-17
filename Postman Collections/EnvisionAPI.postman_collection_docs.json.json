@@ -616,6 +616,43 @@
 							"item": [
 								{
 									"name": "CancelTickets",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "13b2ddf2-dc78-4e45-b97d-fe3f0beabf9d",
+												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"\r",
+													"// Validação de erros.\r",
+													"if(jsonData.errors != null && jsonData.errors.length > 0)\r",
+													"{\r",
+													"    var errorMessage = 'Erro: ';\r",
+													"    jsonData.errors.forEach( m => errorMessage +=  m.message);\r",
+													"    console.info(errorMessage);\r",
+													"}\r",
+													"\r",
+													"pm.expect(jsonData.errors).to.not.exist;\r",
+													"pm.expect(jsonData.pnrs).to.exist;\r",
+													"pm.expect(jsonData.pnrs[0].tickets).to.exist;\r",
+													"\r",
+													"var ticketStatus = jsonData.pnrs[0].tickets[0].status;\r",
+													"var ticketNumber = jsonData.pnrs[0].tickets[0].number;\r",
+													"\r",
+													"pm.test(\"The ticket status is canceled.\", function () {\r",
+													"    pm.expect(ticketStatus).to.equal('cancelled');\r",
+													"});\r",
+													"\r",
+													"console.info(\"Status do bilhete \" + ticketNumber + \" é: \" + ticketStatus);\r",
+													"\r",
+													"\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
 									"id": "436c7010-3f1e-42ab-8d88-a9cda9b04861",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -1770,99 +1807,99 @@
 	],
 	"variable": [
 		{
-			"id": "991c3580-7423-4693-9c17-d3e4bb00c570",
+			"id": "badda7b1-aaed-4b80-b65a-040a9907adf4",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "83feb094-27b8-4088-a6d9-88ba4bb68d54",
+			"id": "0429d520-3ba7-4c35-ad0b-a4ee07eff852",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "08ef1efe-77fa-40cf-ad2a-d65e429e7171",
+			"id": "7991bfb1-828c-4370-9444-03ca696bc688",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "f8a45609-8541-4d17-99e0-bb78526f6d2f",
+			"id": "912a96a2-b2f4-46dc-858b-658c18ca0164",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "58f672bf-3f58-49eb-8191-9408920aab75",
+			"id": "0c85d9da-6e88-4e13-a6a7-36afbace6e72",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "3195f579-cca8-4c18-8da0-8ce11384ffa3",
+			"id": "4dbd1c8d-f516-4a09-bba1-d7949beecb67",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "a5219f64-60a8-44f2-95a8-3d3c56e1c9a0",
+			"id": "28107edc-ff60-4254-a232-57dd746e606d",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "3803b99d-a7e6-48dd-951f-b754a8e7483f",
+			"id": "a8b22fc5-ba32-4a4d-8ff1-296a1c14ee82",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "79a36a07-0720-4c2c-98f4-50bd6eb99764",
+			"id": "cda26411-9df5-448b-977d-e4a3055ee7e4",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "5b65aab7-3ff6-4460-818c-c1d4063bce63",
+			"id": "261511c0-7fd0-4046-b63a-4caf4cc9999a",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "a7255c98-bc20-48a3-aad7-48b549fb3a3d",
+			"id": "662eb26b-82ea-467f-b201-2b65c797dbfe",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "cdfebe81-1d4b-43a9-8fe9-c8735c967d1c",
+			"id": "37a89328-45d0-4a9c-987b-711f7c1af9df",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "6a31dde3-633a-4e45-9a77-be4a69948a01",
+			"id": "9af935a0-2577-487d-9a84-e07db104b498",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "b5cd4c69-cb51-44ac-87c2-c0124ecf38e0",
+			"id": "c1824b9a-99d8-4771-a022-bbb163f5de76",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "f4e30f93-9a4f-4734-9f18-e39798f36e8a",
+			"id": "42d16779-bed6-4450-9b56-571812501876",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "5045cd6e-d348-4c1d-9156-5102177d3ee1",
+			"id": "a52e040b-82b9-4fc2-8cc4-5771856dc0b2",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "9126758d-f4c0-40d9-97c7-9e0de4563ae3",
+			"id": "b29e3992-2836-4540-8aa3-3fab266497a7",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "efc2ad66-4030-4865-912e-67a94d0ae8cf",
+			"id": "9d64d580-c652-4ebc-97b9-ec1680d8d443",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "e10b642c-ad78-4b72-b16a-6dd1266d0f1a",
+			"id": "7b1a1d3a-c421-4e45-b410-f0cf340215fe",
 			"key": "ticketNumber",
 			"value": ""
 		}
