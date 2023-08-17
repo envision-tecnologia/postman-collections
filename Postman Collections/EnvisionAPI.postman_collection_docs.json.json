@@ -363,7 +363,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"{{travellerFirstName}}\",\r\n            \"lastName\": {{travellerLastName}},\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requester\": {\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"firstName\": \"Silvio\",\r\n        \"lastName\": \"Envision\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"67169526166\",\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ]\r\n    }\r\n}",
+											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"{{travellerFirstName}}\",\r\n            \"lastName\": {{travellerLastName}},\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requester\": {\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"firstName\": \"{{travellerFirstName}}\",\r\n        \"lastName\": \"{{travellerLastName}}\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"67169526166\",\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ]\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1807,99 +1807,99 @@
 	],
 	"variable": [
 		{
-			"id": "8f922851-9588-478b-9ffd-b0cd3e78d4b6",
+			"id": "0bda20ab-260f-401f-84a6-90e77a43020f",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "aa68e273-3659-4bbb-b68b-4f265d8894c4",
+			"id": "0ad9761f-e7fd-4f3b-8582-619b3a5c9f3c",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "f35c62f9-0d28-4570-b177-8b5cb3112ee8",
+			"id": "779423ec-4022-48cf-a094-cd5f4be2740c",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "5f838923-1eb6-40a0-858a-d48e44261241",
+			"id": "4ec080eb-7328-4da8-a857-0b298681fb7d",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "d768644f-e110-498e-a901-249ed1e497d4",
+			"id": "34cd5be1-cc4c-466b-86a1-49a15d34143e",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "f717ed26-4cb4-4f7b-ae5e-f16098e29ce3",
+			"id": "26a6d828-e156-47ef-afdb-53b73928cc90",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "93316eaf-c953-4393-a9a8-5d6b0a1e273d",
+			"id": "f9a17d24-bf6b-4860-a8de-f8d09226d49c",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "d11896a7-b05f-4874-b611-97383a4d91d4",
+			"id": "e230a2a3-3b81-429c-9420-5ec52b5e192b",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "bd1ad8b1-ee10-40cc-b807-bbc334db3469",
+			"id": "d06f0baa-440d-46c1-915e-f6c8e8068b8f",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "001ce4c3-6212-42c5-b145-1a4441e86367",
+			"id": "7cac6d58-c1f4-4ad8-b735-87f733a69f0a",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "36aafceb-340d-433f-b066-f1b928a4ea70",
+			"id": "7398493d-086b-4518-a3e4-bba492470ae0",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "23c4d610-c47c-4150-9a2e-a25ea1952d29",
+			"id": "aae6681e-8d84-4b94-b073-66cd35a43a2d",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "0cea20d9-eab3-454c-981d-bd29c12de043",
+			"id": "291f2f3e-70a9-45d2-88b2-7561b6f091a8",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "462985ca-40ae-4a20-a14e-67be54c700cd",
+			"id": "ec20adfb-fa0a-4a11-b60a-b89329c0df06",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "e04348fd-bb03-4689-a5d0-654cb130331c",
+			"id": "5bbbd672-1891-40cc-a152-4735fe90e1ac",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "542623c4-e310-465a-a331-48de040f1813",
+			"id": "da26b161-6ba0-4528-8fba-cdd08e16a5a1",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "90a0d1bb-159e-4a33-b8fe-4ee7628092c1",
+			"id": "e9c828c5-a4ef-4cf1-a49f-fdb80059a507",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "e089f4cf-2071-4d6d-bb2e-eeab74f09829",
+			"id": "9f50b472-0e8c-4601-8446-8965f3679367",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "75432867-e4e7-42e8-9074-5513fe73407f",
+			"id": "10b4708c-061a-4fc3-9832-041bcc8940c7",
 			"key": "ticketNumber",
 			"value": ""
 		}
