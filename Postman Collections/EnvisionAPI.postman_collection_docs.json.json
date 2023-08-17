@@ -489,8 +489,9 @@
 													"const travellerFirstName = pm.collectionVariables.get(\"travellerFirstName\");\r",
 													"const travellerLastName = pm.collectionVariables.get(\"travellerLastName\");\r",
 													"\r",
+													"var travellerName = (travellerFirstName + \" \" + travellerLastName).toUpperCase();\r",
 													"\r",
-													"var travellerName = travellerFirstName + \" \" + travellerLastName;\r",
+													"pm.collectionVariables.set(\"travellerName\", travellerName);\r",
 													"\r",
 													""
 												],
@@ -1764,99 +1765,99 @@
 	],
 	"variable": [
 		{
-			"id": "41562409-de70-40ba-be41-1c17b2a45f9d",
+			"id": "7170ba37-8b01-4583-bae4-f503e97a5ed5",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "8faf05d7-cac2-4967-90cc-ccb0ac4b7bec",
+			"id": "3acb27fd-c261-408f-9594-9ac371a83581",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "fe82a88f-5f9f-44bd-b4f9-4d7c603eca3b",
+			"id": "d1b62109-3473-4a6e-a566-3978b36b1199",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "bd056201-f7b3-4b24-8b2c-108ee2f18596",
+			"id": "eb7d420c-6728-4921-acb5-1c643918dea2",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "3ce15df1-8240-4898-9675-2e5a462675e6",
+			"id": "8a102b45-ffda-4ec5-ad15-164d0198fde4",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "19ceb181-4e79-4830-b060-03374fb22b2f",
+			"id": "ae4f759e-cef0-4d4d-8e4b-ca67e72edf34",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "d4b0c402-9693-43f7-b685-ce17f95e9138",
+			"id": "dc0cfe61-56bf-48c6-b792-f797211974e4",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "3a0dac07-85d8-4be0-b9f2-622d2d0a0f3a",
+			"id": "da4feb76-e093-4a68-8c8b-271814815fbb",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "116f734d-fe0d-450b-ab70-edbbd07f7610",
+			"id": "5011fb49-58e2-4d7d-adef-096c1fde373d",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "a9b07fe6-7cf6-4842-8616-63f5967ba6b7",
+			"id": "3563a6d4-7026-447f-9073-801c2c300ba2",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "2b6d4337-7a5f-4035-bbfc-15e9031c9bef",
+			"id": "ca9369ea-2180-4969-8e37-2a60d4a60946",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "a5878856-ee6a-4264-a263-e8addc977fb1",
+			"id": "ed2f96f6-1f1f-4a24-b8ee-e06e6ae460b4",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "688bbe66-0bb1-41d1-95dd-2631f2a6fe7a",
+			"id": "88f1a406-0cbb-4d49-833a-4d3c6efb5746",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "d6abed3f-99d6-483c-9cfa-2a0c2cdcf5eb",
+			"id": "dc223c00-42b9-48e8-b875-7cbca6bd8aa7",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "66f9e0e0-9fca-43f4-86a7-fccabe426f27",
+			"id": "c2a7e267-b606-44bf-8977-69e3dd1d6102",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "5b0b2516-e7aa-45d9-a52c-132c2435f620",
+			"id": "5804bafd-87df-4140-8b94-45182bbe5d49",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "c9476462-9c68-4701-a2e2-c4a2d8bcc730",
+			"id": "94bad589-e021-48a1-bfbf-12dffad1ae87",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "de51061a-0961-4ae5-ac95-4ece33cf35b8",
+			"id": "29abfd51-cead-4f2f-862e-9755774c69bf",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "7737a35e-2a75-4278-9536-074189816e41",
+			"id": "7642a5ad-52e4-4da8-80cc-9b08a7a4d3b6",
 			"key": "ticketNumber",
 			"value": ""
 		}
