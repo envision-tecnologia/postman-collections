@@ -17,8 +17,42 @@
 							"script": {
 								"id": "e3b9e4a1-127e-4064-91eb-0b046d6f660d",
 								"exec": [
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.expect(pm.response.code).to.equal(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"access_token is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.access_token).to.be.a('string').and.to.have.lengthOf.at.least(1, \"access_token should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Token type is a non-empty string\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.token_type).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"expires_in is a positive integer\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData.expires_in).to.be.a('number');\r",
+									"    pm.expect(responseData.expires_in).to.be.above(0);\r",
+									"});\r",
+									"\r",
+									"// Seta a variável de access_token\r",
 									"var jsonData = pm.response.json();\r",
-									"pm.collectionVariables.set(\"access_token\", jsonData.access_token);"
+									"pm.collectionVariables.set(\"access_token\", jsonData.access_token);\r",
+									"\r",
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1712,99 +1746,99 @@
 	],
 	"variable": [
 		{
-			"id": "338adc1a-7ca1-4c12-8d7b-e68b52e194c9",
+			"id": "adfdbe2d-800f-4b53-a046-367c78f4048b",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "c09003fd-26d5-46f0-bbce-4438a1e837d1",
+			"id": "c3e71132-6e23-4c1b-a698-e7855b3194bd",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "63733604-bb37-4d7d-a9bf-51ff3069bb4c",
+			"id": "43f289d3-3468-48d0-bf56-10b4cd57385d",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "6f3de724-5de7-4be5-a0de-f17ecedb70a8",
+			"id": "2ec84d78-401e-466e-b845-0c795496b5ec",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "17e5a354-216b-426c-9444-a9ea337c4366",
+			"id": "c2513758-f54e-4f86-b75a-48b0f6b8293f",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "7b93898a-a9b1-4621-aa09-82eba7827b96",
+			"id": "cea540de-3ec0-417b-9468-dfacbb730d70",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "fc8be7ee-db4b-47d1-892b-3bf4aa4780cc",
+			"id": "e5fe41c9-611c-4932-9ca9-ac65cced6d1d",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "7d4ce5bb-f30e-4576-9862-c8decd0c6e2c",
+			"id": "9466002e-531f-4a33-9162-1471535a421d",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "8d429168-fecc-4e52-90dc-b0f7b57bb551",
+			"id": "67033e28-b1a1-4dc4-ba52-4c6677c6fad9",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "a0cf2fc5-132f-4111-aacd-6f910e3e65b5",
+			"id": "098ced41-f29e-4e90-bae6-1530bdf4a3d9",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "db59271f-d135-43a1-b275-be4dc52b6df2",
+			"id": "03fd99f8-6907-486d-9e28-050bffdc2b66",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "8fcdd012-5cd7-4c52-b5de-d0edae34df29",
+			"id": "a2a718df-c63d-4480-b184-8599c2214784",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "539d2ac5-2dc4-4158-bff9-5314da3a9985",
+			"id": "af53a76c-512f-464a-98b5-171286fcffaf",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "d0f5ce44-eed5-4481-909b-11218318e789",
+			"id": "cd4a9eb0-3d13-4039-866d-a3d4a9112222",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "7279f9ec-70e9-4e38-ac4a-3be26235a0f6",
+			"id": "8dd6e664-2412-4ea9-9a5e-f0009b3a86b5",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "91280922-c995-4048-a202-9bd6ac157970",
+			"id": "794bde6e-4686-49e3-9b55-445cfa845be3",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "8e696958-3b35-4c72-9a12-dfdee2848cad",
+			"id": "6fcac936-f6a8-4769-a661-837d704d5d21",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "d801871f-c5eb-4745-b1f4-1a0afa3b8e2e",
+			"id": "4ca7abec-6f34-483e-8054-3e693e47229c",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "243fffba-f03d-47ae-97a2-a291b74d19b4",
+			"id": "6a7a7631-68f5-4bff-92b5-6d7184af8648",
 			"key": "ticketNumber",
 			"value": ""
 		}
