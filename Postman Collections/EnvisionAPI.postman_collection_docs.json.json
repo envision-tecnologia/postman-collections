@@ -518,7 +518,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": {{travellerFirstName}},\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"{{locator}}\",\r\n            \"supplierSystem\": \"{{supplierSystem}}\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"invoice\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"tickets\": [\r\n        {\r\n            \"travellerName\": {{travellerName}},\r\n            \"tourCode\": \"\",\r\n            \"pnrLocator\": \"{{locator}}\",\r\n            \"supplierSystem\": \"{{supplierSystem}}\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n            \"totalValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"firstInstallmentValue\": {\r\n                \"value\": {{totalValue}},\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"otherInstallmentValue\": {\r\n                \"value\": 0,\r\n                \"currencyCode\": \"BRL\"\r\n            },\r\n            \"authorizationCode\": \"\",\r\n            \"installments\": 1,\r\n            \"interest\": 0,\r\n            \"method\": \"invoice\",\r\n            \"owner\": {\r\n                \"name\": \"Passageiro Envision\",\r\n                \"document\": \"321.432.205-29\",\r\n                \"birthDate\": {\r\n                    \"year\": 1990,\r\n                    \"month\": 1,\r\n                    \"day\": 1\r\n                },\r\n                \"email\": \"silvio@envisiontecnologia.com.br\",\r\n                \"address\": {\r\n                    \"street\": \"Rua X\",\r\n                    \"number\": \"1234\",\r\n                    \"complement\": \"\",\r\n                    \"zipCode\": \"01310000\",\r\n                    \"neighborhood\": \"Bela Vista\",\r\n                    \"city\": \"Sao Paulo\",\r\n                    \"state\": \"Sao Paulo\",\r\n                    \"country\": \"Brasil\"\r\n                },\r\n                \"buyerId\": 0,\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1769,99 +1769,99 @@
 	],
 	"variable": [
 		{
-			"id": "ac092283-8705-4cfa-b285-a44c4f52c4c5",
+			"id": "673ce8de-79d9-4258-ab2c-197ecf6eb4fb",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "e85fe9b3-3ac2-4247-8f0d-a0bbe204b615",
+			"id": "1e5ad840-a0b5-40aa-b804-f4271ea92863",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "572cf066-fdc7-4df6-bb30-06a1297114d6",
+			"id": "787e730e-c28c-4408-aa3d-efc3a247124a",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "d7bfc008-e7ef-49ec-ade1-1a653df40bd9",
+			"id": "ac7b556a-0baf-44ac-936c-015f3d9bf6d4",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "2343a641-7081-4e63-b71e-539a3aeb1d3a",
+			"id": "91b24d35-cdf6-409d-bf3a-ad8d81fe7b6b",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "de049d44-df72-4707-aa8f-357f6ff8aaf7",
+			"id": "9a303bff-ff37-4aa6-acdf-942dcefecab9",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "e3b6f988-62d6-4713-8234-37d793666138",
+			"id": "669a36e9-df47-4ed6-9cd3-0ed995fae5db",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "d15f0c2b-bc96-4cd3-8f07-9759c5559c45",
+			"id": "2811ebd7-cab9-4374-96cf-eeac46937f80",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "2ea8d7fd-3b15-4822-97c5-b6d7482cfb2c",
+			"id": "f4b95c4a-9699-4395-8406-cbd943769579",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "0c8345de-827e-42e9-aab3-59a25a6d5ca6",
+			"id": "909a85f2-c80c-4797-923d-457d8fbbcfb0",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "3919f347-242a-4cf9-9984-cb4f39bbc29d",
+			"id": "38f2f2e6-3e6b-42ef-8c6a-61368bbdfcca",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "7ee941da-2a2e-487b-9a28-f0fc1c24edd2",
+			"id": "1a55f894-7f22-42d6-86c0-a1071ce3ae8f",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "25ad3bf5-3c8b-4281-a5c8-829e854679ac",
+			"id": "c8f57d6f-cd29-42a4-bc08-4e378340a161",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "a1d961da-8eba-444f-a57d-2f06f89db2a8",
+			"id": "0b36ea41-08c0-4dba-aae4-ae77c7bf6662",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "10509ac1-42d7-4649-aca7-7491d42e6784",
+			"id": "ec375088-374c-44f9-90d8-fe277ade9638",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "c8f796e0-a2a5-4b48-a6c3-9a1215556e70",
+			"id": "a99072f3-b132-4ac7-b44c-ec02054d0b76",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "a848fcf0-00f0-47a0-8cc6-75dbfe79259c",
+			"id": "0cebab8f-c6fd-4ad1-b495-2b392e00fc0b",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "60339e6d-ed15-4457-b8fd-18b4542663f7",
+			"id": "03d0dfc1-bf2b-4de7-ad6f-86264008384e",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "de734b69-28b3-4260-9ced-b2a0cf09720f",
+			"id": "b4d21243-6431-496e-8844-04f51ce660d3",
 			"key": "ticketNumber",
 			"value": ""
 		}
