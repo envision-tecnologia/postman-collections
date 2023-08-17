@@ -608,7 +608,8 @@
 									"response": []
 								}
 							],
-							"id": "e66c9632-323c-4336-a629-eb3520e72584"
+							"id": "e66c9632-323c-4336-a629-eb3520e72584",
+							"description": "Através deste fluxo iremos realizar o fluxo de emissão com 1 Passageiro Adulto, com pagamento Faturado."
 						},
 						{
 							"name": "Cancel Tickets",
@@ -1769,99 +1770,99 @@
 	],
 	"variable": [
 		{
-			"id": "b6519cf3-a091-4a10-b674-8061aae5e4bf",
+			"id": "47f59768-313f-44f1-8b89-f7b81afeee30",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "cd0e37a8-7e41-46cc-9ba6-0a24007a9113",
+			"id": "bbf79033-2cec-48f8-bfc2-9644dd3d5ea7",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "c79a30b7-8a97-4a2b-aa8e-796ccf22ac2b",
+			"id": "195a7c98-96f3-42b6-b4c4-3fe83583689c",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "cb08b079-91eb-499e-aaf8-b6e29caf7e05",
+			"id": "244a0f26-54bf-45a1-962d-000daa8ef32f",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "f051ca81-eb55-46c3-b9e5-d06e58ba9737",
+			"id": "a003083c-e252-4c63-83e2-7cd7ce600c58",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "e8985e18-6418-4ac8-b6da-5f6d23d6ba5d",
+			"id": "a948f811-6eb9-4fa2-9c56-28da6be81c63",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "22560a08-4f4a-4fc6-af66-358c85e4ef17",
+			"id": "5e72d098-69d4-4223-85cd-54efaef2384b",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "51c8932a-e739-46a5-a9b7-035a9706b98e",
+			"id": "a11d57e8-14f7-47e8-92f4-b23226b91717",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "c5035015-825f-405c-85b1-c66194549860",
+			"id": "475bc3de-81ac-43e3-b6de-82cc2df76615",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "96122ae9-5001-402b-8efd-c78f98a705d6",
+			"id": "521c736f-5cf3-4191-b10e-30c16221ef1e",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "d9e37627-2a04-4061-ac2c-b275eea50ae8",
+			"id": "13fb2d6c-7d93-4b9c-9f3b-8421cd77cc49",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "8f2517d6-2600-4f35-9de0-24efc5044e0c",
+			"id": "ee85d3b8-f03e-47ed-9e30-5b0ba8034ac5",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "25fe3c1f-e4aa-47f4-989b-0fc6923768cc",
+			"id": "752d78d9-017b-4018-af79-c8be83e0e56a",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "0b61e1ac-4d25-41c1-9535-b73454dd05e6",
+			"id": "045c037a-9089-41a3-b5f3-45ce76a0cc68",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "a406573c-0f14-4ad6-9edb-01ff86057c60",
+			"id": "38c3632e-0fe7-48da-adc9-092e04bbdc3c",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "bad22df1-4b2d-4025-9238-73a38a6d2ee0",
+			"id": "aaeb8b7c-f0ec-4695-a1e9-a7ae96a2dc4e",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "9077d6e8-597f-4b85-909f-3a84ad214d25",
+			"id": "ed50c69d-7dba-446d-b3dd-a625ddc67943",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "5543169c-d2bd-41f9-bdd4-46538e60cd96",
+			"id": "739e07c2-510f-4a14-ac6a-bf7720881c58",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "1e1a10c7-7eb1-4278-9d1e-3f56c11b60fa",
+			"id": "c54b1957-c6f3-4b72-b165-c53ce8d3c4dd",
 			"key": "ticketNumber",
 			"value": ""
 		}
