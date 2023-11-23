@@ -1608,7 +1608,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"LA\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+									"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"GIG\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 7\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            },\r\n                        {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"GIG\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 11\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1921,116 +1921,116 @@
 	],
 	"variable": [
 		{
-			"id": "e0bcc66d-5a8e-4fb2-ac64-a53110e25e7c",
+			"id": "54718fa3-8c4a-411e-bfbf-e8717fd0a137",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "a41462a4-02e3-469a-9a00-4c5cac250004",
+			"id": "4d06d4fd-ff38-4945-86d6-549368712d77",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "19cd2118-8c04-42ed-a7b4-acc8dacdc777",
+			"id": "5d4e9476-3c5d-489d-a3e4-f4cedc04f20e",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "f35ec258-db5d-4678-a745-d9abf0acfe84",
+			"id": "6a521b25-c247-46ef-af37-b18e10dc636a",
 			"key": "travellerFirstName",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "4ed86a14-2c38-4f34-91eb-404cd8f688dc",
+			"id": "ac19dd37-331c-44db-b04a-a3cf60c4fdbe",
 			"key": "travellerLastName",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "76c0770f-dcf9-4a9b-a2c7-b5dc477dc6be",
+			"id": "001f29cd-bcb3-4f48-9a7e-89cfa3cc7eb5",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "4d223369-d435-4853-be17-a74fae0c6e81",
+			"id": "a3843c14-b0d2-42fe-ad0f-9188f765942e",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d6746272-8b30-47c6-a98e-8a577f96a4e5",
+			"id": "8a328b29-7f59-4ee0-82d9-699e1049cc19",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "9172d8b3-871d-454f-aa2e-0d37a5df8a7b",
+			"id": "7ad6fe1c-3e9a-40ee-a5fd-a8b1f4e5e4e5",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "ca5229cb-4276-49b0-bd7c-7b13aea29c8a",
+			"id": "3d611d69-7583-452a-9866-09633b0a7f75",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "5b930cc2-373a-4ecc-9b58-91c89a19810f",
+			"id": "1a3ff761-dc82-4833-aa92-f2abf0052b42",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "eb13fc14-d88f-4b7c-b393-a6d6f375b5b6",
+			"id": "d03008a2-a59d-4345-884b-5821e0bc54c7",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "4d128bce-5149-4a2f-b96e-ef52daa3586c",
+			"id": "39d62353-73c0-40f0-968a-959db318df68",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "bb83f721-9152-4cf1-9642-5347b7d7677a",
+			"id": "f87906d2-ac90-42db-98ea-fa0d0b84a05b",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "1339645c-c854-4398-847e-17626eb36226",
+			"id": "54787649-1dc4-4ea2-ae35-87d11e861cbe",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "de19ba9b-3299-4ece-b8bc-3e29d699677f",
+			"id": "c541524f-c084-4886-b012-ead311f51277",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "313e7b5b-8ffa-4647-89e5-e465bb508048",
+			"id": "75a43704-fd19-42cc-89f4-39d28f9101b4",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "ce04be3d-dd6b-4f68-985a-8ed9ade796ec",
+			"id": "43ab35db-785f-4a10-aa10-0409ee1724a3",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "d052a498-5d31-43fe-9e83-56c72efc718e",
+			"id": "2ade0f07-e832-4792-84ea-c7d8be9332e2",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "9961f756-093b-4370-95c7-2535397d9bd7",
+			"id": "658accc6-0adc-4cd0-ac45-1169cd5a7324",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "9e3c5f2c-bdb6-4f52-a7fe-f68f0195789d",
+			"id": "4449103c-6235-4c38-8d8a-a71cd00b3284",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "a283aa63-171a-449d-840d-8fc49e1f9633",
+			"id": "d5da51f2-ad08-4df1-9bb2-af82232dd7da",
 			"key": "ticketNumber",
 			"value": ""
 		}
