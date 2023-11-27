@@ -1921,116 +1921,94 @@
 	],
 	"variable": [
 		{
-			"id": "fc8e56e1-5931-4180-8f96-005f4294d753",
 			"key": "username",
 			"value": "username.envision",
 			"type": "string"
 		},
 		{
-			"id": "d4ebc5ab-af76-4b6b-98e3-d79c465d124b",
 			"key": "password",
 			"value": "senha.envision",
 			"type": "string"
 		},
 		{
-			"id": "f42a9cd2-1585-405f-8a6b-26793a8472c1",
 			"key": "access_token",
 			"value": ""
 		},
 		{
-			"id": "c971bf5b-cb27-4c66-a1be-fd40f25ef168",
 			"key": "travellerFirstName",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "51a67eb2-550f-483f-8f20-b578c16f0015",
 			"key": "travellerLastName",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "16ea9c79-e695-4992-84c1-f04e3abdbfe7",
 			"key": "departureDay",
 			"value": ""
 		},
 		{
-			"id": "2c4d4f94-66ee-4030-8d91-675a425b45c9",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "de4a56c8-07fd-4d3a-8938-10d0488492bb",
 			"key": "departureMonth",
 			"value": ""
 		},
 		{
-			"id": "61a6afa2-126c-4df4-b8e7-558e15588b17",
 			"key": "departureYear",
 			"value": ""
 		},
 		{
-			"id": "94266750-a44c-4411-ac73-d8155e91ee10",
 			"key": "returnDay",
 			"value": ""
 		},
 		{
-			"id": "1a0ed133-aec0-47fa-b00f-3daf39bf3104",
 			"key": "returnMonth",
 			"value": ""
 		},
 		{
-			"id": "18436221-0947-45db-8910-7c3bb4933170",
 			"key": "returnYear",
 			"value": ""
 		},
 		{
-			"id": "865dcf52-e4c3-4b62-9e9f-d942f9872079",
 			"key": "selectedFare",
 			"value": ""
 		},
 		{
-			"id": "090ed342-f846-4368-ad6f-855c3807f443",
 			"key": "selectedFlightGroup",
 			"value": ""
 		},
 		{
-			"id": "9c4ac75a-b063-4b71-85c8-a25ae08c4a73",
 			"key": "bookingFares",
 			"value": ""
 		},
 		{
-			"id": "d888e681-a784-4f88-b194-6973aebd0e21",
 			"key": "flightGroups",
 			"value": ""
 		},
 		{
-			"id": "056628c6-1f56-40dd-a00e-cb6955bc6a61",
 			"key": "serviceOrderId",
 			"value": ""
 		},
 		{
-			"id": "6c7a44d3-30ef-40c4-b5c6-e6c544059751",
 			"key": "locator",
 			"value": ""
 		},
 		{
-			"id": "9d59d71b-6a7d-4167-bb2f-fa0689f45fc3",
 			"key": "supplierSystem",
 			"value": ""
 		},
 		{
-			"id": "5675c220-3326-4699-8d70-67f0af0364bf",
 			"key": "totalValue",
 			"value": ""
 		},
 		{
-			"id": "6517593c-82ef-4d6c-b7d2-706432f36724",
 			"key": "currencyCode",
 			"value": ""
 		},
 		{
-			"id": "6fcc8aa2-441a-4ca2-abe6-ea3b2e696483",
 			"key": "ticketNumber",
 			"value": ""
 		}
