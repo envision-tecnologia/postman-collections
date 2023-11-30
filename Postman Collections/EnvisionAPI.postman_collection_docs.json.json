@@ -1087,6 +1087,56 @@
 							"response": []
 						},
 						{
+							"name": "RetrievePnrs Local",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e7458b36-15bd-48e8-a412-2e1bd4d8d81f",
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "973b43d8-0131-4218-ad05-f6e99b5ab3dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"GKRFUD\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs",
+								"description": "Método responsável por atualizar os localizadores."
+							},
+							"response": []
+						},
+						{
 							"name": "CancelPnrs",
 							"event": [
 								{
