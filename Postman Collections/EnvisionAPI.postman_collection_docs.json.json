@@ -435,7 +435,7 @@
 													"var flightData = '';\r",
 													"selectedFlightGroupOutBound.flights.forEach(f => flightData  += f.flightNumber + \" \" + f.airCompanyCode);\r",
 													"\r",
-													"var fareData = 'Familia Tarifária: ' + selectedFareOutBound.brandedFareName + ', Tipo da Tarifa: ' + selectedFare.fareType;\r",
+													"var fareData = 'Familia Tarifária: ' + selectedFareOutBound.brandedFareName + ', Tipo da Tarifa: ' + selectedFareOutBound.fareType;\r",
 													"\r",
 													"console.info(\"Dados dos Voos:\" + flightData );\r",
 													"console.info(\"Dados da Tarifa:\" + fareData );\r",
@@ -2379,6 +2379,22 @@
 		},
 		{
 			"key": "departureYearOutBound",
+			"value": ""
+		},
+		{
+			"key": "selectedFareOutBound",
+			"value": ""
+		},
+		{
+			"key": "selectedFareInBound",
+			"value": ""
+		},
+		{
+			"key": "selectedFlightGroupOutBound",
+			"value": ""
+		},
+		{
+			"key": "selectedFlightGroupInBound",
 			"value": ""
 		}
 	]
