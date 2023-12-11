@@ -534,6 +534,8 @@
 													"pm.collectionVariables.set(\"flightGroups\", JSON.stringify(flightGroups));\r",
 													"\r",
 													"\r",
+													"var adtBookingFare = jsonData.bookingFares[0];\r",
+													"console.info('Tarifa ADT ' + adtBookingFare.equivalentFare.value);\r",
 													"\r",
 													"pm.test(\"Response status code is 200\", function () {\r",
 													"    pm.response.to.have.status(200);\r",
