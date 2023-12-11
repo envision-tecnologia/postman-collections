@@ -379,6 +379,283 @@
 							"id": "85be4ef8-b0b9-42e5-bbc6-a75b1863539d"
 						},
 						{
+							"name": "Book 1 ADT RT Inter",
+							"item": [
+								{
+									"name": "Search Flights",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "eb586594-af08-488e-9f50-b584f1b1712d",
+												"exec": [
+													"const moment = require('moment');\r",
+													"const departureDateOutBound = moment().add(40,'days');\r",
+													"const departureDateInBound = moment().add(47,'days');\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDayOutbound\", parseInt(departureDateOutBound.format(\"DD\")));\r",
+													"pm.collectionVariables.set(\"departureMonthOutbound\", parseInt(departureDateOutBound.format(\"MM\")));\r",
+													"pm.collectionVariables.set(\"departureYearOutbound\", parseInt(departureDateOutBound.format(\"YYYY\")));\r",
+													"\r",
+													"\r",
+													"pm.collectionVariables.set(\"departureDayInBound\", parseInt(departureDateInBound.format(\"DD\")));\r",
+													"pm.collectionVariables.set(\"departureMonthInBound\", parseInt(departureDateInBound.format(\"MM\")));\r",
+													"pm.collectionVariables.set(\"departureYearInBound\", parseInt(departureDateInBound.format(\"YYYY\")));\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "aaf26540-5ea8-4ed5-a56d-c2a512a53056",
+												"exec": [
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.expect(pm.response.code).to.equal(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.successful).to.equal(true);\r",
+													"    pm.expect(jsonData.airResponseData.flightsOptions.length).to.greaterThan(1);\r",
+													"    pm.expect(jsonData.airResponseData.flightGroups.length).to.greaterThan(1);\r",
+													"});\r",
+													"\r",
+													"// Seta a 1 opção (mais barata)\r",
+													"var selectedFlightOption = jsonData.airResponseData.flightsOptions[0];\r",
+													"var selectedFlightGroup = jsonData.airResponseData.flightGroups[selectedFlightOption.flightGroupIndexes[0]];\r",
+													"var selectedFare = selectedFlightOption.brandedFares[0].faresByFlightGroup[0];\r",
+													"\r",
+													"var flightData = '';\r",
+													"selectedFlightGroup.flights.forEach(f => flightData  += f.flightNumber + \" \" + f.airCompanyCode);\r",
+													"\r",
+													"var fareData = 'Familia Tarifária: ' + selectedFare.brandedFareName + ', Tipo da Tarifa: ' + selectedFare.fareType;\r",
+													"\r",
+													"console.info(\"Dados dos Voos:\" + flightData );\r",
+													"console.info(\"Dados da Tarifa:\" + fareData );\r",
+													"\r",
+													"pm.collectionVariables.set(\"selectedFare\", JSON.stringify(selectedFare));\r",
+													"pm.collectionVariables.set(\"selectedFlightGroup\", JSON.stringify(selectedFlightGroup));\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													"\r",
+													"pm.test(\"Validate that searchCompleted field is true\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.searchCompleted).to.be.true;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Air response data is present in the response\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"    pm.expect(responseData.airResponseData).to.exist;\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The flightsOptions array should have more than one element\", function () {\r",
+													"    pm.expect(jsonData.airResponseData.flightsOptions).to.exist.and.to.be.an('array');\r",
+													"    pm.expect(jsonData.airResponseData.flightsOptions).to.have.lengthOf.at.least(2);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"The flightGroups array must have more than one element\", function () {\r",
+													"    pm.expect(jsonData.airResponseData.flightGroups).to.be.an('array').and.to.have.lengthOf.at.least(2);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "3c431f09-66f9-4b4c-ae9c-e57348ba5337",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{access_token}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"RIO\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            },\r\n {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
+									},
+									"response": []
+								},
+								{
+									"name": "PreOrder Flights",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "19820617-c04c-45fc-996b-9b417202fcd9",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.successful).to.equal(true);\r",
+													"    pm.expect(jsonData.bookingFares.length).to.greaterThan(0);\r",
+													"    pm.expect(jsonData.flightGroups.length).to.greaterThan(0);\r",
+													"});\r",
+													"\r",
+													"// Armazena os objetos necessarios para o ProcessOrder\r",
+													"var bookingFares = jsonData.bookingFares;\r",
+													"var flightGroups = jsonData.flightGroups;\r",
+													"\r",
+													"pm.collectionVariables.set(\"bookingFares\", JSON.stringify(bookingFares));\r",
+													"pm.collectionVariables.set(\"flightGroups\", JSON.stringify(flightGroups));\r",
+													"\r",
+													"\r",
+													"\r",
+													"pm.test(\"Response status code is 200\", function () {\r",
+													"    pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"FlightGroups array is present and has expected number of elements\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.flightGroups).to.exist;\r",
+													"    pm.expect(responseData.flightGroups).to.be.an('array');\r",
+													"    pm.expect(responseData.flightGroups).to.have.lengthOf(1);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"pm.test(\"Validate bookingFares array\", function () {\r",
+													"    const responseData = pm.response.json();\r",
+													"\r",
+													"    pm.expect(responseData.bookingFares).to.exist;\r",
+													"    pm.expect(responseData.bookingFares).to.be.an('array');\r",
+													"    pm.expect(responseData.bookingFares).to.have.lengthOf(1);\r",
+													"});\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "aa15f86e-2183-4ad4-9485-7f88538c19b7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{access_token}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ],\r\n    \"air\": {\r\n        \"flightsSelections\": [\r\n            {\r\n                \"flightGroup\": {{selectedFlightGroup}},\r\n                \"fare\": {{selectedFare}}\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/PreOrder",
+										"description": "Esse método é responsável por realizar a tarifação do aéreo."
+									},
+									"response": []
+								},
+								{
+									"name": "ProcessOrder Flights",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "280922c7-7ebd-46cb-92eb-d3dab0b54389",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {\r",
+													"  pm.response.to.have.status(200);\r",
+													"});\r",
+													"\r",
+													"var jsonData = pm.response.json();\r",
+													"\r",
+													"pm.test(\"Check If Response is OK\", function () {\r",
+													"    pm.expect(jsonData.successful).to.equal(true);\r",
+													"    pm.expect(jsonData.parentRecord.children.length).to.greaterThan(0);\r",
+													"    pm.expect(jsonData.parentRecord.children[0].pnrs.length).to.greaterThan(0);\r",
+													"});\r",
+													"\r",
+													"\r",
+													"// Coleta o ID da Ordem de Serviço, e o Localizador, e o Fornecedor Responsável pelo localizador (SupplierSystem ou SourceType)\r",
+													"var serviceOrderId = jsonData.parentRecord.id;\r",
+													"var locator = jsonData.parentRecord.children[0].pnrs[0].locator;\r",
+													"var supplierSystem = jsonData.parentRecord.children[0].pnrs[0].supplierSystem;\r",
+													"\r",
+													"pm.collectionVariables.set(\"serviceOrderId\", serviceOrderId);\r",
+													"pm.collectionVariables.set(\"locator\", locator);\r",
+													"pm.collectionVariables.set(\"supplierSystem\", supplierSystem);\r",
+													"\r",
+													"console.info(\"ServiceOrderId: \" + serviceOrderId);\r",
+													"console.info(\"PNR Locator: \" + locator);\r",
+													"console.info(\"SupplierSystem or SourceType: \" + supplierSystem);\r",
+													"\r",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"id": "f2612db0-7e51-4706-a909-c5b60d2ab3ff",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{access_token}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"{{travellerFirstName}}\",\r\n            \"middleName\": \"\",\r\n            \"lastName\": \"{{travellerLastName}}\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requester\": {\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"firstName\": \"{{travellerFirstName}}\",\r\n        \"middleName\": \"\",\r\n        \"lastName\": \"{{travellerLastName}}\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"67169526166\",\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ]\r\n    }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
+										"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
+									},
+									"response": []
+								}
+							],
+							"id": "a276e266-9a73-44af-8268-0f3cdeb92c10"
+						},
+						{
 							"name": "Issue Tickets 1 ADT",
 							"item": [
 								{
@@ -1951,7 +2228,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1f4a24f5-9073-483d-8c4e-b115c37d11d6",
+				"id": "15693ead-3a94-49b4-acc2-b842d6410ab9",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1961,7 +2238,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "bc8f7e75-f300-450b-8a6e-76cb537adaee",
+				"id": "1de1d905-061b-4e7c-81eb-fe452de934da",
 				"type": "text/javascript",
 				"exec": [
 					""
