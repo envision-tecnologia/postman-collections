@@ -1071,6 +1071,40 @@
 								}
 							],
 							"id": "6836e5dd-52be-48a5-b62e-3d35f42da940"
+						},
+						{
+							"name": "Get Ticket Status",
+							"item": [
+								{
+									"name": "GetTicketsInformation",
+									"id": "a85f0a57-abb2-48fb-89ac-c8f3e7d0b2f4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{access_token}}"
+											}
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"{{locator}}\",\r\n      \"supplierSystem\": \"{{supplierSystem}}\"\r\n    }\r\n  ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.travelagent.com.br/Shopping/CancelPnrs"
+									},
+									"response": []
+								}
+							],
+							"id": "c275061b-d22e-446d-913a-4f064d2af468"
 						}
 					],
 					"id": "f0d25fc5-bc94-4d1b-9534-cc0bfe1a1abc",
