@@ -2224,6 +2224,40 @@
 						}
 					],
 					"id": "e33e5f2c-acde-4027-9f0d-a792a4a1d904"
+				},
+				{
+					"name": "GetTicketInformation",
+					"item": [
+						{
+							"name": "GetTicketsInformation",
+							"id": "ac165910-a488-4788-a03e-64b7c095767e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"ticketNumber\": \"{{ticketNumber}}\",\r\n      \"locator\": {\r\n        \"locator\": \"{{locator}}\",\r\n        \"supplierSystem\": \"{{supplierSystem}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost/EnvisionAPI/Shopping/Air/GetTicketsInformation"
+							},
+							"response": []
+						}
+					],
+					"id": "709d8008-13c0-449f-978a-4b2becb3ce7e"
 				}
 			],
 			"id": "388581b9-117c-4742-b65a-89c9a0d4acfd"
