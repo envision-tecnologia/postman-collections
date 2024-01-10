@@ -2229,7 +2229,7 @@
 					"name": "GetTicketInformation",
 					"item": [
 						{
-							"name": "GetTicketsInformation",
+							"name": "GetTicketsInformation Local",
 							"id": "ac165910-a488-4788-a03e-64b7c095767e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2253,6 +2253,34 @@
 									}
 								},
 								"url": "http://localhost/EnvisionAPI/Shopping/Air/GetTicketsInformation"
+							},
+							"response": []
+						},
+						{
+							"name": "GetTicketsInformation",
+							"id": "568ed310-64a9-42f3-afab-8936525daeb8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"ticketNumber\": \"{{ticketNumber}}\",\r\n      \"locator\": {\r\n        \"locator\": \"{{locator}}\",\r\n        \"supplierSystem\": \"{{supplierSystem}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Air/GetTicketsInformation"
 							},
 							"response": []
 						}
@@ -2303,7 +2331,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4a6ea3d0-0ce8-4728-a9a8-2a10cb9af2fd",
+				"id": "79aa47a7-f980-4af2-b0c5-59a00b5e24ff",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2313,7 +2341,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "300fa021-ec86-4263-8479-6819f0774092",
+				"id": "b9e657c9-bd81-4587-a53d-e400798a4cfb",
 				"type": "text/javascript",
 				"exec": [
 					""
