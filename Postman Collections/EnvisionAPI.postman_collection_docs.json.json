@@ -2321,8 +2321,8 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"password": "2023@EnvAbr!L",
-										"username": "suporte.copastur",
+										"password": "S|t6efE0{",
+										"username": "copastur.API",
 										"accessTokenUrl": "https://api.travelagent.com.br/token",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
@@ -2336,7 +2336,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"DYSJAU\",\r\n      \"supplierSystem\": \"Latam\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"OMLNES\",\r\n      \"supplierSystem\": \"Latam\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
