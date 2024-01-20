@@ -2301,7 +2301,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"ticketNumber\": \"{{ticketNumber}}\",\r\n      \"locator\": {\r\n        \"locator\": \"{{locator}}\",\r\n        \"supplierSystem\": \"{{supplierSystem}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"locator\": {\r\n        \"locator\": \"MWHK5U\",\r\n        \"supplierSystem\": \"Azul\"\r\n      }\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
