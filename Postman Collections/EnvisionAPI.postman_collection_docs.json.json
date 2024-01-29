@@ -1151,14 +1151,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\r\n    \"companyContext\": {\r\n\r\n        \"consolidator\": {\r\n\r\n            \"id\": 11111\r\n\r\n        },\r\n\r\n        \"travelAgency\": {\r\n\r\n            \"id\": 22222\r\n\r\n        }\r\n\r\n    },\r\n\r\n    \"hotelParameters\": {\r\n\r\n        \"checkIn\": {\r\n\r\n            \"year\": 2022,\r\n\r\n            \"month\": 10,\r\n\r\n            \"day\": 5,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"checkOut\": {\r\n\r\n            \"year\": 2022,\r\n\r\n            \"month\": 10,\r\n\r\n            \"day\": 12,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"locationId\": 258680\r\n\r\n    },\r\n\r\n    \"paginationParameters\": {\r\n\r\n        \"pageNumber\": 1,\r\n\r\n        \"itemsPerPage\": 1000\r\n\r\n    },\r\n\r\n    \"sortParameters\": {\r\n\r\n        \"sortBy\": \"price\",\r\n\r\n        \"descending\": true\r\n\r\n    },\r\n\r\n    \"asynchronous\": false,\r\n\r\n    \"travellers\": [{\r\n\r\n            \"ageGroup\": \"adult\",\r\n\r\n            \"age\": 30\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"raw": "{\r\n\r\n    \"hotelParameters\": {\r\n\r\n        \"checkIn\": {\r\n\r\n            \"year\": 2024,\r\n\r\n            \"month\": 6,\r\n\r\n            \"day\": 12,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"checkOut\": {\r\n\r\n            \"year\": 2024,\r\n\r\n            \"month\": 6,\r\n\r\n            \"day\": 14,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"locationId\": 258680\r\n\r\n    },\r\n\r\n    \"paginationParameters\": {\r\n\r\n        \"pageNumber\": 1,\r\n\r\n        \"itemsPerPage\": 1000\r\n\r\n    },\r\n\r\n    \"sortParameters\": {\r\n\r\n        \"sortBy\": \"price\",\r\n\r\n        \"descending\": true\r\n\r\n    },\r\n\r\n    \"asynchronous\": false,\r\n\r\n    \"travellers\": [{\r\n\r\n            \"ageGroup\": \"adult\",\r\n\r\n            \"age\": 30\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/api/Shopping/Search",
+								"url": "https://api.travelagent.com.br/Shopping/Search",
 								"description": "Método responsável por realizar a pesquisa de hotel."
 							},
 							"response": []
@@ -2539,7 +2539,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "c0e98750-b711-4883-8093-ed5400182b2b",
+				"id": "090afaac-6d38-4704-80d1-071ff5ac9076",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2549,7 +2549,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "6386a9d6-74e8-4ea5-9fe0-818781b1a7ec",
+				"id": "107f37b5-cc82-496f-93f1-68c0273c85b0",
 				"type": "text/javascript",
 				"exec": [
 					""
