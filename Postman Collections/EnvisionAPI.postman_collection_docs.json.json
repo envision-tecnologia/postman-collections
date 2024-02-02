@@ -2494,6 +2494,24 @@
 						}
 					],
 					"id": "5f877b28-bd68-4dd8-8be2-f24c1c2442f9"
+				},
+				{
+					"name": "GetFareRules",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "23ed7b98-2986-44f9-9b1d-7cffec1f5cf3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "d8f4c070-8658-4708-9cb2-1667dc9ddf88"
 				}
 			],
 			"id": "388581b9-117c-4742-b65a-89c9a0d4acfd"
