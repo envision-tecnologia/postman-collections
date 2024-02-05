@@ -2322,9 +2322,9 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"password": "2023@EnvAbr!L",
 										"username": "suporte.copastur",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
 										"authUrl": "https://www.travelagent.com.br/api/token",
