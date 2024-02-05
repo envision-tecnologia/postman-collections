@@ -2320,23 +2320,31 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{access_token}}"
+									"type": "oauth2",
+									"oauth2": {
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.copastur",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
 									}
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"locator\": {\r\n        \"locator\": \"MWHK5U\",\r\n        \"supplierSystem\": \"Azul\"\r\n      }\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"locator\": {\r\n        \"locator\": \"IDGYAI\",\r\n        \"supplierSystem\": \"Sabre\"\r\n      }\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/Air/GetTicketsInformation"
+								"url": "http://localhost/EnvisionAPI/Shopping/Air/GetTicketsInformation"
 							},
 							"response": []
 						}
