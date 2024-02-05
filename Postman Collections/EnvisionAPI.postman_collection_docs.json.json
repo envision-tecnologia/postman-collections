@@ -2311,6 +2311,34 @@
 								"url": "https://api.travelagent.com.br/Shopping/Air/GetTicketsInformation"
 							},
 							"response": []
+						},
+						{
+							"name": "GetTicketsInformation Local 2",
+							"id": "06fe82ba-a043-47a3-bc54-f03ca924dc3d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"locator\": {\r\n        \"locator\": \"MWHK5U\",\r\n        \"supplierSystem\": \"Azul\"\r\n      }\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Air/GetTicketsInformation"
+							},
+							"response": []
 						}
 					],
 					"id": "709d8008-13c0-449f-978a-4b2becb3ce7e"
