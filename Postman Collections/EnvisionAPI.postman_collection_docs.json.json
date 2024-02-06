@@ -2561,6 +2561,34 @@
 								"url": "https://api.travelagent.com.br/Shopping/PreOrder"
 							},
 							"response": []
+						},
+						{
+							"name": "New Request Copy",
+							"id": "c7bcd572-cec3-4ce3-a371-dff6ef6d2c40",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ],\r\n    \"flightsSelections\": [\r\n        {\r\n            \"flightGroup\": {\r\n                \"originId\": 2701199,\r\n                \"destinationId\": 2701188,\r\n                \"arrivalTime\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 13,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 19,\r\n                    \"minutes\": 30,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"departureTime\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 13,\r\n                    \"dayOfWeek\": \"wednesday\",\r\n                    \"hour\": 18,\r\n                    \"minutes\": 10,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"issuerAirCompanyCode\": \"G3\",\r\n                \"supplierSystem\": \"GolGWS\",\r\n                \"durationInMinutes\": 80,\r\n                \"flights\": [\r\n                    {\r\n                        \"arrivalAirportId\": 2701188,\r\n                        \"departureAirportId\": 2701199,\r\n                        \"durationInMinutes\": 80,\r\n                        \"layoverInMinutes\": 0,\r\n                        \"arrivalDateTime\": {\r\n                            \"year\": 2024,\r\n                            \"month\": 3,\r\n                            \"day\": 13,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 19,\r\n                            \"minutes\": 30,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"departureDateTime\": {\r\n                            \"year\": 2024,\r\n                            \"month\": 3,\r\n                            \"day\": 13,\r\n                            \"dayOfWeek\": \"wednesday\",\r\n                            \"hour\": 18,\r\n                            \"minutes\": 10,\r\n                            \"seconds\": 0,\r\n                            \"millisecond\": 0\r\n                        },\r\n                        \"cabinType\": \"economic\",\r\n                        \"airCompanyCode\": \"G3\",\r\n                        \"status\": \"unknwon\",\r\n                        \"operatedByAirCompanyCode\": \"G3\",\r\n                        \"flightNumber\": \"1973\",\r\n                        \"externalProperties\": \"{\\\"MarriageGrp\\\":\\\"O\\\",\\\"SegmentNumber\\\":null}\",\r\n                        \"legs\": [],\r\n                        \"classOfService\": \"B\",\r\n                        \"aircraftType\": \"737-800\"\r\n                    }\r\n                ],\r\n                \"externalProperties\": \"{\\\"LoginInformationName\\\":\\\"Gol Copastur\\\",\\\"EAPILoginInformationId\\\":\\\"135\\\"}\",\r\n                \"stops\": 0\r\n            },\r\n            \"fare\": {\r\n                \"externalProperties\": \"{\\\"Currency\\\":\\\"BRL\\\",\\\"IsNegoSpace\\\":false,\\\"TaxAmount\\\":28.85,\\\"TaxAmountCHD\\\":0.0,\\\"TaxAmountINF\\\":0.0,\\\"TaxAmountSRC\\\":0.0,\\\"TripType\\\":1,\\\"FareAmount\\\":323.81,\\\"DiscountRate\\\":0.0,\\\"USDFareAmount\\\":0.0,\\\"OriginalFareAmount\\\":323.81,\\\"OriginalFareAmountCHD\\\":0.0,\\\"OriginalFareAmountINF\\\":0.0,\\\"OriginalFareAmountSRC\\\":0.0,\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangeRate\\\":1.0,\\\"DUTaxes\\\":0.0,\\\"AdvancePurchase\\\":0.0,\\\"FlightClasses\\\":[\\\"B\\\"],\\\"CabinType\\\":2,\\\"FareBasis\\\":\\\"BNJAAG2GCP\\\",\\\"FareRules\\\":null,\\\"RuleNumber\\\":null,\\\"CiaCode\\\":\\\"G3\\\",\\\"MinStayHours\\\":0.0,\\\"MinStay\\\":\\\"00:00:00\\\",\\\"MaxStay\\\":\\\"00:00:00\\\",\\\"Source\\\":76,\\\"InboundOutbound\\\":0,\\\"CommercialAgreement\\\":null,\\\"AgreementCode\\\":null,\\\"Pricing\\\":null,\\\"B2BExtension\\\":null,\\\"MarkupedFare\\\":323.81,\\\"DisplayFareAmount\\\":323.81,\\\"ExternalProperties\\\":{\\\"BrandID\\\":\\\"LT\\\",\\\"ExchangeRate.Old\\\":\\\"1\\\",\\\"Currency.Old\\\":\\\"BRL\\\",\\\"FareAmount.Old\\\":\\\"323.81\\\",\\\"TaxAmount.Old\\\":\\\"28.85\\\"},\\\"Quantity\\\":0,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"AwardAmount\\\":0.0,\\\"FareConversions\\\":[{\\\"OriginalCurrency\\\":\\\"BRL\\\",\\\"ExchangedCurrency\\\":\\\"BRL\\\",\\\"Value\\\":1.0,\\\"Exchanges\\\":{\\\"FareAmount\\\":323.81,\\\"FareAmountCHD\\\":0.0,\\\"FareAmountINF\\\":0.0,\\\"FareAmountSRC\\\":0.0,\\\"TaxAmount\\\":28.85}}],\\\"FareAmountSRC\\\":0.0,\\\"BaggagesIncluded\\\":1,\\\"BrandedFaresFamily\\\":\\\"LIGHT\\\",\\\"OBFeeADT\\\":null,\\\"OBFeeCHD\\\":null,\\\"OBFeeINF\\\":null,\\\"FareType\\\":0}\",\r\n                \"baggagesIncluded\": 0,\r\n                \"brandedFareName\": \"LIGHT\",\r\n                \"fareBasis\": \"BNJAAG2GCP\",\r\n                \"flightClasses\": [\r\n                    \"B\"\r\n                ],\r\n                \"fareType\": \"public\",\r\n                \"supplierSystem\": \"GolGWS\",\r\n                \"isRoundTripFare\": false\r\n            }\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/PreOrder"
+							},
+							"response": []
 						}
 					],
 					"id": "d8f4c070-8658-4708-9cb2-1667dc9ddf88"
