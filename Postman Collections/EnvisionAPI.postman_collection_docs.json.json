@@ -2598,9 +2598,17 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{access_token}}"
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.copastur",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
 									}
 								},
 								"method": "POST",
