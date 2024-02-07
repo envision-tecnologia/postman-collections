@@ -2614,7 +2614,7 @@
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/GetFareRules"
+								"url": "http://localhost/EnvisionAPI/Shopping/GetFareRules"
 							},
 							"response": []
 						}
