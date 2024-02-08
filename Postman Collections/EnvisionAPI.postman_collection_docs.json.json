@@ -1967,9 +1967,17 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{access_token}}"
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://homolog.travelagent.com.br/api/token",
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.copastur",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
 									}
 								},
 								"method": "POST",
@@ -1983,7 +1991,7 @@
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"url": "https://homolog.travelagent.com.br/api/Shopping/Search",
 								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 							},
 							"response": []
