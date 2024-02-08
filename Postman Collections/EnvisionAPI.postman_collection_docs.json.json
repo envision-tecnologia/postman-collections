@@ -2091,7 +2091,7 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"accessTokenUrl": "https://localhost/EnvisionAPI/token",
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"password": "2023@EnvAbr!L",
 										"username": "suporte.copastur",
 										"challengeAlgorithm": "S256",
@@ -2113,7 +2113,7 @@
 										}
 									}
 								},
-								"url": "https://localhost/EnvisionAPI/Shopping/Search",
+								"url": "http://localhost/EnvisionAPI/Shopping/Search",
 								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 							},
 							"response": []
