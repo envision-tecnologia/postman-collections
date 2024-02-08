@@ -1995,6 +1995,128 @@
 								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 							},
 							"response": []
+						},
+						{
+							"name": "Search Flights Local",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "eb586594-af08-488e-9f50-b584f1b1712d",
+										"exec": [
+											"const moment = require('moment');\r",
+											"const departureDate = moment().add(40,'days');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", parseInt(departureDate.format(\"DD\")));\r",
+											"pm.collectionVariables.set(\"departureMonth\", parseInt(departureDate.format(\"MM\")));\r",
+											"pm.collectionVariables.set(\"departureYear\", parseInt(departureDate.format(\"YYYY\")));\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "aaf26540-5ea8-4ed5-a56d-c2a512a53056",
+										"exec": [
+											"pm.test(\"Response status code is 200\", function () {\r",
+											"    pm.expect(pm.response.code).to.equal(200);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Check If Response is OK\", function () {\r",
+											"    pm.expect(jsonData.successful).to.equal(true);\r",
+											"    pm.expect(jsonData.airResponseData.flightsOptions.length).to.greaterThan(1);\r",
+											"    pm.expect(jsonData.airResponseData.flightGroups.length).to.greaterThan(1);\r",
+											"});\r",
+											"\r",
+											"// Seta a 1 opção (mais barata)\r",
+											"var selectedFlightOption = jsonData.airResponseData.flightsOptions[0];\r",
+											"var selectedFlightGroup = jsonData.airResponseData.flightGroups[selectedFlightOption.flightGroupIndexes[0]];\r",
+											"var selectedFare = selectedFlightOption.brandedFares[0].faresByFlightGroup[0];\r",
+											"\r",
+											"var flightData = '';\r",
+											"selectedFlightGroup.flights.forEach(f => flightData  += f.flightNumber + \" \" + f.airCompanyCode);\r",
+											"\r",
+											"var fareData = 'Familia Tarifária: ' + selectedFare.brandedFareName + ', Tipo da Tarifa: ' + selectedFare.fareType;\r",
+											"\r",
+											"console.info(\"Dados dos Voos:\" + flightData );\r",
+											"console.info(\"Dados da Tarifa:\" + fareData );\r",
+											"\r",
+											"pm.collectionVariables.set(\"selectedFare\", JSON.stringify(selectedFare));\r",
+											"pm.collectionVariables.set(\"selectedFlightGroup\", JSON.stringify(selectedFlightGroup));\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"\r",
+											"pm.test(\"Validate that searchCompleted field is true\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"\r",
+											"    pm.expect(responseData.searchCompleted).to.be.true;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"Air response data is present in the response\", function () {\r",
+											"    const responseData = pm.response.json();\r",
+											"    pm.expect(responseData.airResponseData).to.exist;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"The flightsOptions array should have more than one element\", function () {\r",
+											"    pm.expect(jsonData.airResponseData.flightsOptions).to.exist.and.to.be.an('array');\r",
+											"    pm.expect(jsonData.airResponseData.flightsOptions).to.have.lengthOf.at.least(2);\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"The flightGroups array must have more than one element\", function () {\r",
+											"    pm.expect(jsonData.airResponseData.flightGroups).to.be.an('array').and.to.have.lengthOf.at.least(2);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "1fb008cc-4492-47a0-b2a2-9144b7f9f78a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://localhost/EnvisionAPI/token",
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.copastur",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"GIG\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 7\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            },\r\n                        {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"GIG\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 11\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost/EnvisionAPI/Shopping/Search",
+								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
+							},
+							"response": []
 						}
 					],
 					"id": "670ef416-c386-4f22-b3c1-05b2d77a0729"
