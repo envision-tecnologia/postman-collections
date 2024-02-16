@@ -2850,9 +2850,17 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{access_token}}"
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
 									}
 								},
 								"method": "POST",
