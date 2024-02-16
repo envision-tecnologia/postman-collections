@@ -2888,7 +2888,7 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"password": "S|t6efE0{",
 										"username": "copastur.api",
 										"challengeAlgorithm": "S256",
@@ -2903,14 +2903,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\r\n  \"locator\": {\r\n    \"locator\": \"WLYLRZ\",\r\n    \"supplierSystem\": \"Sabre\"\r\n  }\r\n}",
+									"raw": "{\r\n    \"locator\": {\r\n        \"locator\": \"GLFPQQ\",\r\n        \"supplierSystem\": \"Azul\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/GetFareRulesByLoc"
+								"url": "http://localhost/EnvisionAPI/Shopping/GetFareRulesByLoc"
 							},
 							"response": []
 						},
