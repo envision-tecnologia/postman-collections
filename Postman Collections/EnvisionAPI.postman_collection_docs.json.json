@@ -2879,6 +2879,42 @@
 							"response": []
 						},
 						{
+							"name": "GetFareRulesByLoc Local",
+							"id": "8ff3ed74-49e6-4fb0-8e16-b1171d13cbcf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n  \"locator\": {\r\n    \"locator\": \"WLYLRZ\",\r\n    \"supplierSystem\": \"Sabre\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/GetFareRulesByLoc"
+							},
+							"response": []
+						},
+						{
 							"name": "GetFareRules Local",
 							"id": "9b20ac3b-7f1b-4fe4-ad9d-e3e364faa604",
 							"protocolProfileBehavior": {
