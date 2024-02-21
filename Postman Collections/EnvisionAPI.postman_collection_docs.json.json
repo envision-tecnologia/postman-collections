@@ -2660,7 +2660,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"OMLNES\",\r\n      \"supplierSystem\": \"Latam\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"KL8R4A\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
