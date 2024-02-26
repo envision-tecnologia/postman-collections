@@ -2239,6 +2239,56 @@
 								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 							},
 							"response": []
+						},
+						{
+							"name": "Search de Hotel Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4f26933a-1fe7-4f4a-bddf-1ee062a0a7cd",
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "9ea96d8e-2544-494e-bb69-25666c7cb354",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"hotelParameters\": {\r\n\r\n        \"checkIn\": {\r\n\r\n            \"year\": 2024,\r\n\r\n            \"month\": 6,\r\n\r\n            \"day\": 12,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"checkOut\": {\r\n\r\n            \"year\": 2024,\r\n\r\n            \"month\": 6,\r\n\r\n            \"day\": 14,\r\n\r\n            \"dayOfWeek\": \"sunday\",\r\n\r\n            \"hour\": 0,\r\n\r\n            \"minutes\": 0,\r\n\r\n            \"seconds\": 0,\r\n\r\n            \"millisecond\": 0\r\n\r\n        },\r\n\r\n        \"locationId\": 258680\r\n\r\n    },\r\n\r\n    \"paginationParameters\": {\r\n\r\n        \"pageNumber\": 1,\r\n\r\n        \"itemsPerPage\": 1000\r\n\r\n    },\r\n\r\n    \"sortParameters\": {\r\n\r\n        \"sortBy\": \"price\",\r\n\r\n        \"descending\": true\r\n\r\n    },\r\n\r\n    \"asynchronous\": false,\r\n\r\n    \"travellers\": [{\r\n\r\n            \"ageGroup\": \"adult\",\r\n\r\n            \"age\": 30\r\n\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Método responsável por realizar a pesquisa de hotel."
+							},
+							"response": []
 						}
 					],
 					"id": "670ef416-c386-4f22-b3c1-05b2d77a0729"
