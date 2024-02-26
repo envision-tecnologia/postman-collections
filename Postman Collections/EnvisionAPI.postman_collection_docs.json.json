@@ -2561,7 +2561,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"ticketsToGetInformation\": [\r\n    {\r\n      \"ticketNumber\": \"1272109196335\",\r\n      \"locator\": {\r\n        \"locator\": \"LVCWVF\",\r\n        \"supplierSystem\": \"GolGWS\" \r\n      }\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n    \"ticketsToGetInformation\": [\r\n        {\r\n            \"ticketNumber\": \"1272109196335\",\r\n            \"locator\": {\r\n                \"locator\": \"LVCWVF\",\r\n                \"supplierSystem\": \"GolGWS\"\r\n            }\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
