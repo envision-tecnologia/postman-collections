@@ -2898,7 +2898,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": {{Locator}},\r\n      \"supplierSystem\": {{SupplierSystemName}}\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": {{Locator}},\r\n      \"supplierSystem\": {{SupplierSystem}}\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
