@@ -2259,7 +2259,8 @@
 											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -2271,9 +2272,9 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
 										"password": "Petro,4321",
 										"username": "api.petrobras",
-										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
 										"authUrl": "https://www.travelagent.com.br/api/token",
@@ -2293,7 +2294,7 @@
 										}
 									}
 								},
-								"url": "http://localhost/EnvisionAPI/Shopping/Search",
+								"url": "https://api.travelagent.com.br/Shopping/Search",
 								"description": "Método responsável por realizar a pesquisa de hotel."
 							},
 							"response": []
