@@ -2241,7 +2241,7 @@
 							"response": []
 						},
 						{
-							"name": "Search de Hotel Copy",
+							"name": "Search Hotel Prod",
 							"event": [
 								{
 									"listen": "prerequest",
