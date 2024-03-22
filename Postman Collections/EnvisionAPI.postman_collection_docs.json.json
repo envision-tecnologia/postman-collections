@@ -2300,7 +2300,7 @@
 							"response": []
 						},
 						{
-							"name": "Search Hotel Prod Copy",
+							"name": "Search Hotel Homolog",
 							"event": [
 								{
 									"listen": "prerequest",
