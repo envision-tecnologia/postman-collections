@@ -2353,7 +2353,7 @@
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"url": "https://homolog.travelagent.com.br/api/Shopping/Search",
 								"description": "Método responsável por realizar a pesquisa de hotel."
 							},
 							"response": []
