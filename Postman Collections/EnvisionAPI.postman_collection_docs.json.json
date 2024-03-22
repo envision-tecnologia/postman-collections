@@ -2331,7 +2331,7 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"accessTokenUrl": "https://homolog.travelagent.com.br/api/token",
 										"password": "Petro,4321",
 										"username": "api.petrobras",
 										"challengeAlgorithm": "S256",
@@ -2353,7 +2353,7 @@
 										}
 									}
 								},
-								"url": "https://homolog.travelagent.com.br/api/Shopping/Search",
+								"url": "https://hom-api.travelagent.com.br/Shopping/Search",
 								"description": "Método responsável por realizar a pesquisa de hotel."
 							},
 							"response": []
