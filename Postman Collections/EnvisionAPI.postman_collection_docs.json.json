@@ -1548,7 +1548,7 @@
 					"response": []
 				},
 				{
-					"name": "GetRecords Copy",
+					"name": "GetRecords Prod",
 					"id": "2d809b68-17fb-4823-9df6-89f837539698",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1574,7 +1574,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{    \r\n\"criteria\": \"LastChangeDate >= '2023-03-13 09:42' && LastChangeDate <= '2023-03-14 11:41'\"\r\n//\"criteria\": \"(Created >= '2022-09-01 13:00:00' && Created <= '2022-09-30 23:00:00') && ServiceTypeName = 'Issue'\"  \r\n//\"criteria\": \"LastChangeDate >= '2020-11-19 15:00:00' && ServiceTypeName = 'ServiceOrder'\"  \r\n//\"criteria\": \"LastChangeDate >= '2021-03-21 15:00:00' && ServiceTypeName = 'Issue'\"  \r\n// \"sortFields\": \"id\",   \r\n// \"pagingPivotId\": 3710   \r\n//\"criteria\": \"id = 4384\"  \r\n//\"criteria\": \"id = 4871\"\r\n}",
+							"raw": "{    \r\n//\"criteria\": \"LastChangeDate >= '2023-03-13 09:42' && LastChangeDate <= '2023-03-14 11:41'\"\r\n//\"criteria\": \"(Created >= '2022-09-01 13:00:00' && Created <= '2022-09-30 23:00:00') && ServiceTypeName = 'Issue'\"  \r\n//\"criteria\": \"LastChangeDate >= '2020-11-19 15:00:00' && ServiceTypeName = 'ServiceOrder'\"  \r\n//\"criteria\": \"LastChangeDate >= '2021-03-21 15:00:00' && ServiceTypeName = 'Issue'\"  \r\n// \"sortFields\": \"id\",   \r\n// \"pagingPivotId\": 3710   \r\n\"criteria\": \"id = 705220\"  \r\n//\"criteria\": \"id = 4871\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
