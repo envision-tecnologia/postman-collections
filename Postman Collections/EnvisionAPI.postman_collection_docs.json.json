@@ -2439,9 +2439,9 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"password": "Luigi@321",
 										"username": "luigi@starlings.travel",
-										"accessTokenUrl": "https://api.travelagent.com.br/token",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
 										"authUrl": "https://www.travelagent.com.br/api/token",
@@ -2461,7 +2461,7 @@
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"url": "http://localhost/EnvisionAPI/Shopping/Search",
 								"description": "Método responsável por realizar a pesquisa de hotel."
 							},
 							"response": []
