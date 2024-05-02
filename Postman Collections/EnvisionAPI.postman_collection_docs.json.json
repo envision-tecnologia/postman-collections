@@ -2349,6 +2349,65 @@
 							"response": []
 						},
 						{
+							"name": "Search Hotel Prod Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "4f26933a-1fe7-4f4a-bddf-1ee062a0a7cd",
+										"exec": [
+											"const moment = require('moment');\r",
+											"\r",
+											"pm.collectionVariables.set(\"departureDay\", moment().add(60,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"departureMonth\", moment().add(60,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"departureYear\", moment().add(60,'days').format(\"YYYY\"));\r",
+											"\r",
+											"pm.collectionVariables.set(\"returnDay\", moment().add(67,'days').format(\"DD\"));\r",
+											"pm.collectionVariables.set(\"returnMonth\", moment().add(67,'days').format(\"MM\"));\r",
+											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "dcf68a6f-efbf-41c2-8bb1-9b7ac3fdeb7b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"password": "Petro,4321",
+										"username": "api.petrobras",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"hotelParameters\": {\r\n        \"checkIn\": {\r\n            \"year\": 2024,\r\n            \"month\": 6,\r\n            \"day\": 12,\r\n            \"dayOfWeek\": \"sunday\",\r\n            \"hour\": 0,\r\n            \"minutes\": 0,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n        },\r\n        \"checkOut\": {\r\n            \"year\": 2024,\r\n            \"month\": 6,\r\n            \"day\": 14,\r\n            \"dayOfWeek\": \"sunday\",\r\n            \"hour\": 0,\r\n            \"minutes\": 0,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n        },\r\n        \"locationId\": 258680,\r\n        \r\n        //\"hotelName\": \"Boreas\",\r\n/*\r\n        \"supplierSystems\": [\r\n            {\r\n                \"supplierSystemName\": \"OmnibeesHoteisNet\",\r\n                \"supplierSystemCodes\": [\r\n                     \"2104\",\"2066\"\r\n                 ]\r\n             }\r\n         ]\r\n*/\r\n    },\r\n    \"paginationParameters\": {\r\n        \"pageNumber\": 1,\r\n        \"itemsPerPage\": 1000\r\n    },\r\n    \"sortParameters\": {\r\n        \"sortBy\": \"price\",\r\n        \"descending\": true\r\n    },\r\n    \"asynchronous\": false,\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\",\r\n            \"age\": 30\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Search",
+								"description": "Método responsável por realizar a pesquisa de hotel."
+							},
+							"response": []
+						},
+						{
 							"name": "Search Hotel Homolog",
 							"event": [
 								{
