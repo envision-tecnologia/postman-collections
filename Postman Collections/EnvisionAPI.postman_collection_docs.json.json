@@ -2661,9 +2661,17 @@
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{access_token}}"
+									"type": "oauth2",
+									"oauth2": {
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.rdc",
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
 									}
 								},
 								"method": "POST",
@@ -2677,7 +2685,7 @@
 										}
 									}
 								},
-								"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
+								"url": "http://localhost/EnvisionAPI/Shopping/ProcessOrder",
 								"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
 							},
 							"response": []
