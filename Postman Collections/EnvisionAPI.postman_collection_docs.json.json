@@ -60,7 +60,8 @@
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -94,7 +95,7 @@
 								}
 							]
 						},
-						"url": "https://api.travelagent.com.br/token"
+						"url": "https://hom-api.travelagent.com.br/token"
 					},
 					"response": []
 				}
@@ -398,7 +399,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										},
 										{
@@ -464,7 +466,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -490,7 +493,7 @@
 												}
 											}
 										},
-										"url": "https://api.travelagent.com.br/Shopping/Search",
+										"url": "https://hom-api.travelagent.com.br/Shopping/Search",
 										"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 									},
 									"response": []
@@ -548,7 +551,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -574,7 +578,7 @@
 												}
 											}
 										},
-										"url": "https://api.travelagent.com.br/Shopping/PreOrder",
+										"url": "https://hom-api.travelagent.com.br/Shopping/PreOrder",
 										"description": "Esse método é responsável por realizar a tarifação do aéreo."
 									},
 									"response": []
@@ -615,7 +619,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -641,7 +646,7 @@
 												}
 											}
 										},
-										"url": "https://api.travelagent.com.br/Shopping/ProcessOrder",
+										"url": "https://hom-api.travelagent.com.br/Shopping/ProcessOrder",
 										"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
 									},
 									"response": []
@@ -3757,7 +3762,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "49cbf09c-3123-4dc4-9f1f-b0166b32e899",
+				"id": "211101d2-9a77-4533-aab6-ba65256512c4",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -3767,7 +3772,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "cd43ee6d-69d5-4f50-8a85-d65c6e6c7edd",
+				"id": "28dd0ea7-0661-46e7-b55d-ca7086f62119",
 				"type": "text/javascript",
 				"exec": [
 					""
