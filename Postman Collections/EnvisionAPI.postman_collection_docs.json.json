@@ -761,7 +761,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"SAO\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYear}},\r\n                    \"month\": {{departureMonth}},\r\n                    \"day\": {{departureDay}}\r\n                },\r\n                \"ciaCodes\": [\"LA\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
