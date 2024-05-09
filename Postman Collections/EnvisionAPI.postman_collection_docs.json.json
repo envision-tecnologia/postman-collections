@@ -921,7 +921,7 @@
 												}
 											}
 										},
-										"url": "https://localhost/EnvisionAPI/Shopping/ProcessOrder",
+										"url": "http://localhost/EnvisionAPI/Shopping/ProcessOrder",
 										"description": "Esse método é responsável por realizar a criação da reserva de aéreo."
 									},
 									"response": []
