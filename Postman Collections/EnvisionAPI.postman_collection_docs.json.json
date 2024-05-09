@@ -914,7 +914,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"{{travellerFirstName}}\",\r\n            \"middleName\": \"\",\r\n            \"lastName\": \"{{travellerLastName}}\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n\t \"buyer\": {\r\n        \"firstName\": \"Silvio\",\r\n        \"middleName\": \"\",\r\n        \"lastName\": \"Envision\",\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"phoneNumber\": \"55-113549-6399\",\r\n        \"birthDate\": {\r\n            \"year\": 1990,\r\n            \"month\": 1,\r\n            \"day\": 10,\r\n            \"dayOfWeek\": \"sunday\",\r\n            \"hour\": 0,\r\n            \"minutes\": 0,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n        },\r\n        \"nationalityCode\": \"BR\",\r\n        \"gender\": \"male\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"92231131307\",\r\n                \"expirationDate\": {\r\n                    \"year\": 0,\r\n                    \"month\": 0,\r\n                    \"day\": 0,\r\n                    \"dayOfWeek\": \"sunday\",\r\n                    \"hour\": 0,\r\n                    \"minutes\": 0,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"customFields\": {},\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ],\r\n        \"address\": {\r\n            \"street\": \"Av. Mazzei\",\r\n            \"number\": \"1234\",\r\n            \"complement\": \"Apto 123\",\r\n            \"zipCode\": \"02310-000\",\r\n            \"neighborhood\": \"Vila Mazzei\",\r\n            \"city\": \"São Paulo\",\r\n            \"state\": \"São Paulo\",\r\n            \"country\": \"Brasil\",\r\n            \"longitude\": 0,\r\n            \"latitude\": 0\r\n        }\r\n    }\r\n}",
+											"raw": "{\r\n    \"air\": {\r\n        \"flightGroups\": {{flightGroups}},\r\n        \"bookingFares\": {{bookingFares}}\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"firstName\": \"{{travellerFirstName}}\",\r\n            \"middleName\": \"\",\r\n            \"lastName\": \"{{travellerLastName}}\",\r\n            \"birthDate\": {\r\n                \"year\": 1980,\r\n                \"month\": 1,\r\n                \"day\": 1\r\n            },\r\n            \"documents\": [\r\n                {\r\n                    \"number\": \"19867697804\",\r\n                    \"documentType\": \"cpf\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n\t \"buyer\": {\r\n        \"firstName\": \"Silvio\",\r\n        \"middleName\": \"\",\r\n        \"lastName\": \"Envision\",\r\n        \"email\": \"silvio@envisiontecnologia.com.br\",\r\n        \"phoneNumber\": \"55-113549-6399\",\r\n        \"birthDate\": {\r\n            \"year\": 1990,\r\n            \"month\": 1,\r\n            \"day\": 10,\r\n            \"dayOfWeek\": \"sunday\",\r\n            \"hour\": 0,\r\n            \"minutes\": 0,\r\n            \"seconds\": 0,\r\n            \"millisecond\": 0\r\n        },\r\n        \"nationalityCode\": \"BR\",\r\n        \"gender\": \"male\",\r\n        \"documents\": [\r\n            {\r\n                \"number\": \"09572367609\",\r\n                \"expirationDate\": {\r\n                    \"year\": 0,\r\n                    \"month\": 0,\r\n                    \"day\": 0,\r\n                    \"dayOfWeek\": \"sunday\",\r\n                    \"hour\": 0,\r\n                    \"minutes\": 0,\r\n                    \"seconds\": 0,\r\n                    \"millisecond\": 0\r\n                },\r\n                \"customFields\": {},\r\n                \"documentType\": \"cpf\"\r\n            }\r\n        ],\r\n        \"address\": {\r\n            \"street\": \"Av. Mazzei\",\r\n            \"number\": \"1234\",\r\n            \"complement\": \"Apto 123\",\r\n            \"zipCode\": \"02310-000\",\r\n            \"neighborhood\": \"Vila Mazzei\",\r\n            \"city\": \"São Paulo\",\r\n            \"state\": \"São Paulo\",\r\n            \"country\": \"Brasil\",\r\n            \"longitude\": 0,\r\n            \"latitude\": 0\r\n        }\r\n    }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4037,7 +4037,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "211101d2-9a77-4533-aab6-ba65256512c4",
+				"id": "7d8eaf49-c59b-4dda-b0d7-224443cf1440",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4047,7 +4047,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "28dd0ea7-0661-46e7-b55d-ca7086f62119",
+				"id": "3e26e0ba-6515-4192-95ce-b20bacc2e684",
 				"type": "text/javascript",
 				"exec": [
 					""
