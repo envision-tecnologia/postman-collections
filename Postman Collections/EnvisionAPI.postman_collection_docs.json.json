@@ -95,7 +95,7 @@
 								}
 							]
 						},
-						"url": "http://localhost/EnvisionAPI/token"
+						"url": "https://api.travelagent.com.br/token"
 					},
 					"response": []
 				}
