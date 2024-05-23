@@ -2099,6 +2099,45 @@
 					"response": []
 				},
 				{
+					"name": "GetRecords Homolog",
+					"id": "6fb19e13-a946-4a34-b65c-e1f12754e691",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": {
+								"password": "2023@EnvAbr!L",
+								"username": "suporte.copastur",
+								"accessTokenUrl": "https://hom-api.travelagent.com.br/token",
+								"clientId": "",
+								"clientSecret": "",
+								"challengeAlgorithm": "S256",
+								"grant_type": "password_credentials",
+								"authUrl": "https://www.travelagent.com.br/api/token",
+								"addTokenTo": "header",
+								"client_authentication": "header",
+								"tokenType": "bearer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n\r\n//\"criteria\": \"LastChangeDate >= '2023-03-13 09:42' && LastChangeDate <= '2023-03-14 11:41'\"\r\n//\"criteria\": \"(Created >= '2022-09-01 13:00:00' && Created <= '2022-09-30 23:00:00') && ServiceTypeName = 'Issue'\"  \r\n//\"criteria\": \"LastChangeDate >= '2020-11-19 15:00:00' && ServiceTypeName = 'ServiceOrder'\"  \r\n//\"criteria\": \"LastChangeDate >= '2021-03-21 15:00:00' && ServiceTypeName = 'Issue'\"  \r\n// \"sortFields\": \"id\",   \r\n// \"pagingPivotId\": 3710   \r\n\"criteria\": \"id = 39148\"  \r\n//\"criteria\": \"id = 4871\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://hom-api.travelagent.com.br/Records/Query",
+						"description": "Método responsável por realizar consultas por determinados produtos, ordem de serviços e etc."
+					},
+					"response": []
+				},
+				{
 					"name": "GetRecords Prod",
 					"id": "2d809b68-17fb-4823-9df6-89f837539698",
 					"protocolProfileBehavior": {
