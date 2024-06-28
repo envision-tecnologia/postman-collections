@@ -3902,14 +3902,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"YUUXDK\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"BackOfficeId\": \"80744\"}\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"WN6WQQ\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"BackOfficeId\": \"80744\"}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "https://hom-api.travelagent.com.br/Shopping/RetrievePnrs",
+								"url": "https://api.travelagent.com.br/Shopping/RetrievePnrs",
 								"description": "Método responsável por atualizar os localizadores."
 							},
 							"response": []
