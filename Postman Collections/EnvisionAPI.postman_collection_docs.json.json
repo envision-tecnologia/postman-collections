@@ -3784,7 +3784,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VM163Q\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"backOfficeId\": \"42350\"}\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"MPYMHU\",\r\n      \"supplierSystem\": \"Sabre\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"backOfficeId\": \"42350\"}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
