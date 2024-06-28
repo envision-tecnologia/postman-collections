@@ -3756,7 +3756,8 @@
 											"pm.collectionVariables.set(\"returnYear\", moment().add(67,'days').format(\"YYYY\"));\r",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -3768,9 +3769,9 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
+										"password": "1e!KF3m|",
+										"username": "b2c.vale",
 										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
-										"password": "2023@EnvAbr!L",
-										"username": "suporte.copastur",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
 										"authUrl": "https://www.travelagent.com.br/api/token",
@@ -3783,7 +3784,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"IDGUQP\",\r\n      \"supplierSystem\": \"Sabre\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"VM163Q\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"backOfficeId\": \"42350\"}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
