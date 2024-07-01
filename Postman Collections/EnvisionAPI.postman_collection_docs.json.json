@@ -955,7 +955,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										},
 										{
@@ -1026,7 +1027,8 @@
 													"\r",
 													""
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -1045,7 +1047,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"RIO\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYearOutBound}},\r\n                    \"month\": {{departureMonthOutBound}},\r\n                    \"day\": {{departureDayOutBound}}\r\n                },\r\n                \"ciaCodes\": [\r\n                    \"G3\"\r\n                ]\r\n            },\r\n            {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYearInBound}},\r\n                    \"month\": {{departureMonthInBound}},\r\n                    \"day\": {{departureDayInBound}}\r\n                },\r\n                \"ciaCodes\": [\r\n                    \"G3\"\r\n                ]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"RIO\",\r\n                \"destination\": \"MIA\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYearOutBound}},\r\n                    \"month\": {{departureMonthOutBound}},\r\n                    \"day\": {{departureDayOutBound}}\r\n                }//,\r\n                // \"ciaCodes\": [\r\n                //     \"G3\"\r\n                // ]\r\n            },\r\n            {\r\n                \"origin\": \"MIA\",\r\n                \"destination\": \"RIO\",\r\n                \"departureDate\": {\r\n                    \"year\": {{departureYearInBound}},\r\n                    \"month\": {{departureMonthInBound}},\r\n                    \"day\": {{departureDayInBound}}\r\n                }//,\r\n                // \"ciaCodes\": [\r\n                //     \"G3\"\r\n                // ]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
