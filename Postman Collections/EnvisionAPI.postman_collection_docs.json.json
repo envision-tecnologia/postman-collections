@@ -3771,8 +3771,8 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"password": "1e!KF3m|",
-										"username": "b2c.vale",
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
 										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
@@ -3786,7 +3786,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"OCULCV\",\r\n      \"supplierSystem\": \"Latam\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"BackOfficeId\": \"48673\"}\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"NMAEHC\",\r\n      \"supplierSystem\": \"GolGWS\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"BackOfficeId\": \"3899\"}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
