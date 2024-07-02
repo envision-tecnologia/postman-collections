@@ -4152,6 +4152,44 @@
 						}
 					],
 					"id": "d8f4c070-8658-4708-9cb2-1667dc9ddf88"
+				},
+				{
+					"name": "GetCommercialAgreements",
+					"item": [
+						{
+							"name": "Get Commercial Agreements Prod",
+							"id": "d5c80bad-57e7-4a9c-8e05-29b9f527d21e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
+										"grant_type": "password_credentials",
+										"addTokenTo": "header",
+										"accessTokenUrl": "https://api.travelagent.com.br/token"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"flightGroups\": [\r\n        {\r\n            \"originId\": 2702586,\r\n            \"destinationId\": 2702940,\r\n            \"arrivalTime\": {\r\n                \"year\": 2024,\r\n                \"month\": 9,\r\n                \"day\": 13,\r\n                \"dayOfWeek\": \"friday\",\r\n                \"hour\": 7,\r\n                \"minutes\": 45,\r\n                \"seconds\": 0,\r\n                \"millisecond\": 0\r\n            },\r\n            \"departureTime\": {\r\n                \"year\": 2024,\r\n                \"month\": 9,\r\n                \"day\": 13,\r\n                \"dayOfWeek\": \"friday\",\r\n                \"hour\": 6,\r\n                \"minutes\": 0,\r\n                \"seconds\": 0,\r\n                \"millisecond\": 0\r\n            },\r\n            \"issuerAirCompanyCode\": \"G3\",\r\n            \"supplierSystem\": \"GolGWS\",\r\n            \"durationInMinutes\": 105,\r\n            \"flights\": [\r\n                {\r\n                    \"arrivalAirportId\": 2702940,\r\n                    \"departureAirportId\": 2702586,\r\n                    \"durationInMinutes\": 105,\r\n                    \"layoverInMinutes\": 0,\r\n                    \"arrivalDateTime\": {\r\n                        \"year\": 2024,\r\n                        \"month\": 9,\r\n                        \"day\": 13,\r\n                        \"dayOfWeek\": \"friday\",\r\n                        \"hour\": 7,\r\n                        \"minutes\": 45,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"departureDateTime\": {\r\n                        \"year\": 2024,\r\n                        \"month\": 9,\r\n                        \"day\": 13,\r\n                        \"dayOfWeek\": \"friday\",\r\n                        \"hour\": 6,\r\n                        \"minutes\": 0,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"cabinType\": \"economic\",\r\n                    \"airCompanyCode\": \"G3\",\r\n                    \"status\": \"confirmed\",\r\n                    \"operatedByAirCompanyCode\": \"G3\",\r\n                    \"flightNumber\": \"1402\",\r\n                    \"externalProperties\": \"{\\u0022SegmentNumber\\u0022:\\u00220001\\u0022,\\u0022FlightGroupIndex\\u0022:\\u00220\\u0022}\",\r\n                    \"legs\": [],\r\n                    \"classOfService\": \"O\",\r\n                    \"aircraftType\": \"737-800\",\r\n                    \"airCompanyLocator\": \"AVUSSL\"\r\n                }\r\n            ],\r\n            \"externalProperties\": \"{\\u0022FlightSegmentStatus\\u0022:\\u0022HK\\u0022,\\u0022FareOption\\u0022:\\u0022{\\\\\\u0022Currency\\\\\\u0022:null,\\\\\\u0022IsNegoSpace\\\\\\u0022:false,\\\\\\u0022TaxAmount\\\\\\u0022:0.0,\\\\\\u0022TaxAmountCHD\\\\\\u0022:0.0,\\\\\\u0022TaxAmountINF\\\\\\u0022:0.0,\\\\\\u0022TaxAmountSRC\\\\\\u0022:0.0,\\\\\\u0022TripType\\\\\\u0022:0,\\\\\\u0022FareAmount\\\\\\u0022:0.0,\\\\\\u0022DiscountRate\\\\\\u0022:0.0,\\\\\\u0022USDFareAmount\\\\\\u0022:0.0,\\\\\\u0022OriginalFareAmount\\\\\\u0022:0.0,\\\\\\u0022OriginalFareAmountCHD\\\\\\u0022:0.0,\\\\\\u0022OriginalFareAmountINF\\\\\\u0022:0.0,\\\\\\u0022OriginalFareAmountSRC\\\\\\u0022:0.0,\\\\\\u0022OriginalCurrency\\\\\\u0022:null,\\\\\\u0022ExchangeRate\\\\\\u0022:1.0,\\\\\\u0022DUTaxes\\\\\\u0022:0.0,\\\\\\u0022AdvancePurchase\\\\\\u0022:0.0,\\\\\\u0022FlightClasses\\\\\\u0022:[],\\\\\\u0022CabinType\\\\\\u0022:2,\\\\\\u0022FareBasis\\\\\\u0022:\\\\\\u0022ONOAAG4G\\\\\\u0022,\\\\\\u0022FareRules\\\\\\u0022:null,\\\\\\u0022RuleNumber\\\\\\u0022:null,\\\\\\u0022CiaCode\\\\\\u0022:null,\\\\\\u0022MinStayHours\\\\\\u0022:0.0,\\\\\\u0022MinStay\\\\\\u0022:\\\\\\u002200:00:00\\\\\\u0022,\\\\\\u0022MaxStay\\\\\\u0022:\\\\\\u002200:00:00\\\\\\u0022,\\\\\\u0022Source\\\\\\u0022:0,\\\\\\u0022InboundOutbound\\\\\\u0022:0,\\\\\\u0022CommercialAgreement\\\\\\u0022:null,\\\\\\u0022AgreementCode\\\\\\u0022:null,\\\\\\u0022Pricing\\\\\\u0022:null,\\\\\\u0022B2BExtension\\\\\\u0022:null,\\\\\\u0022MarkupedFare\\\\\\u0022:0.0,\\\\\\u0022DisplayFareAmount\\\\\\u0022:0.0,\\\\\\u0022ExternalProperties\\\\\\u0022:{},\\\\\\u0022Quantity\\\\\\u0022:0,\\\\\\u0022FareAmountCHD\\\\\\u0022:0.0,\\\\\\u0022FareAmountINF\\\\\\u0022:0.0,\\\\\\u0022AwardAmount\\\\\\u0022:0.0,\\\\\\u0022FareConversions\\\\\\u0022:[],\\\\\\u0022FareAmountSRC\\\\\\u0022:0.0,\\\\\\u0022BaggagesIncluded\\\\\\u0022:0,\\\\\\u0022BrandedFaresFamily\\\\\\u0022:null,\\\\\\u0022OBFeeADT\\\\\\u0022:null,\\\\\\u0022OBFeeCHD\\\\\\u0022:null,\\\\\\u0022OBFeeINF\\\\\\u0022:null,\\\\\\u0022FareType\\\\\\u0022:0}\\u0022,\\u0022EAPILoginInformationId\\u0022:\\u0022135\\u0022}\",\r\n            \"stops\": 0\r\n        }\r\n    ],\r\n    \"additionalinfo\": {\r\n        \"BackOfficeId\": \"3899\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Air/GetCommercialAgreements"
+							},
+							"response": []
+						}
+					],
+					"id": "56996f02-3a83-4e96-bb13-c1f325020faa"
 				}
 			],
 			"id": "388581b9-117c-4742-b65a-89c9a0d4acfd"
