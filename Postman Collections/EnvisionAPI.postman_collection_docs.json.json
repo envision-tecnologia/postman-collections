@@ -3889,9 +3889,9 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"password": "2023@EnvAbr!L",
-										"username": "suporte.copastur",
-										"accessTokenUrl": "https://hom-api.travelagent.com.br/token",
+										"accessTokenUrl": "https://api.travelagent.com.br/token",
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
 										"challengeAlgorithm": "S256",
 										"grant_type": "password_credentials",
 										"authUrl": "https://www.travelagent.com.br/api/token",
@@ -3904,7 +3904,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"WN6WQQ\",\r\n      \"supplierSystem\": \"Azul\"\r\n    }\r\n  ],\r\n  \"additionalInfo\": {\"BackOfficeId\": \"80744\"}\r\n}",
+									"raw": "{\r\n  \"locators\": [\r\n    {\r\n      \"locator\": \"ESXNON\",\r\n      \"supplierSystem\": \"Latam\"\r\n    }\r\n  ]//,\r\n  //\"additionalInfo\": {\"BackOfficeId\": \"53820\"}\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
