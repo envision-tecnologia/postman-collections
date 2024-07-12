@@ -3456,6 +3456,34 @@
 							"response": []
 						},
 						{
+							"name": "SearchFarePnr Copy",
+							"id": "44eba529-75e2-4468-b30c-399d8cce69a5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"companyContext\": {\r\n        \"consolidator\": {\r\n            \"id\": 93176,\r\n            \"name\": \"Copastur Lazer\",\r\n            \"systemAccountId\": 36208\r\n        },\r\n        \"travelAgency\": {\r\n            \"id\": 93176,\r\n            \"name\": \"Copastur Lazer\",\r\n            \"systemAccountId\": 36208\r\n        }\r\n    },\r\n    \"serviceOrderId\": 181,\r\n    \"locator\": {\r\n        \"locator\": \"FDDQ7V\",\r\n        \"supplierSystem\": \"Azul\"\r\n    },\r\n    \"commercialAgreements\": [],\r\n    \"bestBuy\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Air/SearchFarePnr"
+							},
+							"response": []
+						},
+						{
 							"name": "PricePnr",
 							"id": "d8b4e067-aa8a-4eb0-b90c-b988b4a19722",
 							"protocolProfileBehavior": {
@@ -4235,7 +4263,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "1caea50f-2ded-41ee-829c-ac702636925c",
+				"id": "91cefaa1-c8d0-4147-885f-9a25a183bf0a",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -4245,7 +4273,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c5ca3c18-6fca-4f35-a0c1-1f3b73e4d44a",
+				"id": "5dc2953e-d5bb-4557-8059-716009cb2113",
 				"type": "text/javascript",
 				"exec": [
 					""
