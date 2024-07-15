@@ -3486,6 +3486,42 @@
 							"response": []
 						},
 						{
+							"name": "SearchFarePnr Local",
+							"id": "c9936732-e9f4-4413-b1d1-99c360bbbfbf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"accessTokenUrl": "http://localhost/EnvisionAPI/token",
+										"password": "2023@EnvAbr!L",
+										"username": "suporte.copastur",
+										"challengeAlgorithm": "S256",
+										"grant_type": "password_credentials",
+										"authUrl": "https://www.travelagent.com.br/api/token",
+										"addTokenTo": "header",
+										"client_authentication": "header",
+										"tokenType": "bearer"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"serviceOrderId\": 2591019,\r\n    \"locator\": {\r\n        \"locator\": \"EIVHEO\",\r\n        \"supplierSystem\": \"Latam\"\r\n    },\r\n    \"commercialAgreements\": [\r\n        {\r\n            \"id\": 4637,\r\n            \"name\": \"Acordo Seadrill Latam - Copastur API\",\r\n            \"agreementCode\": \"B3523\",\r\n            \"agreementType\": \"Account\",\r\n            \"classes\": \"\",\r\n            \"airCompanyId\": 26,\r\n            \"source\": \"Latam\",\r\n            \"active\": true,\r\n            \"cionsLoginInformationIds\": {},\r\n            \"externalId\": \"\",\r\n            \"condition\": \"<Parenthesis Operator=\\\"0\\\"><Field FieldName=\\\"TripType\\\" Operator=\\\"0\\\" Comparator=\\\"0\\\" Value=\\\"1\\\" Tag=\\\"\\\" ValueType=\\\"0\\\" /><Field FieldName=\\\"TripType\\\" Operator=\\\"2\\\" Comparator=\\\"0\\\" Value=\\\"2\\\" Tag=\\\"\\\" ValueType=\\\"0\\\" /><Field FieldName=\\\"TripType\\\" Operator=\\\"2\\\" Comparator=\\\"0\\\" Value=\\\"3\\\" Tag=\\\"\\\" ValueType=\\\"0\\\" /></Parenthesis>\",\r\n            \"paxType\": \"\",\r\n            \"isOperatorFare\": false,\r\n            \"productType\": \"Air\",\r\n            \"airTravelAgent\": false,\r\n            \"airCorporateGO\": false,\r\n            \"airTravelGO\": false,\r\n            \"hotelTravelAgent\": false,\r\n            \"hotelCorporateGO\": false,\r\n            \"hotelTravelGO\": false,\r\n            \"isGlobalTravelAgent\": false,\r\n            \"isGlobalCorporateGO\": false,\r\n            \"isGlobalTravelGO\": false,\r\n            \"useVoucherFake\": false\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost/EnvisionAPI/Shopping/Air/SearchFarePnr"
+							},
+							"response": []
+						},
+						{
 							"name": "PricePnr",
 							"id": "d8b4e067-aa8a-4eb0-b90c-b988b4a19722",
 							"protocolProfileBehavior": {
