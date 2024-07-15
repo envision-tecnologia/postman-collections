@@ -4270,6 +4270,38 @@
 								"url": "https://api.travelagent.com.br/Shopping/Air/GetCommercialAgreements"
 							},
 							"response": []
+						},
+						{
+							"name": "Get Commercial Agreements Prod Copy",
+							"id": "bed396d9-a58a-4515-bd1c-1bed8be8ea28",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": {
+										"password": "S|t6efE0{",
+										"username": "copastur.api",
+										"grant_type": "password_credentials",
+										"addTokenTo": "header",
+										"accessTokenUrl": "https://api.travelagent.com.br/token"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"flightGroups\": [\r\n        {\r\n            \"originId\": 2702586,\r\n            \"destinationId\": 2701273,\r\n            \"arrivalTime\": {\r\n                \"year\": 2024,\r\n                \"month\": 7,\r\n                \"day\": 27,\r\n                \"dayOfWeek\": \"saturday\",\r\n                \"hour\": 7,\r\n                \"minutes\": 5,\r\n                \"seconds\": 0,\r\n                \"millisecond\": 0\r\n            },\r\n            \"departureTime\": {\r\n                \"year\": 2024,\r\n                \"month\": 7,\r\n                \"day\": 27,\r\n                \"dayOfWeek\": \"saturday\",\r\n                \"hour\": 6,\r\n                \"minutes\": 0,\r\n                \"seconds\": 0,\r\n                \"millisecond\": 0\r\n            },\r\n            \"issuerAirCompanyCode\": \"G3\",\r\n            \"supplierSystem\": \"GolGWS\",\r\n            \"durationInMinutes\": 65,\r\n            \"flights\": [\r\n                {\r\n                    \"arrivalAirportId\": 2701273,\r\n                    \"departureAirportId\": 2702586,\r\n                    \"durationInMinutes\": 65,\r\n                    \"layoverInMinutes\": 0,\r\n                    \"arrivalDateTime\": {\r\n                        \"year\": 2024,\r\n                        \"month\": 7,\r\n                        \"day\": 27,\r\n                        \"dayOfWeek\": \"saturday\",\r\n                        \"hour\": 7,\r\n                        \"minutes\": 5,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"departureDateTime\": {\r\n                        \"year\": 2024,\r\n                        \"month\": 7,\r\n                        \"day\": 27,\r\n                        \"dayOfWeek\": \"saturday\",\r\n                        \"hour\": 6,\r\n                        \"minutes\": 0,\r\n                        \"seconds\": 0,\r\n                        \"millisecond\": 0\r\n                    },\r\n                    \"cabinType\": \"economic\",\r\n                    \"airCompanyCode\": \"G3\",\r\n                    \"status\": \"confirmed\",\r\n                    \"operatedByAirCompanyCode\": \"G3\",\r\n                    \"flightNumber\": \"1002\",\r\n                    \"externalProperties\": \"{\\\"SegmentNumber\\\":\\\"0001\\\",\\\"FlightGroupIndex\\\":\\\"0\\\"}\",\r\n                    \"legs\": [],\r\n                    \"classOfService\": \"P\",\r\n                    \"aircraftType\": \"737-800\",\r\n                    \"airCompanyLocator\": \"KZCFPR\"\r\n                }\r\n            ],\r\n            \"externalProperties\": \"{\\\"FlightSegmentStatus\\\":\\\"HK\\\",\\\"FareOption\\\":\\\"{\\\\\\\"Currency\\\\\\\":null,\\\\\\\"IsNegoSpace\\\\\\\":false,\\\\\\\"TaxAmount\\\\\\\":0.0,\\\\\\\"TaxAmountCHD\\\\\\\":0.0,\\\\\\\"TaxAmountINF\\\\\\\":0.0,\\\\\\\"TaxAmountSRC\\\\\\\":0.0,\\\\\\\"TripType\\\\\\\":0,\\\\\\\"FareAmount\\\\\\\":0.0,\\\\\\\"DiscountRate\\\\\\\":0.0,\\\\\\\"USDFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmount\\\\\\\":0.0,\\\\\\\"OriginalFareAmountCHD\\\\\\\":0.0,\\\\\\\"OriginalFareAmountINF\\\\\\\":0.0,\\\\\\\"OriginalFareAmountSRC\\\\\\\":0.0,\\\\\\\"OriginalCurrency\\\\\\\":null,\\\\\\\"ExchangeRate\\\\\\\":1.0,\\\\\\\"DUTaxes\\\\\\\":0.0,\\\\\\\"AdvancePurchase\\\\\\\":0.0,\\\\\\\"FlightClasses\\\\\\\":[],\\\\\\\"CabinType\\\\\\\":2,\\\\\\\"FareBasis\\\\\\\":\\\\\\\"PNGAAG2G\\\\\\\",\\\\\\\"FareRules\\\\\\\":null,\\\\\\\"RuleNumber\\\\\\\":null,\\\\\\\"CiaCode\\\\\\\":null,\\\\\\\"MinStayHours\\\\\\\":0.0,\\\\\\\"MinStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"MaxStay\\\\\\\":\\\\\\\"00:00:00\\\\\\\",\\\\\\\"Source\\\\\\\":0,\\\\\\\"InboundOutbound\\\\\\\":0,\\\\\\\"CommercialAgreement\\\\\\\":null,\\\\\\\"AgreementCode\\\\\\\":null,\\\\\\\"Pricing\\\\\\\":null,\\\\\\\"B2BExtension\\\\\\\":null,\\\\\\\"MarkupedFare\\\\\\\":0.0,\\\\\\\"DisplayFareAmount\\\\\\\":0.0,\\\\\\\"ExternalProperties\\\\\\\":{},\\\\\\\"Quantity\\\\\\\":0,\\\\\\\"FareAmountCHD\\\\\\\":0.0,\\\\\\\"FareAmountINF\\\\\\\":0.0,\\\\\\\"AwardAmount\\\\\\\":0.0,\\\\\\\"FareConversions\\\\\\\":[],\\\\\\\"FareAmountSRC\\\\\\\":0.0,\\\\\\\"BaggagesIncluded\\\\\\\":0,\\\\\\\"BrandedFaresFamily\\\\\\\":null,\\\\\\\"OBFeeADT\\\\\\\":null,\\\\\\\"OBFeeCHD\\\\\\\":null,\\\\\\\"OBFeeINF\\\\\\\":null,\\\\\\\"FareType\\\\\\\":0}\\\",\\\"EAPILoginInformationId\\\":\\\"378\\\"}\",\r\n            \"stops\": 0\r\n        }\r\n    ],\r\n    \"additionalinfo\": {\r\n        \"BackOfficeId\": \"23030\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.travelagent.com.br/Shopping/Air/GetCommercialAgreements"
+							},
+							"response": []
 						}
 					],
 					"id": "56996f02-3a83-4e96-bb13-c1f325020faa"
