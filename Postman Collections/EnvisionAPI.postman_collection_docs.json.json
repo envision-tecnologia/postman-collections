@@ -2532,7 +2532,8 @@
 											"\r",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								},
 								{
@@ -2598,7 +2599,8 @@
 											"\r",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -2610,7 +2612,7 @@
 								"auth": {
 									"type": "oauth2",
 									"oauth2": {
-										"accessTokenUrl": "https://homolog.travelagent.com.br/api/token",
+										"accessTokenUrl": "https://hom-api.travelagent.com.br/token",
 										"password": "2023@EnvAbr!L",
 										"username": "suporte.copastur",
 										"challengeAlgorithm": "S256",
@@ -2625,14 +2627,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"recommendations\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"GIG\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 7\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            },\r\n                        {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"GIG\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 3,\r\n                    \"day\": 11\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
+									"raw": "{\r\n    \"airParameters\": {\r\n        \"groupingType\": \"priceGroups\",\r\n        \"cityPairRequests\": [\r\n            {\r\n                \"origin\": \"GIG\",\r\n                \"destination\": \"AEP\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 12,\r\n                    \"day\": 7\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            },\r\n                        {\r\n                \"origin\": \"AEP\",\r\n                \"destination\": \"GIG\",\r\n                \"departureDate\": {\r\n                    \"year\": 2024,\r\n                    \"month\": 12,\r\n                    \"day\": 11\r\n                },\r\n                \"ciaCodes\": [\"G3\"]\r\n            }\r\n        ]\r\n    },\r\n    \"travellers\": [\r\n        {\r\n            \"ageGroup\": \"adult\"\r\n        },\r\n          {\r\n            \"ageGroup\": \"adult\"\r\n        }\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "https://homolog.travelagent.com.br/api/Shopping/Search",
+								"url": "https://hom-api.travelagent.com.br/Shopping/Search",
 								"description": "Nesse método é responsável por realizar a pesquisa de aereo filtrando uma determinada cia-aérea."
 							},
 							"response": []
